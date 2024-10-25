@@ -1,0 +1,31 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches:
+      - main  # Change this if your main branch has a different name
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install SSH Client
+        run: sudo apt-get install openssh-client
+
+      - name: Add SSH Key
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H "your-hostinger-ip" >> ~/.ssh/known_hosts
+
+      - name: Deploy to Hostinger
+        run: |
+          rsync -avz --delete-after ./ user@your-hostinger-ip:/home/username/public_html/
+        env:
+          SSH_AUTH_SOCK: /tmp/ssh_auth_sock
