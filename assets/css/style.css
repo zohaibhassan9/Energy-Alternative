@@ -784,7 +784,7 @@ input:focus {
 
 .menu {
     position: absolute;
-    width: 70px; /* Adjust width */
+    width: 70px;
     height: 270px; /* Adjust height for vertical layout */
     background: #fff;
     border-radius: 35px; /* Adjust for rounder edges */
@@ -857,11 +857,11 @@ input:focus {
 }
 
 
-/* Social Icons */
+Social Icons
 /*             */
 
 
-.social-icons {
+/* .social-icons {
   position: fixed;
   top: 50%;
   left: 94%;
@@ -893,26 +893,26 @@ input:focus {
   background-color: #FAAA1B;
 }
 
-/* Keyframes for pulse spread animation */
+Keyframes for pulse spread animation
 @keyframes pulse-spread {
   0% {
     transform: scale(1);
-    /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); 
   }
   70% {
-    transform: scale(.9); /* Expand size */
-    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
+    transform: scale(.9); Expand size
+    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
+    box-shadow: 0 0 0 0 rgba(250, 170, 27
   }
 }
 
 
 
   .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1); 
   }
 
 
@@ -923,7 +923,7 @@ input:focus {
   @keyframes pulse-spread {
     0% {
       transform: scale(1);
-      /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
     }
     70% {
       transform: scale(1.1);
@@ -952,7 +952,7 @@ input:focus {
       transform: scale(1);
       /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
     }
-    70% {
+    /* 70% {
       transform: scale(1.05);
       box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
     }
@@ -961,7 +961,7 @@ input:focus {
       box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
   }
-}
+} */ */
 
 
 
