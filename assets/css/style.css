@@ -2706,12 +2706,13 @@ input:focus {
 }
 .srex-about-us-three__left__img-3-col::before {
   content: "";
+  background : url(../images/dots.png) no-repeat;
   position: absolute;
   top: 0;
   right: -44px;
   width: 100%;
   bottom: 0
-  background: url(../images/dots.png) no-repeat;
+
 }
 .srex-about-us-three__left__img-3 {
   margin-top: -80px;
@@ -4646,8 +4647,7 @@ input:focus {
 
 /* .srex-testimonial-one__slider__item__quote:hover {
   transform: scale(1.1); /* Scale the image to 110% */
- */
-
+ 
 
 
 @media (max-width: 767px) {
@@ -4655,6 +4655,7 @@ input:focus {
     padding: 40px 30px;
   }
 }
+
 .srex-testimonial-one__slider__item__quote {
   height: 60px;
   width: 60px;
