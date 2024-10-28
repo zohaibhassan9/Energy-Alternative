@@ -1063,9 +1063,14 @@ input:focus {
   background-image: url('../images/services/renewable-energy-alternative-pakistan-investment-solar-panels-piggy-bank-transformed.jpeg');
 }
 
+.netmetering {
+  background-image: url('../images/services/2.jpg');
+}
+
 .testing {
   background-image: url('../images/services/energy-alternatives-solar-testing-service.png');
 }
+
 
 .solar-pv-sticky-left{
   @media (min-width: 991px) {
