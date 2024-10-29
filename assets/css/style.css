@@ -499,6 +499,7 @@ input:focus {
     padding-bottom: 30px;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .srex-section {
     padding-bottom: 40px;
