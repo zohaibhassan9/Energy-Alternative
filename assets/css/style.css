@@ -581,7 +581,7 @@ input:focus {
   text-transform: capitalize;
   transition: all 0.3s ease;
   display: inline-block;
-  padding: 15px 25px;
+  padding: 15px 25px; 
 }
 .srex-btn {
   font-family: Manrope;
