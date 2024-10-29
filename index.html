@@ -1965,6 +1965,7 @@
                 </div>
               </div>
             </div>
+
             <!-- <div class="col-6 col-lg-2 col-md-6">
               <div class="srex-footer__links__wrapper">
                 <h4>More Service</h4>
@@ -2118,5 +2119,41 @@ setInterval(scrollGallery, 3000);
       }, 3000); // Adjust the time as needed
   };
   </script>
+
+
+
+<!--                 -->
+<!-- Careers Section -->
+<!--                 -->
+
+<script>
+  // JavaScript for modal functionality 
+document.querySelector('.open-careers-modal').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('careers-modal').style.display = 'flex';
+});
+
+document.querySelector('.srex-footer__modal__close').addEventListener('click', function() {
+  document.getElementById('careers-modal').style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  const modal = document.getElementById('careers-modal');
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+window.addEventListener('keydown', function(event) {
+  const modal = document.getElementById('careers-modal');
+  if (event.key === 'Escape') {
+    modal.style.display = 'none';
+  }
+});
+
+  </script>
+
+
+
   </body>
 </html>
