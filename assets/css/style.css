@@ -682,60 +682,7 @@ input:focus {
 }
 
 
-/* Floating Social Media Icons */
-/* .social-icons {
-  position: fixed;
-  top: 66%;
-  left: 95%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
 
-.social-icon {
-  display: block;
-  margin: 10px 0;
-  text-align: center;
-  background-color: #333;
-  color: #fff;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  transition: background-color 0.3s;
-}
-
-.social-icon i {
-  font-size: 20px;
-}
-
-.social-icon:hover {
-  background-color: #555;
-} */
-
-/* Floating Social Media Icons */
-/* Floating Social Media Icons */
-.social-icons {
-  position: fixed;
-  top: 50%;
-  left: 95%;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-
-.social-icon {
-  display: block;
-  margin: 10px 0;
-  text-align: center;
-  background-color: #333;
-  color: #FAAA1B;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 30%;
-  transition: background-color 0.3s;
-  animation: pulse-spread 2.5s infinite;
-  box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); /* Initial shadow */
-}
 
 .social-icon i {
   font-size: 20px;
