@@ -4549,79 +4549,6 @@ input:focus {
   }
 }
 
-/*------------------------------------
-	19/ Testimonial
-------------------------------------*/
-/* .srex-testimonial-one {
-  position: relative;
-  background-color: #F8F7F0;
-  margin-top: 100px;
-  background-image: url(../images/testimonial-bg.png);
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one {
-    margin-top: 0px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one {
-    margin-top: 0px;
-  }
-}
-.srex-testimonial-one .row {
-  -ms-flex-align: center;
-      align-items: center;
-}
-.srex-testimonial-one__left {
-  position: relative;
-  z-index: 9;
-}
-.srex-testimonial-one__left .srex-section__head {
-  padding-top: 80px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__left .srex-section__head {
-    padding-top: 40px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__left .srex-section__head {
-    padding-top: 40px;
-  }
-}
-.srex-testimonial-one__slider {
-  margin-top: 60px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider {
-    margin-top: 40px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__slider {
-    margin-top: 40px;
-  }
-}
-.srex-testimonial-one__slider__item {
-  background-color: #2D65A7;
-  color: #fff;
-  padding: 70px 60px;
-  border-radius: 20px;
-  background-image: url(../images/plant.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-} */
-
-/* Hover effect on quote alt image. */
-/* .srex-testimonial-one__slider__item__quote {
-  transition: transform 0.3s ease; /* Smooth transition for the effect */
-/* } */
-
-/* .srex-testimonial-one__slider__item__quote:hover {
-  transform: scale(1.1); /* Scale the image to 110% */
- 
 
 
 @media (max-width: 767px) {
@@ -4724,7 +4651,7 @@ input:focus {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 120px;
-  padding-bottom: 270px;
+  padding-bottom: 100px;
   width: 100%;
   /* border-radius: 40px; */
 }
