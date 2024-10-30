@@ -686,87 +686,112 @@ input:focus {
 
 
 
-.social-icon i {
-  font-size: 20px;
-}
+/*.........................*/
+    /* Social Icons */
 
-.social-icon:hover {
-  color: #FAAA1B;
-  background-color: #555;
-}
-
-/* Keyframes for pulse spread animation */
-@keyframes pulse-spread {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
-  }
-  70% {
-    transform: scale(.9); /* Expand size */
-    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
-  }
-}
-
-/* Responsive CSS for smaller devices */
-@media only screen and (max-width: 768px) {
-  .social-icon {
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-  }
-
-  .social-icon i {
-    font-size: 18px;
-  }
-
-  @keyframes pulse-spread {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+    .social-icons {
+      position: fixed;
+      top: 50%;
+      left: 95%;
+      transform: translateY(-50%);
+      z-index: 1000;
     }
-    70% {
-      transform: scale(1.1);
-      box-shadow: 0 0 15px 15px rgba(250, 170, 27, 0);
+    
+    .social-icon {
+      display: block;
+      margin: 10px 0;
+      text-align: center;
+      background-color: #333;
+      color: #FAAA1B;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 30%;
+      transition: background-color 0.3s;
+      animation: pulse-spread 2.5s infinite;
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); /* Initial shadow */
     }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+    
+    .social-icon i {
+      font-size: 20px;
     }
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .social-icon {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-  }
-
-  .social-icon i {  
-    font-size: 16px;
-  }
-
-  @keyframes pulse-spread {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+    
+    .social-icon:hover {
+      color: #FAAA1B;
+      background-color: #555;
     }
-    70% {
-      transform: scale(1.05);
-      box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
+    
+    /* Keyframes for pulse spread animation */
+    @keyframes pulse-spread {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+      }
+      70% {
+        transform: scale(.9); /* Expand size */
+        box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
+      }
     }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+    
+    /* Responsive CSS for smaller devices */
+    @media only screen and (max-width: 768px) {
+      .social-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+      }
+    
+      .social-icon i {
+        font-size: 18px;
+      }
+    
+      @keyframes pulse-spread {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+        }
+        70% {
+          transform: scale(1.1);
+          box-shadow: 0 0 15px 15px rgba(250, 170, 27, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+        }
+      }
     }
-  }
-}
-
-
+    
+    @media only screen and (max-width: 480px) {
+      .social-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    
+      .social-icon i {  
+        font-size: 16px;
+      }
+    
+      @keyframes pulse-spread {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
+        }
+      }
+    }
+    
 
 
 
