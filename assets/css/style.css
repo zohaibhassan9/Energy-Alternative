@@ -243,7 +243,6 @@ animation-fill-mode: both;
     opacity: 0;
   }
 }
-
 /*------------------------------------
 	04/ Fonts
 ------------------------------------*/
@@ -389,7 +388,7 @@ h2 {
     line-height: 50px;
   }
 }
- 
+
 h3, .srex-accordion .accordion-header__left__badge {
   color: #24231D;
   font-family: Manrope;
@@ -500,7 +499,6 @@ input:focus {
     padding-bottom: 30px;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .srex-section {
     padding-bottom: 40px;
@@ -583,7 +581,7 @@ input:focus {
   text-transform: capitalize;
   transition: all 0.3s ease;
   display: inline-block;
-  padding: 15px 25px; 
+  padding: 15px 25px;
 }
 .srex-btn {
   font-family: Manrope;
@@ -686,112 +684,286 @@ input:focus {
 
 
 
-/*.........................*/
-    /* Social Icons */
 
-    .social-icons {
-      position: fixed;
-      top: 50%;
-      left: 95%;
-      transform: translateY(-50%);
-      z-index: 1000;
+/* Floating Social Media Icons */
+/* .social-icons {
+  position: fixed;
+  top: 66%;
+  left: 95%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icon {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.social-icon i {
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  background-color: #555;
+} */
+
+/* Floating Social Media Icons */
+/* Floating Social Media Icons */
+
+
+
+
+
+/* .navigation {
+    position: fixed;
+    top: 50%;
+    left: 90%;
+    display: flex;
+  flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.navigation {
+  position: fixed;  /* Ensure it's fixed on the page */
+  top: 70%;         /* Adjust vertical position */
+  left: 90%;        /* Adjust horizontal position */
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;     /* Ensure the icons are above other content */
+}
+
+.menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #faaa1b;
+  border-radius: 70px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Main menu container */
+.navigation .menu {
+  display: none; /* Hide by default */
+  position: absolute;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+/* Show menu when active */
+.navigation .menu.active {
+  display: block; /* Show menu when active */
+}
+
+
+.menuToggle i {
+  font-size: 2em; /* Adjust the size of the icon as needed */
+  color: #087fe0; /* You can change the color as needed */
+}
+
+.menuToggle.active i {
+  transform: rotate(315deg); /* Optional: Add a rotation effect on click */
+  transition: transform 1.5s;
+}
+
+.menuToggle.active::before {
+    transform: rotate(215deg);
+}
+
+.menu {
+    position: absolute;
+    width: 70px; /* Adjust width */
+    height: 270px; /* Adjust height for vertical layout */
+    background: #fff;
+    border-radius: 35px; /* Adjust for rounder edges */
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Evenly distribute space between icons */
+    align-items: center;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+    transition-delay: 1s, 0.5s, 0.5s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuToggle.active~.menu {
+    z-index: 1;
+    transform: translateY(-140px); /* Move vertically */
+    transition-delay: 0s, 0.5s, 0.5s;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    left: calc(50% - 8px);
+    bottom: 4px;
+    transform: rotate(45deg);
+    border-radius: 2px;
+    transition: 0.5s;
+}
+
+.menuToggle.active~.menu::before {
+    transition-delay: 0.5s;
+    bottom: -6px;
+}
+
+.menu ul {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Vertical layout */
+    justify-content: space-evenly; /* Center items evenly */
+    align-items: center; /* Center horizontally */
+    height: 100%; /* Full height for vertical centering */
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    list-style: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: 0.25s;
+    transition-delay: calc(0s + var(--i));
+}
+
+.menuToggle.active~.menu ul li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition-delay: calc(0.75s + var(--i));
+}
+
+.menu ul li a {
+    display: block;
+    font-size: 2.2em;
+}
+
+
+/* Social Icons */
+/*             */
+
+
+.social-icons {
+  position: fixed;
+  top: 50%;
+  left: 94%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.social-icon {
+  display: block;
+  margin: 10px 0;
+  text-align: center;
+  background-color: #333;
+  color: #FAAA1B;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 30%;
+  transition: background-color 0.3s;
+  animation: pulse-spread 2s infinite;
+  box-shadow: 0 0 0 0 rgba(209, 209, 209, 0.4);
+}
+
+.social-icon i {
+  font-size: 20px;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  background-color: #FAAA1B;
+}
+
+/* Keyframes for pulse spread animation */
+@keyframes pulse-spread {
+  0% {
+    transform: scale(1);
+    /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+  }
+  70% {
+    transform: scale(.9); /* Expand size */
+    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
+  }
+}
+
+
+
+  .social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+
+
+  .social-icon i {
+    font-size: 18px;
+  }
+
+  @keyframes pulse-spread {
+    0% {
+      transform: scale(1);
+      /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
     }
-    
-    .social-icon {
-      display: block;
-      margin: 10px 0;
-      text-align: center;
-      background-color: #333;
-      color: #FAAA1B;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      border-radius: 30%;
-      transition: background-color 0.3s;
-      animation: pulse-spread 2.5s infinite;
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); /* Initial shadow */
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px 15px rgba(250, 170, 27, 0);
     }
-    
-    .social-icon i {
-      font-size: 20px;
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
-    
-    .social-icon:hover {
-      color: #FAAA1B;
-      background-color: #555;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .social-icon i {
+    font-size: 16px;
+  }
+
+  @keyframes pulse-spread {
+    0% {
+      transform: scale(1);
+      /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
     }
-    
-    /* Keyframes for pulse spread animation */
-    @keyframes pulse-spread {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
-      }
-      70% {
-        transform: scale(.9); /* Expand size */
-        box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
-      }
-      100% {
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
-      }
+    70% {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
     }
-    
-    /* Responsive CSS for smaller devices */
-    @media only screen and (max-width: 768px) {
-      .social-icon {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-      }
-    
-      .social-icon i {
-        font-size: 18px;
-      }
-    
-      @keyframes pulse-spread {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
-        }
-        70% {
-          transform: scale(1.1);
-          box-shadow: 0 0 15px 15px rgba(250, 170, 27, 0);
-        }
-        100% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
-        }
-      }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
-    
-    @media only screen and (max-width: 480px) {
-      .social-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-      }
-    
-      .social-icon i {  
-        font-size: 16px;
-      }
-    
-      @keyframes pulse-spread {
-        0% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
-        }
-        70% {
-          transform: scale(1.05);
-          box-shadow: 0 0 10px 10px rgba(250, 170, 27, 0);
-        }
-        100% {
-          transform: scale(1);
-          box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
-        }
-      }
-    }
-    
+  }
+}
+
+
 
 
 
@@ -1037,14 +1209,9 @@ input:focus {
   background-image: url('../images/services/renewable-energy-alternative-pakistan-investment-solar-panels-piggy-bank-transformed.jpeg');
 }
 
-.netmetering {
-  background-image: url('../images/services/2.jpg');
-}
-
 .testing {
   background-image: url('../images/services/energy-alternatives-solar-testing-service.png');
 }
-
 
 .solar-pv-sticky-left{
   @media (min-width: 991px) {
@@ -2680,13 +2847,12 @@ input:focus {
 }
 .srex-about-us-three__left__img-3-col::before {
   content: "";
-  background : url(../images/dots.png) no-repeat;
   position: absolute;
   top: 0;
   right: -44px;
   width: 100%;
   bottom: 0
-
+  background: url(../images/dots.png) no-repeat;
 }
 .srex-about-us-three__left__img-3 {
   margin-top: -80px;
@@ -4549,6 +4715,80 @@ input:focus {
   }
 }
 
+/*------------------------------------
+	19/ Testimonial
+------------------------------------*/
+/* .srex-testimonial-one {
+  position: relative;
+  background-color: #F8F7F0;
+  margin-top: 100px;
+  background-image: url(../images/testimonial-bg.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+@media (max-width: 767px) {
+  .srex-testimonial-one {
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .srex-testimonial-one {
+    margin-top: 0px;
+  }
+}
+.srex-testimonial-one .row {
+  -ms-flex-align: center;
+      align-items: center;
+}
+.srex-testimonial-one__left {
+  position: relative;
+  z-index: 9;
+}
+.srex-testimonial-one__left .srex-section__head {
+  padding-top: 80px;
+}
+@media (max-width: 767px) {
+  .srex-testimonial-one__left .srex-section__head {
+    padding-top: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .srex-testimonial-one__left .srex-section__head {
+    padding-top: 40px;
+  }
+}
+.srex-testimonial-one__slider {
+  margin-top: 60px;
+}
+@media (max-width: 767px) {
+  .srex-testimonial-one__slider {
+    margin-top: 40px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .srex-testimonial-one__slider {
+    margin-top: 40px;
+  }
+}
+.srex-testimonial-one__slider__item {
+  background-color: #2D65A7;
+  color: #fff;
+  padding: 70px 60px;
+  border-radius: 20px;
+  background-image: url(../images/plant.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+} */
+
+/* Hover effect on quote alt image. */
+/* .srex-testimonial-one__slider__item__quote {
+  transition: transform 0.3s ease; /* Smooth transition for the effect */
+/* } */
+
+/* .srex-testimonial-one__slider__item__quote:hover {
+  transform: scale(1.1); /* Scale the image to 110% */
+ */
+
 
 
 @media (max-width: 767px) {
@@ -4556,7 +4796,6 @@ input:focus {
     padding: 40px 30px;
   }
 }
-
 .srex-testimonial-one__slider__item__quote {
   height: 60px;
   width: 60px;
@@ -4651,7 +4890,7 @@ input:focus {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 120px;
-  padding-bottom: 100px;
+  padding-bottom: 270px;
   width: 100%;
   /* border-radius: 40px; */
 }
@@ -5756,15 +5995,6 @@ input:focus {
   font-size: 16px;
   color: #fff;
 }
-
-
-
-/*------------------------------------
-	 Careers Section
-------------------------------------*/
-
-
-
 
 /*------------------------------------
 	22/ Support - 2
