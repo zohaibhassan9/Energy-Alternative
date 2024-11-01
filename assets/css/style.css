@@ -6231,7 +6231,7 @@ padding: 40px;
 	display: block;
 	line-height: 50px;
 	transition: 0.3s;
-}
+} 
 .post-slide-blog h2 a:hover{color:#2D65A7;}
 .post-slide-blog span {
 	text-transform: capitalize;
@@ -6239,7 +6239,7 @@ padding: 40px;
 	margin-bottom: 15px;
 	display: inline-block;
 	margin-top: 20px;
-}
+} 
 .post-slide-blog span i{color:#2D65A7;}
 .post-slide-blog > a{margin-bottom: 0px;}
 .post-slide-blog p{margin-bottom: 30px;}
