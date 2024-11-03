@@ -5590,7 +5590,7 @@ input:focus {
 
 .header h1 {
   font-size: 2.5em;
-  color: #007BFF;
+  color: #2D65A7;
 }
 
 .header p {
@@ -5632,7 +5632,7 @@ ul li {
 
 .position h3 {
   font-size: 1.5em;
-  color: #007BFF;
+  color: #2d65a7;
 }
 
 .position p {
@@ -5641,7 +5641,7 @@ ul li {
 }
 
 .apply a {
-  color: #007BFF;
+  color: #2d65a7;
   text-decoration: none;
 }
 
