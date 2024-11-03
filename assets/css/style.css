@@ -5572,6 +5572,134 @@ input:focus {
   color: #2D65A7;
 }
 
+
+
+/* Careers */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  color: #007BFF;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+.intro, .why-work, .values, .positions, .apply {
+  margin: 20px 0;
+}
+
+.intro p, .apply p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.position {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.position h3 {
+  font-size: 1.5em;
+  color: #007BFF;
+}
+
+.position p {
+  font-size: 1em;
+  color: #555;
+}
+
+.apply a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.apply a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2em;
+  }
+
+  h2 {
+      font-size: 1.5em;
+  }
+
+  ul li, .position h3 {
+      font-size: 1.1em;
+  }
+
+  .apply p {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+      font-size: 1.8em;
+  }
+
+  h2 {
+      font-size: 1.3em;
+  }
+
+  ul li, .position h3 {
+      font-size: 1em;
+  }
+
+  .apply p {
+      font-size: 0.9em;
+  }
+}
+
+
 /*------------------------------------
 	21/ Footer
 ------------------------------------*/
