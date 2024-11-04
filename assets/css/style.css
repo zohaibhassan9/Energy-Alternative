@@ -731,15 +731,15 @@ input:focus {
     justify-content: center;
     align-items: center;
 } */
-.navigation {
-  position: fixed;  /* Ensure it's fixed on the page */
-  top: 70%;         /* Adjust vertical position */
-  left: 90%;        /* Adjust horizontal position */
+/* .navigation {
+  position: fixed; 
+  top: 70%;       
+  left: 90%;     
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 999;     /* Ensure the icons are above other content */
+  z-index: 999;    
 }
 
 .menuToggle {
@@ -755,26 +755,25 @@ input:focus {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Main menu container */
-.navigation .menu {
-  display: none; /* Hide by default */
-  position: absolute;
-  z-index: 1000; /* Ensure it is above other content */
-}
 
-/* Show menu when active */
+.navigation .menu {
+  display: none; 
+  position: absolute;
+  z-index: 1000; 
+
+
 .navigation .menu.active {
-  display: block; /* Show menu when active */
+  display: block;
 }
 
 
 .menuToggle i {
-  font-size: 2em; /* Adjust the size of the icon as needed */
-  color: #087fe0; /* You can change the color as needed */
+  font-size: 2em; 
+  color: #087fe0;
 }
 
 .menuToggle.active i {
-  transform: rotate(315deg); /* Optional: Add a rotation effect on click */
+  transform: rotate(315deg);
   transition: transform 1.5s;
 }
 
@@ -784,14 +783,14 @@ input:focus {
 
 .menu {
     position: absolute;
-    width: 70px; /* Adjust width */
-    height: 270px; /* Adjust height for vertical layout */
+    width: 70px; 
+    height: 270px; 
     background: #fff;
-    border-radius: 35px; /* Adjust for rounder edges */
+    border-radius: 35px;
     z-index: -1;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Evenly distribute space between icons */
+    justify-content: space-evenly; 
     align-items: center;
     transition: transform 0.5s, width 0.5s, height 0.5s;
     transition-delay: 1s, 0.5s, 0.5s;
@@ -800,7 +799,7 @@ input:focus {
 
 .menuToggle.active~.menu {
     z-index: 1;
-    transform: translateY(-140px); /* Move vertically */
+    transform: translateY(-140px);
     transition-delay: 0s, 0.5s, 0.5s;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
 }
@@ -826,10 +825,10 @@ input:focus {
 .menu ul {
     position: relative;
     display: flex;
-    flex-direction: column; /* Vertical layout */
-    justify-content: space-evenly; /* Center items evenly */
-    align-items: center; /* Center horizontally */
-    height: 100%; /* Full height for vertical centering */
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -855,13 +854,13 @@ input:focus {
     display: block;
     font-size: 2.2em;
 }
-
+ */
 
 /* Social Icons */
 /*             */
 
 
-.social-icons {
+/* .social-icons {
   position: fixed;
   top: 50%;
   left: 94%;
@@ -891,28 +890,28 @@ input:focus {
 .social-icon:hover {
   color: #ffffff;
   background-color: #FAAA1B;
-}
+} */
 
 /* Keyframes for pulse spread animation */
-@keyframes pulse-spread {
+/* @keyframes pulse-spread {
   0% {
     transform: scale(1);
-    /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
   }
   70% {
-    transform: scale(.9); /* Expand size */
-    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0); /* Spread shadow */
+    transform: scale(.9);
+    box-shadow: 0 0 20px 20px rgba(250, 170, 27, 0);
   }
   100% {
     transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0); /* Reset shadow */
+    box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
   }
 }
 
 
 
   .social-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+    transform: scale(1.1); 
   }
 
 
@@ -923,7 +922,7 @@ input:focus {
   @keyframes pulse-spread {
     0% {
       transform: scale(1);
-      /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
     }
     70% {
       transform: scale(1.1);
@@ -934,8 +933,8 @@ input:focus {
       box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
   }
-}
-
+} */
+/* 
 @media only screen and (max-width: 480px) {
   .social-icon {
     width: 30px;
@@ -950,7 +949,7 @@ input:focus {
   @keyframes pulse-spread {
     0% {
       transform: scale(1);
-      /* box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7); */
+      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
     }
     70% {
       transform: scale(1.05);
@@ -961,7 +960,7 @@ input:focus {
       box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
   }
-}
+} */
 
 
 
