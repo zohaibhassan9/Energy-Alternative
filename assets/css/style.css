@@ -322,20 +322,14 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-a:hover,
-a:focus {
+a:hovera:focus {
   color: #24231D;
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
+h1,h2,h3,
 .srex-accordion .accordion-header__left__badge,
-h4,
-h5,
-h6,
-p {
+h4,h5,h6,p {
   margin: 0;
   color: #24231D;
   transition: all 0.3s ease-in-out;
