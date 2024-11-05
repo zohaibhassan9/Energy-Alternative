@@ -854,10 +854,10 @@ input:focus {
 /*             */
 
 
-/* .social-icons {
+ .social-icons {
   position: fixed;
   top: 50%;
-  left: 94%;
+  left: 92%;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -868,9 +868,9 @@ input:focus {
   text-align: center;
   background-color: #333;
   color: #FAAA1B;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   border-radius: 30%;
   transition: background-color 0.3s;
   animation: pulse-spread 2s infinite;
@@ -887,7 +887,7 @@ input:focus {
 } */
 
 /* Keyframes for pulse spread animation */
-/* @keyframes pulse-spread {
+ @keyframes pulse-spread {
   0% {
     transform: scale(1);
     box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
@@ -916,7 +916,7 @@ input:focus {
   @keyframes pulse-spread {
     0% {
       transform: scale(1);
-      box-shadow: 0 0 0 0 rgba(250, 170, 27, 0.7);
+      box-shadow: 0 0 0 0 rgba(205, 205, 205, 0.7);
     }
     70% {
       transform: scale(1.1);
@@ -927,13 +927,17 @@ input:focus {
       box-shadow: 0 0 0 0 rgba(250, 170, 27, 0);
     }
   }
-} */
-/* 
+} 
+
 @media only screen and (max-width: 480px) {
   .social-icon {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+
+      top: unset; /* Remove the top positioning */
+      bottom: 10px; /* Position at the bottom */
+      left: 90%; /* Center horizontally */
+      transform: translateX(-50%); /* Center horizontally */
+      flex-direction: row;
+      gap: 20px; /* Arrange icons in a row */
   }
 
   .social-icon i {
