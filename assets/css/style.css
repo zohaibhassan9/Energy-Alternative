@@ -2162,6 +2162,24 @@ button:focus {
   }
 }
 
+
+.about-section {
+
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+}
+.about-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.about-section p {
+  font-size: 16px;
+  color: #666;
+}
+
+
 /*------------------------------------
 	Hero Two
 ------------------------------------*/
