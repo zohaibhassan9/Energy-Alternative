@@ -2105,6 +2105,7 @@ input:focus {
 }
 
 /* Gallery Modal */
+
 .gallery-modal {
   display: none;
   position: fixed;
