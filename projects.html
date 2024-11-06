@@ -387,7 +387,7 @@
             });
         });
         
-        
+
         // Open the gallery modal
         function openGallery(projectId) {
             const galleryModal = document.getElementById('gallery-modal');
@@ -405,7 +405,7 @@
             // Handle next and previous image navigation
             document.querySelector('.next-btn').addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % images.length;
-                galleryImage.src = images[currentIndex];
+                galleryImage.src = images[currentIndex]; 
             });
         
             document.querySelector('.prev-btn').addEventListener('click', () => {
