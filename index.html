@@ -924,156 +924,73 @@
   
 </script>
     <!-- Question Section Start -->
-    <section class="srex-question-two srex-section">
+    <section class="faq-section" style="background-color: rgb(252, 248, 243); padding: 80px">
       <div class="container">
         <div class="row">
-          <div class="col-12 col-lg-6">
-            <div
-              class="srex-question-two__right wow ud-fade-in-right"
-              data-wow-delay="200ms"
-            >
-              <img
-                src="./assets/images/home-two/question/FAQ.jpg"
-              
-              />
-    
-            </div>
+          <!-- FAQ Image Section -->
+          <div class="col-lg-6 faq-image">
+            <img src="./assets/images/home-two/question/FAQ.jpg" alt="FAQ Image">
           </div>
-          <div class="col-12 col-lg-6">
-            <div
-              class="srex-section__head wow ud-fade-in-left"
-              data-wow-delay="200ms"
-            >
-              <h2 class="srex-section__head__title">
-                Frequently Ask Question
-              </h2>
-              <p class="mb-5 mt-3">
-                We have been operating for over a decade, providing top-notch
-                services to our clients and building a strong track record.
+    
+          <!--  FAQ Content Section  -->
+          <div class="col-lg-6 faq-content">
+            <div class="section-header">
+              <h2>Frequently Asked Questions</h2>
+              <p>
+                We have been operating for over a decade, providing top-notch services to our clients and building a strong track record.
               </p>
             </div>
-            <div
-              class="srex-question-two__left wow ud-fade-in-left"
-              data-wow-delay="200ms"
-            >
-              <div class="srex-accordion accordion" id="faq">
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <div
-                      class="accordion-button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseOne"
-                      aria-expanded="true"
-                      aria-controls="collapseOne"
-                      role="button"
-                    >
-                      <div class="accordion-header__left">
-                        <h3>
-                          How long would it take to recover my investment?
-                        </h3>
-                      </div>
-                      <i class="fa-solid fa-angle-down open"></i>
-                      <i class="fa-solid fa-angle-up close"></i>
-                    </div>
-                  </div>
-                  <div
-                    id="collapseOne"
-                    class="accordion-collapse collapse show"
-                    data-bs-parent="#faq"
-                  >
-                    <div class="accordion-body">
-                      SRE's customized solar solutions offer significant savings
-                      and typically pay back in under 4 years due to rising
-                      electricity rates and other factors.
-                    </div>
+            
+            <!-- Accordion for FAQs -->
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                    How long would it take to recover my investment?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Our customized solar solutions offer significant savings and typically pay back in under 4 years due to rising electricity rates and other factors.
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <div
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                      role="button"
-                    >
-                      <div class="accordion-header__left">
-                        <h3>
-                          How does the system efficiency change over time?
-                        </h3>
-                      </div>
-                      <i class="fa-solid fa-angle-down open"></i>
-                      <i class="fa-solid fa-angle-up close"></i>
-                    </div>
-                  </div>
-                  <div
-                    id="collapseTwo"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faq"
-                  >
-                    <div class="accordion-body">
-                      Total efficiency drop in 15 years will be 11%. After 25
-                      years, the panels will still be working at 80% efficiency.
-                    </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                    How does the system efficiency change over time?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Total efficiency drop in 15 years will be 11%. After 25 years, the panels will still be working at 80% efficiency.
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <div
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseThree"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                      role="button"
-                    >
-                      <div class="accordion-header__left">
-                        <h3>What happens when the weather is cloudy?</h3>
-                      </div>
-                      <i class="fa-solid fa-angle-down open"></i>
-                      <i class="fa-solid fa-angle-up close"></i>
-                    </div>
-                  </div>
-                  <div
-                    id="collapseThree"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faq"
-                  >
-                    <div class="accordion-body">
-                      Even on overcast days, the system provides significant
-                      heating. In fog, clouds, or rain, the system switches to
-                      an alternate source if necessary.
-                    </div>
+              </div>
+              
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                    What happens when the weather is cloudy?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Even on overcast days, the system provides significant heating. In fog, clouds, or rain, the system switches to an alternate source if necessary.
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <div class="accordion-header">
-                    <div
-                      class="accordion-button collapsed"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapseFour"
-                      aria-expanded="false"
-                      aria-controls="collapseTwo"
-                      role="button"
-                    >
-                      <div class="accordion-header__left">
-                        <h3>How often is the maintenance required?</h3>
-                      </div>
-                      <i class="fa-solid fa-angle-down open"></i>
-                      <i class="fa-solid fa-angle-up close"></i>
-                    </div>
-                  </div>
-                  <div
-                    id="collapseFour"
-                    class="accordion-collapse collapse"
-                    data-bs-parent="#faq"
-                  >
-                    <div class="accordion-body">
-                      This system is almost maintenance free. Occasional washing
-                      of solar panels is required to attain the maximum
-                      efficiency possible.
-                    </div>
+              </div>
+    
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                    How often is the maintenance required?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    The system is almost maintenance-free. Occasional washing of solar panels is required to attain maximum efficiency.
                   </div>
                 </div>
               </div>
@@ -1082,6 +999,7 @@
         </div>
       </div>
     </section>
+    
 
 
 <!-- NewsLetter Section Start -->
