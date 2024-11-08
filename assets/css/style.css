@@ -961,11 +961,6 @@ input:focus {
 } */
 
 
-
-
-
-
-
 /*------------------------------------
 	Overlay
 ------------------------------------*/
@@ -1208,6 +1203,12 @@ input:focus {
 
 .testing {
   background-image: url('../images/services/energy-alternatives-solar-testing-service.png');
+}
+.netmetering{
+  background-image: url('../images/services/net-metering.jpg');
+}
+.facility-management{
+  background-image: url('../images/services/facility\ management\ service.jpg');
 }
 
 .solar-pv-sticky-left{
