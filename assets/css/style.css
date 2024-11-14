@@ -2060,17 +2060,6 @@ input:focus {
 
 
 
-
-
-
-
-
-/* project */
-
-
-
-/* styles.css */
-
 /* Projects Section */
 .projects-section {
   display: flex;
@@ -2189,167 +2178,195 @@ button:focus {
   .about-section {
       max-width: 90%;      
       padding: 15px;        
+    }
+
+    .about-section h2 {
+        font-size: 20px;      
+    }
+
+    .about-section p {
+        font-size: 14px;
+    }
   }
 
-  .about-section h2 {
-      font-size: 20px;      
-  }
+  /*------------------------------------
+    Hero Two
+  ------------------------------------*/
+  /* Base styles */
 
-  .about-section p {
-      font-size: 14px;
-  }
+
+.green-color {
+    color: #e5a928 !important;
 }
 
-/*------------------------------------
-	Hero Two
-------------------------------------*/
-/* Base styles */
-
-
-
-
-
-
-.green-color{
-  color:#e5a928 !important;
-}
 .srex-hero-two {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%), url(../images/home-two/hero/hero-bg-image.png) no-repeat center center/cover;
+  background-size: cover;
+  width: 1920px;
+  height: 720px;
+  background-position: center;
+  transition: background-image 1s ease-in-out; /* Smooth transition */
 }
+
+
 .srex-hero-two__box {
-  padding: 100px 0px 20px 0;
+    padding: 100px 0px 20px 40px;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box {
-    padding: 80px 0px;
-  }
+    .srex-hero-two__box {
+        padding: 80px 0px;
+    }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-hero-two__box {
-    padding: 90px 0px 70px 0;
-  }
+    .srex-hero-two__box {
+        padding: 90px 0px 70px 0;
+    }
 }
+
 .srex-hero-two__box h1 {
-  color: #fff;
-  font-size: 130px;
-  font-weight: 700;
-  line-height: 115%;
+    color: #fff;
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 115%;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box h1 {
-    font-size: 50px;
-    margin-bottom: 15px;
-  }
+    .srex-hero-two__box h1 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-hero-two__box h1 {
-    font-size: 80px;
-  }
+    .srex-hero-two__box h1 {
+        font-size: 80px;
+    }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
-  .srex-hero-two__box h1 {
-    font-size: 90px;
-  }
+    .srex-hero-two__box h1 {
+        font-size: 90px;
+    }
 }
+
 .srex-hero-two__box h1 span {
-  -webkit-text-stroke: 1px #fff;
-  color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
 }
+
 .srex-hero-two__box h2 {
-  color: #fff;
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 115%;
-  text-align: center;
-  position: relative;
+    color: #fff;
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 115%;
+    text-align: center;
+    position: relative;
 }
+
 @media (max-width: 499px) {
-  .srex-hero-two__box h2 {
-    font-size: 25px;
-    margin-bottom: 15px;
-    text-align: right;
-  }
+    .srex-hero-two__box h2 {
+        font-size: 25px;
+        margin-bottom: 15px;
+        text-align: right;
+    }
 }
+
 @media only screen and (min-width: 500px) and (max-width: 767px) {
-  .srex-hero-two__box h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
-    text-align: right;
-  }
+    .srex-hero-two__box h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+        text-align: right;
+    }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-hero-two__box h2 {
-    font-size: 40px;
-  }
+    .srex-hero-two__box h2 {
+        font-size: 40px;
+    }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
-  .srex-hero-two__box h2 {
-    font-size: 45px;
-  }
+    .srex-hero-two__box h2 {
+        font-size: 45px;
+    }
 }
+
 .srex-hero-two__box h2::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 20%;
-  height: 3px;
-  background-color: #e3e3e3;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    background-color: #e3e3e3;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box h2::before {
-    width: 55px;
-  }
+    .srex-hero-two__box h2::before {
+        width: 55px;
+    }
 }
+
 .srex-hero-two__box p {
-  max-width: 40%;
-  color: #fff;
-  padding-bottom: 30px;
+    max-width: 40%;
+    color: #fff;
+    padding-bottom: 30px;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box p {
-    max-width: 100%;
-  }
+    .srex-hero-two__box p {
+        max-width: 100%;
+    }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-hero-two__box p {
-    max-width: 60%;
-  }
+    .srex-hero-two__box p {
+        max-width: 60%;
+    }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1280px) {
-  .srex-hero-two__box p {
-    max-width: 70%;
-  }
+    .srex-hero-two__box p {
+        max-width: 70%;
+    }
 }
+
 .srex-hero-two__box .srex-btn--outline {
-  border-color: #FAAA1B;
-  color: #fff;
+    border-color: #FAAA1B;
+    color: #fff;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box .srex-btn--outline {
-    padding: 5px 20px;
-  }
+    .srex-hero-two__box .srex-btn--outline {
+        padding: 5px 20px;
+    }
 }
+
 .srex-hero-two__box .srex-btn--outline:hover {
-  border-color: #FAAA1B;
-  background-color: #FAAA1B;
-  color: #fff;
+    border-color: #FAAA1B;
+    background-color: #FAAA1B;
+    color: #fff;
 }
+
 .srex-hero-two__box .srex-btn--primary {
-  background-color: #FAAA1B;
-  border-color: #FAAA1B;
-  color: #fff;
+    background-color: #FAAA1B;
+    border-color: #FAAA1B;
+    color: #fff;
 }
+
 @media (max-width: 767px) {
-  .srex-hero-two__box .srex-btn--primary {
-    padding: 10px 15px;
-  }
+    .srex-hero-two__box .srex-btn--primary {
+        padding: 10px 15px;
+    }
 }
+
 .srex-hero-two__box .srex-btn--primary:hover {
-  background-color: transparent;
-  border: 1px solid #FAAA1B;
-  color: #fff;
+    background-color: transparent;
+    border: 1px solid #FAAA1B;
+    color: #fff;
 }
 
 
@@ -2857,6 +2874,8 @@ button:focus {
     margin: 0 auto;
   }
 }
+
+
 
 .srex-about-us-two {
   margin-top:-150px;

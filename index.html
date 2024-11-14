@@ -131,10 +131,9 @@
         ><i class="fa-brands fa-instagram"></i
         ></a>
         <a href="https://www.tiktok.com/@energy_alternatives" target="_blank" class="social-icon"
-        ><i class="fa-brands fa-tiktok"></i
-          ></a>
-   
-      </div>
+        ><i class="fa-brands fa-tiktok"></i>
+      </a>
+        </div>
     </header>
       <!-- Side Popup -->
       <div class="ud-side-popup ud-side-popup--home-one">
@@ -238,30 +237,31 @@
     <!-- Hero Section Start -->
     <section class="srex-hero-two srex-section">
       <div class="container">
-        <div class="srex-hero-two__box d-flex flex-column">
-          <h1 class="wow ud-fade-in-up" data-wow-delay="200ms">
-            ENERGY <span>ALTERNATIVES</span>
-          </h1>
-          <h2 class="wow green-color ud-fade-in-up" data-wow-delay="200ms">
-            Powered By Nature
-          </h2>
-          <p class="wow ud-fade-in-up" data-wow-delay="200ms">
-            Energy alternatives is a highly diversified and progressive company
-            involved in the business of sales & renewable energy projects in all
-            sectors of Pakistan.
-          </p>
-          <div class="d-flex gap-4 wow ud-fade-in-up" data-wow-delay="200ms">
-            <a href="./about.html" class="srex-btn srex-btn--secondary">
-              Discover
-              <i class="fa-solid fa-plus"></i>
-            </a>
-            <a href="./services.html" class="srex-btn srex-btn--outline">
-              All Services <i class="fa-solid fa-plus"></i>
-            </a>
+          <div class="srex-hero-two__box d-flex flex-column">
+              <h1 class="wow ud-fade-in-up" data-wow-delay="200ms">
+                  ENERGY <span>ALTERNATIVES</span>
+              </h1>
+              <h2 class="wow green-color ud-fade-in-up" data-wow-delay="200ms">
+                  Powered By Nature
+              </h2>
+              <p class="wow ud-fade-in-up" data-wow-delay="200ms">
+                  Energy alternatives is a highly diversified and progressive company
+                  involved in the business of sales & renewable energy projects in all
+                  sectors of Pakistan.
+              </p>
+              <div class="d-flex gap-4 wow ud-fade-in-up" data-wow-delay="200ms">
+                  <a href="./about.html" class="srex-btn srex-btn--secondary">
+                      Discover
+                      <i class="fa-solid fa-plus"></i>
+                  </a>
+                  <a href="./services.html" class="srex-btn srex-btn--outline">
+                      All Services <i class="fa-solid fa-plus"></i>
+                  </a>
+              </div>
           </div>
-        </div>
       </div>
-    </section>
+  </section>
+  
     <!-- Hero Section End -->
 
 
@@ -420,7 +420,6 @@
                 <div class="gallery-item">
                   <img src="assets/images/gallery (1)/20.jpg" alt="About_Us_Right_3" />
                 </div>
-          
                 <div class="gallery-item">
                   <img src="assets/images/gallery (1)/22.jpg" alt="About_Us_Right_3" />
                 </div>
@@ -1394,7 +1393,6 @@ setInterval(scrollGallery, 3000);
 
 
 
-<!--                 -->
 <!-- Careers Section -->
 <!--                 -->
 
@@ -1425,7 +1423,31 @@ window.addEventListener('keydown', function(event) {
 
   </script>
 
+<script>
+  const heroSection = document.querySelector('.srex-hero-two');
+const images = [
+    './assets/1.jpg',
+    './assets/2.jpg',
+    './assets/3.jpg',
+    './assets/4.jpg',
+    './assets/5.jpg',
+    './assets/6.jpg',
+    './assets/7.jpg',
+];
 
+let currentIndex = 0;
 
+// Set the initial background image immediately
+heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${images[currentIndex]})`;
+
+function changeBackgroundImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${images[currentIndex]})`;
+}
+
+// Change background every 2 seconds
+setInterval(changeBackgroundImage, 3000);
+
+</script>
   </body>
 </html>
