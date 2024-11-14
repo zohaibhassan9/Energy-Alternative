@@ -2203,15 +2203,14 @@ button:focus {
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.7) 100%, rgba(0, 0, 0, 0.7) 100%), url(../images/home-two/hero/hero-bg-image.png) no-repeat center center/cover;
   background-size: cover;
-  width: 1920px;
-  height: 720px;
+ 
   background-position: center;
   transition: background-image 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
 }
 
 
 .srex-hero-two__box {
-    padding: 100px 20px;
+    padding: 90px 05px 10px 20px;
 }
 
 @media (max-width: 767px) {
@@ -2228,9 +2227,10 @@ button:focus {
 
 .srex-hero-two__box h1 {
     color: #fff;
-    font-size: 130px;
-    font-weight: 700;
-    line-height: 115%;
+    font-size: 100px;
+    width: 60%;
+    font-weight: 600;
+    line-height: 135%;
 }
 
 @media (max-width: 767px) {
@@ -2259,8 +2259,8 @@ button:focus {
 
 .srex-hero-two__box h2 {
     color: #fff;
-    font-size: 70px;
-    font-weight: 700;
+    font-size: 55px;
+    font-weight: 600;
     line-height: 115%;
     text-align: center;
     position: relative;
@@ -2371,50 +2371,9 @@ button:focus {
 
 
 /*------------------------------------
-	Hero Three
-------------------------------------*/
-.srex-hero-three {
-  background-image: url(../images/home-three/hero-bg.png);
-  background-position: bottom;
-  background-color: #F8F7F0;
-  height: 815px;
-  margin-top: -85px;
-}
-.srex-hero-three__left {
-  max-width: 500px;
-  padding: 200px 0;
-}
-.srex-hero-three__left__title {
-  font-size: 68px;
-  line-height: 78px;
-  font-weight: 700;
-  color: #24231D;
-  text-transform: capitalize;
-}
-.srex-hero-three__left__title span {
-  color: #FAAA1B;
-}
-.srex-hero-three__left__desc {
-  color: #878680;
-  margin-top: 30px;
-}
-.srex-hero-three__left .srex-btn {
-  margin-top: 32px;
-}
-.srex-hero-three__right {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-@media (max-width: 767px) {
-.srex-hero-three__right img{display:none;}
-}
-/*------------------------------------
 	09/ Services
 ------------------------------------*/
 .srex-service {
-  margin-top: 110px;
   background: #fff;
   padding-top: 30px;
 }
@@ -4242,54 +4201,7 @@ button:focus {
 /*------------------------------------
 	15/ Sponsor
 ------------------------------------*/
-/* .srex-sponsor ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-.srex-sponsor ul li {
-  display: inline;
-  cursor: pointer;
-}
 
-.srex-sponsor-two {
-  margin-top: 120px;
-}
-@media (max-width: 767px) {
-  .srex-sponsor-two {
-    margin-top: 60px;
-  }
-}
-.srex-sponsor-two .slick-slide {
-  transition: all 0.3s ease-in-out;
-  padding: 0 10px;
-}
-
-.srex-sponsor-three {
-  padding: 80px 0;
-  margin-top: 100px;
-  background-image: url(../images/home-three/sponsor/bg.png);
-  background-color: rgba(29, 143, 44, 0.8);
-}
-@media (max-width: 767px) {
-  .srex-sponsor-three {
-    margin-top: 60px;
-  }
-}
-.srex-sponsor-three .slick-slide {
-  transition: all 0.3s ease-in-out;
-  padding: 0 10px;
-}
-
-.srex-sponsor__items-item
-{
-  height:60px;
-  align-items:center;
-} */
 .srex-sponsor {
   overflow: hidden; /* Hide overflow for the scrolling effect */
 }
@@ -4448,6 +4360,8 @@ button:focus {
     font-size: 15px;
   }
 }
+
+
 .srex-question-two .accordion-button {
   font-size: 16px;
   font-weight: 600;
@@ -4643,7 +4557,7 @@ button:focus {
 /* General Newsletter Section Styles */
 .srex-news-letter {
   margin-top: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
 }
 
 .srex-news-letter__box {
@@ -4880,182 +4794,12 @@ button:focus {
   }
 }
 
-/*------------------------------------
-	19/ Testimonial
-------------------------------------*/
-/* .srex-testimonial-one {
-  position: relative;
-  background-color: #F8F7F0;
-  margin-top: 100px;
-  background-image: url(../images/testimonial-bg.png);
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one {
-    margin-top: 0px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one {
-    margin-top: 0px;
-  }
-}
-.srex-testimonial-one .row {
-  -ms-flex-align: center;
-      align-items: center;
-}
-.srex-testimonial-one__left {
-  position: relative;
-  z-index: 9;
-}
-.srex-testimonial-one__left .srex-section__head {
-  padding-top: 80px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__left .srex-section__head {
-    padding-top: 40px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__left .srex-section__head {
-    padding-top: 40px;
-  }
-}
-.srex-testimonial-one__slider {
-  margin-top: 60px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider {
-    margin-top: 40px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__slider {
-    margin-top: 40px;
-  }
-}
-.srex-testimonial-one__slider__item {
-  background-color: #2D65A7;
-  color: #fff;
-  padding: 70px 60px;
-  border-radius: 20px;
-  background-image: url(../images/plant.svg);
-  background-repeat: no-repeat;
-  background-position: center center;
-} */
-
-/* Hover effect on quote alt image. */
-/* .srex-testimonial-one__slider__item__quote {
-  transition: transform 0.3s ease; /* Smooth transition for the effect */
-/* } */
-
-/* .srex-testimonial-one__slider__item__quote:hover {
-  transform: scale(1.1); /* Scale the image to 110% */
- */
-
-
-
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider__item {
-    padding: 40px 30px;
-  }
-}
-.srex-testimonial-one__slider__item__quote {
-  height: 60px;
-  width: 60px;
-  margin-bottom: 30px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider__item__quote {
-    height: 40px;
-    width: 40px;
-    margin-bottom: 20px;
-  }
-}
-.srex-testimonial-one__slider__item__text {
-  font-size: 20px;
-  line-height: 40px;
-  color: #fff;
-  font-weight: 500;
-  margin-bottom: 30px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider__item__text {
-    font-size: 15px;
-    line-height: 30px;
-    margin-bottom: 20px;
-  }
-}
-.srex-testimonial-one__slider__item__author h3, .srex-testimonial-one__slider__item__author .srex-accordion .accordion-header__left__badge, .srex-accordion .srex-testimonial-one__slider__item__author .accordion-header__left__badge {
-  margin-bottom: 5px;
-}
-.srex-testimonial-one__slider__item__author h3, .srex-testimonial-one__slider__item__author .srex-accordion .accordion-header__left__badge, .srex-accordion .srex-testimonial-one__slider__item__author .accordion-header__left__badge, .srex-testimonial-one__slider__item__author p {
-  color: #fff;
-}
-.srex-testimonial-one__slider .slick-dots {
-  bottom: 70px;
-  right: 70px;
-  width: auto;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__slider .slick-dots {
-    bottom: 40px;
-    right: 40px;
-  }
-}
-.srex-testimonial-one__slider .slick-dots li button {
-  background-color: transparent;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 1px solid #fff;
-}
-.srex-testimonial-one__slider .slick-dots li button::before {
-  display: none;
-}
-.srex-testimonial-one__slider .slick-dots li.slick-active button {
-  background-color: #fff;
-}
-.srex-testimonial-one__right {
-  position: absolute;
-  top: -90px;
-  right: 0;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__right {
-    position: unset;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__right {
-    position: unset;
-  }
-}
-.srex-testimonial-one__right img {
-  width: 100%;
-  border-top-left-radius: 40px;
-  border-bottom-left-radius: 40px;
-}
-@media (max-width: 767px) {
-  .srex-testimonial-one__right img {
-    border-radius: 20px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-testimonial-one__right img {
-    border-radius: 20px;
-  }
-}
-
 .srex-testimonial-two {
-  margin-top: 10px;
   background-color: #F8F7F0;
   background-image: url(../images/home-two/testimonial-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 120px;
-  padding-bottom: 270px;
+  padding-top: 100px;
   width: 100%;
   /* border-radius: 40px; */
 }
