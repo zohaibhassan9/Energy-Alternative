@@ -589,9 +589,9 @@ input:focus {
   padding: 5px 25px;
 }
 @media (max-width: 767px) {
-  .srex-btn {
+  /* .srex-btn {
     padding: 5px 20px;
-  }
+  } */
 }
 .srex-btn--outline {
   color: #24231D;
