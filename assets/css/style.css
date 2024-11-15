@@ -4111,6 +4111,16 @@ button:focus {
 /*------------------------------------
 	16/ FAQ
 ------------------------------------*/
+.faq-section{
+  background-color: rgb(252, 248, 243);
+  padding: 80px
+}
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 10px;
+  }
+}
+
 .srex-question {
   background: url(../images/home-one/faq/faq-bg.png) no-repeat;
   padding: 120px 0;
