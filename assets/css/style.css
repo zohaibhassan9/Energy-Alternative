@@ -1046,7 +1046,9 @@ input:focus {
 .srex-info-box__item--3 .srex-icon-list p {
   color: #878680;
 }
-.srex-service-text{margin-bottom:20px;}
+.srex-service-text{
+margin-bottom:20px;
+}
 .srex-info-box__item--3 .srex-info-box__item__top-text {
   margin-bottom: 30px;
 }
@@ -1070,7 +1072,7 @@ input:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
 }
 .srex-info-box__more a {
   color: #24231d;
