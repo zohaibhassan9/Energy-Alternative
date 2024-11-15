@@ -4264,11 +4264,6 @@ button:focus {
   margin-top: 60px;
 }
 
-@media (max-width: 767px) {
-  .srex-sponsor-two {
-    margin-top: 60px;
-  }
-}
 
 .srex-sponsor-three {
   padding: 80px 0;
