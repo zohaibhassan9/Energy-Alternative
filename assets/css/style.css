@@ -2238,7 +2238,7 @@ button:focus {
 
 @media (max-width: 767px) {
     .srex-hero-two__box h1 {
-        font-size: 50px;
+        font-size: 30px;
         margin-bottom: 15px;
     }
 }
