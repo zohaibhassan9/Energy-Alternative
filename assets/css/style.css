@@ -485,7 +485,7 @@ input:focus {
 	Section
 ------------------------------------*/
 .srex-section {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -4084,7 +4084,7 @@ button:focus {
 }
 
 .srex-sponsor-two {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 @media (max-width: 767px) {
@@ -4554,13 +4554,13 @@ button:focus {
 	18/ Stats
 ------------------------------------*/
 .srex-stats__item {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
-  gap: 20px;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-pack: center;
+justify-content: center;
+-ms-flex-align: center;
+align-items: center;
+gap: 20px;
 }
 @media (max-width: 767px) {
   .srex-stats__item {
