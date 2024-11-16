@@ -1543,7 +1543,7 @@ margin-bottom:20px;
 }
 .srex-header.sticky-top {
   padding: 15px 0;
-  background-color: #fff;
+  background-color: #f9f9f9;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .srex-header__call svg {
