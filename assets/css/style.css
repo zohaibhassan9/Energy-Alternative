@@ -1197,10 +1197,6 @@ margin-bottom:20px;
 /*------------------------------------
 	06/ Top Header
 ------------------------------------*/
-.srex-top-header {
-  background: #FAE4A3;
-  padding: 5px 0;
-}
 
 @media (max-width: 767px) {
   .srex-top-header {
@@ -1620,7 +1616,7 @@ margin-bottom:20px;
 /*---------------------
     Header Home Three
 ----------------------*/
-.srex-header--home-three {
+/* .srex-header--home-three {
   padding: 0;
   background-color: transparent;
   position: relative;
@@ -1685,7 +1681,7 @@ margin-bottom:20px;
 }
 .srex-header--home-three__call-three h4 a:hover {
   color: #24231D;
-}
+} */
 
 /*---------------------
     Header Hamburger Menu
@@ -5927,7 +5923,7 @@ button {
 }
 
 button:hover {
-  background-color: #218838;
+  background-color: #b4b4b4;
 }
 
 #message {
