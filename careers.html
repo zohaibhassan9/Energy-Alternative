@@ -285,38 +285,41 @@ class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
 </div>
 
 
-
-<!-- career online submisstion form -->
-<div class="careers-section">
-  <div class="form-container">
-    <h1>Join Our Team</h1>
+<!-- career online submission form -->
+<div style="display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; padding: 50px 0;">
+  <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; width: 100%;">
+    <h1 style="text-align: center; color: #333;">Join Our Team</h1>
     <form id="careersForm">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <label for="name" style="display: block; margin-top: 15px; font-weight: bold;">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required>
+      <label for="email" style="display: block; margin-top: 15px; font-weight: bold;">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
 
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+      <label for="phone" style="display: block; margin-top: 15px; font-weight: bold;">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
 
-      <label for="position">Desired Position:</label>
-      <select id="position" name="position" required>
+      <label for="position" style="display: block; margin-top: 15px; font-weight: bold;">Desired Position:</label>
+      <select id="position" name="position" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
         <option value="" disabled selected>Select a position</option>
         <option value="developer">Solar Project Engineer</option>
         <option value="manager">Environmental Analyst</option>
         <option value="designer">Sales and Business Development Manager</option>
-        
       </select>
 
-      <label for="resume">Upload Resume:</label>
-      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+      <label for="resume" style="display: block; margin-top: 15px; font-weight: bold;">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
 
-      <button type="submit">Submit Application</button>
+      <button type="submit" style="width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 4px; background-color: #28a745; color: #fff; cursor: pointer;" 
+              onmouseover="this.style.backgroundColor='#FAAA1B';" 
+              onmouseout="this.style.backgroundColor='#28a745';">
+        Submit Application
+      </button>
     </form>
-    <div id="message"></div>
+    <div id="message" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
   </div>
 </div>
+
 
   <!-- Online submisstion is ended -->
 
