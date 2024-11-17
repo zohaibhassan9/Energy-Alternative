@@ -2041,6 +2041,7 @@ padding: 90px 0px 70px 0;
     width: 60%;
     font-weight: 600;
     line-height: 135%;
+    text-align: left;
 }
 
 @media (max-width: 767px) {
@@ -4766,7 +4767,7 @@ gap: 20px;
 @media (max-width: 767px) {
   .srex-testimonial-two__right__img {
     left: 50px;
-    height: 400px;
+    height: 300px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
