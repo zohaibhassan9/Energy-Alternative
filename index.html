@@ -1356,63 +1356,7 @@ setInterval(scrollGallery, 3000);
 </script>
    
 
-
-<script>// Get the menu toggle element
-  let menuToggle = document.querySelector('.menuToggle');
-  let menu = document.querySelector('.menu'); // Get the menu element
-  
-  // Toggle the menu on click
-  menuToggle.onclick = function () {
-      menuToggle.classList.toggle('active');
-      menu.classList.toggle('active'); // Toggle the menu visibility
-  };
-  
-  // Auto-open the menu when the page loads
-  window.onload = function() {
-      // Open the menu on page load
-      menuToggle.classList.add('active');
-      menu.classList.add('active'); // Ensure menu is also active
-  
-      // Close the menu after 5 seconds
-      setTimeout(function() {
-          menuToggle.classList.remove('active');
-          menu.classList.remove('active'); // Hide the menu when closing
-      }, 3000); // Adjust the time as needed
-  };
-  </script>
-
-
-
 <!-- Careers Section -->
-<!--                 -->
-
-<script>
-  // JavaScript for modal functionality 
-document.querySelector('.open-careers-modal').addEventListener('click', function(e) {
-  e.preventDefault();
-  document.getElementById('careers-modal').style.display = 'flex';
-});
-
-document.querySelector('.srex-footer__modal__close').addEventListener('click', function() {
-  document.getElementById('careers-modal').style.display = 'none';
-});
-
-window.addEventListener('click', function(event) {
-  const modal = document.getElementById('careers-modal');
-  if (event.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-window.addEventListener('keydown', function(event) {
-  const modal = document.getElementById('careers-modal');
-  if (event.key === 'Escape') {
-    modal.style.display = 'none';
-  }
-});
-
-  </script>
-
 <script>
   const heroSection = document.querySelector('.srex-hero-two');
 const images = [
@@ -1438,7 +1382,7 @@ function changeBackgroundImage() {
     heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${images[currentIndex]})`;
 }
 
-// Change background every 2 seconds
+// Change background every 3 seconds
 setInterval(changeBackgroundImage, 3000);
 
 </script>
