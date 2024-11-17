@@ -272,19 +272,6 @@ body {
 
 
 
-
-/* Style for the loading screen */
-#loading-screen {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff; /* Change to your preferred background color */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999; /* Ensure it's above everything else */
-}
-
 /* Logo animation */
 .logo {
   width: 200px; /* Adjust logo size as needed */
@@ -1006,6 +993,8 @@ margin-bottom:20px;
   margin-left: 15px;
   transition: 0.3s;
 }
+
+
 
 /* Background images for each card with unique classes */
 .solar-pv {
@@ -1759,7 +1748,7 @@ margin-bottom:20px;
 /*------------------------------------
 	Hero One
 ------------------------------------*/
-.srex-hero-one {
+/* .srex-hero-one {
   background-color: #F8F7F0;
   padding: 50px 0 30px 0;
   margin-bottom: 40px;
@@ -1826,7 +1815,7 @@ margin-bottom:20px;
   font-size: 68px;
   font-style: normal;
   font-weight: 700;
-  line-height: 115%; /* 78.2px */
+  line-height: 115%;
   text-transform: capitalize;
 }
 @media (max-width: 767px) {
@@ -1883,7 +1872,7 @@ margin-bottom:20px;
     height: 100%;
     margin-bottom: -120px;
   }
-}
+} */
 
 
 
@@ -1981,8 +1970,6 @@ button:focus {
   } 
 }
 
-
-
 .about-section {
   text-align: center;
   padding: 20px;
@@ -2001,7 +1988,7 @@ button:focus {
 }
 
 /* Responsive styling for mobile devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .about-section {
       max-width: 90%;      
       padding: 15px;        
@@ -2014,7 +2001,7 @@ button:focus {
     .about-section p {
         font-size: 14px;
     }
-  }
+  } */
 
   /*------------------------------------
     Hero Two
@@ -2023,7 +2010,7 @@ button:focus {
 
 
 .green-color {
-    color: #e5a928 !important;
+color: #e5a928 !important;
 }
 
 .srex-hero-two {
@@ -2037,19 +2024,19 @@ button:focus {
 
 
 .srex-hero-two__box {
-    padding: 90px 05px 10px 20px;
+padding: 90px 05px 10px 20px;
 }
 
 @media (max-width: 767px) {
-    .srex-hero-two__box {
-        padding: 80px 0px;
+.srex-hero-two__box {
+padding: 80px 0px;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .srex-hero-two__box {
-        padding: 90px 0px 70px 0;
-    }
+.srex-hero-two__box {
+padding: 90px 0px 70px 0;
+}
 }
 
 .srex-hero-two__box h1 {
