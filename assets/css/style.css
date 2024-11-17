@@ -4423,7 +4423,7 @@ padding: 90px 0px 70px 0;
 
 .srex-news-letter__box__right input {
   border-radius: 999px;
-  padding: 16px;
+  padding: 16px 30px;
   border: 2px solid #E3E3E3;
   width: 250px;
   max-width: 100%;
@@ -4436,6 +4436,7 @@ padding: 90px 0px 70px 0;
   background-color: #FFBA08;
   color: #ffffff;
   border-radius: 999px;
+  width: 250px;
   padding: 16px 30px;
   font-weight: 700;
   font-size: 16px;
@@ -5923,7 +5924,7 @@ button {
 }
 
 button:hover {
-  background-color: #b4b4b4;
+  background-color: #FAAA1B;
 }
 
 #message {
