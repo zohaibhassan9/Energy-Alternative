@@ -392,44 +392,52 @@ project5: [
 
 // Open the modal with images based on selected project
 document.querySelectorAll('.project-card').forEach(card => {
-card.addEventListener('click', (event) => {
-const projectId = card.getAttribute('data-project');
-openGallery(projectId);
+  card.addEventListener('click', (event) => {
+    const projectId = card.getAttribute('data-project');
+    openGallery(projectId);
+  });
 });
-});
-
 
 // Open the gallery modal
 function openGallery(projectId) {
-const galleryModal = document.getElementById('gallery-modal'); 
-const galleryImage = document.getElementById('gallery-image'); 
+  const galleryModal = document.getElementById('gallery-modal'); 
+  const galleryImage = document.getElementById('gallery-image'); 
 
-const images = projectImages[projectId];
-let currentIndex = 0;
+  const images = projectImages[projectId];
+  let currentIndex = 0;
 
-// Set the initial image
-galleryImage.src = images[currentIndex];
+  // Set the initial image
+  galleryImage.src = images[currentIndex];
 
-// Show the modal
-galleryModal.style.display = 'flex';
+  // Show the modal
+  galleryModal.style.display = 'flex';
 
-// Handle next and previous image navigation
-document.querySelector('.next-btn').addEventListener('click', () => {
-currentIndex = (currentIndex + 1) % images.length;
-galleryImage.src = images[currentIndex]; 
-});
+  // Auto-scroll functionality
+  let autoScrollInterval = setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    galleryImage.src = images[currentIndex];
+  }, 1500); // Change image every 1.5 seconds
 
-document.querySelector('.prev-btn').addEventListener('click', () => {
-currentIndex = (currentIndex - 1 + images.length) % images.length;
-galleryImage.src = images[currentIndex];
-});
+  // Handle next and previous image navigation
+  document.querySelector('.next-btn').addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Stop auto-scroll on manual navigation
+    currentIndex = (currentIndex + 1) % images.length;
+    galleryImage.src = images[currentIndex];
+  });
 
-// Close the modal when clicked outside
-galleryModal.addEventListener('click', (e) => {
-if (e.target === galleryModal) {
-galleryModal.style.display = 'none';
-}
-});
+  document.querySelector('.prev-btn').addEventListener('click', () => {
+    clearInterval(autoScrollInterval); // Stop auto-scroll on manual navigation
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    galleryImage.src = images[currentIndex];
+  });
+
+  // Close the modal when clicked outside
+  galleryModal.addEventListener('click', (e) => {
+    if (e.target === galleryModal) {
+      galleryModal.style.display = 'none';
+      clearInterval(autoScrollInterval); // Stop auto-scroll when modal is closed
+    }
+  });
 }
 </script>
 
