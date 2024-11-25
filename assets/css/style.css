@@ -1622,22 +1622,6 @@ button:focus {
   color: #666;
 }
 
-/* Responsive styling for mobile devices */
-/* @media (max-width: 768px) {
-  .about-section {
-      max-width: 90%;      
-      padding: 15px;        
-    }
-
-    .about-section h2 {
-        font-size: 20px;      
-    }
-
-    .about-section p {
-        font-size: 14px;
-    }
-  } */
-
   /*------------------------------------
     Hero Two
   ------------------------------------*/
