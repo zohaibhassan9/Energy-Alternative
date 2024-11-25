@@ -4981,7 +4981,7 @@ ul li {
   }
 }
 .srex-footer-two__top__content i {
-  font-size: 40px;
+  font-size: 30px;
   color: #2D65A7;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -4992,8 +4992,11 @@ ul li {
 .srex-footer-two__top__content p {
   color: #fff;
 }
+.srex-footer-two__top__content h4{
+  color: #ffffff;
+}
 .srex-footer-two__top__content p a {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
 }
