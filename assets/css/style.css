@@ -1160,46 +1160,6 @@ margin-bottom:20px;
 	padding: 12px 25px!important;
 }
 }
-/*------------------------------------
-	06/ Top Header
-------------------------------------*/
-
-@media (max-width: 767px) {
-  .srex-top-header {
-    padding: 15px 10px;
-  }
-}
-
-.srex-top-header p {
-  color: #24231D;
-}
-
-@media (max-width: 767px) {
-  .srex-top-header p {
-    font-size: 10px;
-  }
-}
-
-.srex-top-header ul {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.srex-top-header ul li {
-  margin: 0; /* Optional: Reset margin if any */
-}
-
-.srex-top-header ul li a {
-  padding: 0 8px; /* Reduced padding */
-  margin: 0; /* Ensure no margin */
-}
-
-.srex-top-header ul li a:last-child {
-  padding-right: 0;
-}
-
 
 /*------------------------------------
 	07/ Header
