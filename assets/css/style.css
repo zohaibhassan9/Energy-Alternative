@@ -5072,7 +5072,7 @@ ul li {
   color: #fff;
 }
 .footer-two .srex-footer__links__wrapper li a {
-  color: #ffffff;
+  color: #8e8989;
   font-size: 16px;
   font-weight: 500;
 }
@@ -5086,6 +5086,7 @@ ul li {
   border-radius: 999px;
   padding: 16px;
   padding-right: 80px;
+  margin-top: 40px;
   margin-right: 10px;
   background: #24231D;
   border: 2px solid #2F2E28;
@@ -5098,6 +5099,7 @@ ul li {
 .footer-two .srex-footer__form button {
   width: 60px;
   height: 60px;
+   margin-top: 40px;
   background: #2D65A7;
   border-radius: 999px;
   position: absolute;
