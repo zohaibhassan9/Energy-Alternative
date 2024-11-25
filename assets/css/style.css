@@ -270,29 +270,6 @@ body {
 }
 
 
-
-
-/* Logo animation */
-.logo {
-  width: 200px; /* Adjust logo size as needed */
-  animation: logoFadeIn 0.5s ease-out; /* Animation for the logo */
-}
-
-/* Keyframes for logo animation */
-@keyframes logoFadeIn {
-  0% {
-    opacity: 0; /* Start fully transparent */
-    transform: scale(0.8); /* Start slightly smaller */
-  }
-  100% {
-    opacity: 1; /* Fully visible */
-    transform: scale(1); /* End at original size */
-  }}
-/* Animation is ended when a page is fully laoded  */
-
-
-
-
 img {
   max-width: 100%;
   height: auto;
