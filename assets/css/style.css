@@ -1626,7 +1626,7 @@ button:focus {
     Hero Two
   ------------------------------------*/
   /* Base styles */
-/* background section */
+/* background video hero section */
 
 .srex-hero-two {
     position: relative;
@@ -1647,7 +1647,6 @@ button:focus {
 }
 
 
-
 /* heroo */
 .green-color {
 color: #e5a928 !important;
@@ -1662,6 +1661,13 @@ color: #e5a928 !important;
   transition: background-image 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
 }
 
+@media (max-width: 767px) {
+  .srex-hero-two {
+    width: 100%;
+    height:370px;
+    margin-bottom: -85px;
+  }
+  
 
 .srex-hero-two__box {
 padding: 90px 05px 10px 20px;
