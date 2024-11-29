@@ -3881,11 +3881,6 @@ button:focus {
 	17/ News Letter
 ------------------------------------*/
 /* General Newsletter Section Styles */
-.srex-news-letter {
-  margin-top: 100px;
-  margin-bottom: 100px;
-}
-
 .srex-news-letter__box {
   background-color: #2D65A7;
   padding: 50px;
