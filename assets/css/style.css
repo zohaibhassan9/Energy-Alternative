@@ -4876,6 +4876,9 @@ ul li {
 .footer-two .srex-footer__form {
   position: relative;
 }
+.srex-footer__form{
+  margin-top: 30px;
+}
 
 .footer-two .srex-footer__form input {
   border-radius: 999px;
