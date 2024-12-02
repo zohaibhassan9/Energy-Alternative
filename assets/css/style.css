@@ -882,6 +882,8 @@ margin-bottom:20px;
 .srex-info-box--feature-box .srex-info-box__item__img {
   background: #2D65A7;
 }
+
+
 /* Affan Info box iamges styling */
 .custom-info-box__item {
   border-radius: 20px;
@@ -1911,15 +1913,15 @@ button:focus {
 }
 
 .single_ser_details h3 {
-            margin-top: 50px;
-            font-size: 24px;
-            font-weight: bold;
-            scroll-margin-top: 120px;
-        }
+margin-top: 50px;
+font-size: 24px;
+font-weight: bold;
+scroll-margin-top: 120px;
+}
 
 .single_ser_details   p {
-            font-size: 16px;
-            line-height: 1.6;
+font-size: 16px;
+line-height: 1.6;
         }
 
         
