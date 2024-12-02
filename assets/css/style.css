@@ -551,6 +551,7 @@ input:focus {
 .loader-text {
   font-size: 2rem;
   color: #FAAA1B;
+  margin-left: 10px;
   font-family: 'Arial', sans-serif;
   animation: fade-in-out 2s infinite;
 }
