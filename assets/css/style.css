@@ -544,8 +544,20 @@ input:focus {
   display: inline-block;
   width: 10px;
   height: 60px;
-  background-color: #FAAA1B;
+  background-color: #3498db;
   animation: grow-shrink 1.2s infinite ease-in-out;
+}
+
+.loader-text {
+  font-size: 2rem;
+  color: #FAAA1B;
+  font-family: 'Arial', sans-serif;
+  animation: fade-in-out 2s infinite;
+}
+/* Text fade animation */
+@keyframes fade-in-out {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
 }
 
 /* Delay each bar for staggered effect */
