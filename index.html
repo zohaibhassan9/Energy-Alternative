@@ -23,6 +23,17 @@
   </head>
   <body class="body-wrapper home-one" data-scroll-animation="true">
 <!-- Overlay -->
+
+<div id="loader" class="bar-loader">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div id="content" style="display: none;">
+
     <div class="overlay"></div>
 
     <!-- Header Start -->
@@ -71,9 +82,8 @@
         </div>
       </div>
     
-          <div class="social-icons">
-  
-        <a href="https://www.facebook.com/energyalternatives.pk" target="_blank" class="social-icon"
+    <div class="social-icons">
+  <a href="https://www.facebook.com/energyalternatives.pk" target="_blank" class="social-icon"
           ><i class="fab fa-facebook-f"></i
         ></a>
         <a href="https://pk.linkedin.com/company/ealternativespk" target="_blank" class="social-icon"
@@ -1103,6 +1113,8 @@
     </script>
         <!-- Footer End -->
 
+      </div>
+
     <!-- jQuery -->
     <script src="./assets/vendors/jquery/jquery-3.6.0.min.js"></script>
     <!-- Slick Slider JS -->
@@ -1135,7 +1147,19 @@ function scrollGallery() {
 // Scroll images every 3 seconds
 setInterval(scrollGallery, 3000);
 </script>
-   
+
+   <script>
+window.addEventListener('load', function() {
+  // Run the loader animation for 4.5 seconds
+  setTimeout(function() {
+    // Hide loader
+    document.getElementById('loader').style.display = 'none';
+    
+    // Show main content
+    document.getElementById('content').style.display = 'block';
+  }, 4500); // 4500 milliseconds = 4.5 seconds
+});
+ </script>
 
 
 </script>

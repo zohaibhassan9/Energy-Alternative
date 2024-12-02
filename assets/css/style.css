@@ -528,6 +528,55 @@ input:focus {
 }
 
 /*------------------------------------
+	 loader animation
+------------------------------------*/
+.bar-loader {
+  background-color: #f4f4f4;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.bar-loader span {
+  display: inline-block;
+  width: 12px;
+  height: 60px;
+  background-color: #FAAA1B;
+  animation: grow-shrink 1.2s infinite ease-in-out;
+}
+
+/* Delay each bar for staggered effect */
+.bar-loader span:nth-child(1) {
+  animation-delay: 0s;
+}
+.bar-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bar-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.bar-loader span:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.bar-loader span:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+/* Animation: Bars grow and shrink */
+@keyframes grow-shrink {
+  0%, 100% {
+    transform: scaleY(0.4);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+
+/*------------------------------------
 	Button
 ------------------------------------*/
 .form-submit-button{
