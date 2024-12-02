@@ -542,7 +542,7 @@ input:focus {
 
 .bar-loader span {
   display: inline-block;
-  width: 12px;
+  width: 10px;
   height: 60px;
   background-color: #FAAA1B;
   animation: grow-shrink 1.2s infinite ease-in-out;
