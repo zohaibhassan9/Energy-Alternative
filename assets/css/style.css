@@ -1729,7 +1729,7 @@ button:focus {
 @media (max-width: 767px) {
   .srex-hero-two {
     height: auto;
-    min-height: 500px;
+    min-height: 270px;
   }
   /* @media (max-width: 767px) {
     .srex-hero-two {
