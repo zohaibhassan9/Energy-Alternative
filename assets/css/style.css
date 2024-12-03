@@ -1713,10 +1713,10 @@ button:focus {
 #background-video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Default for larger screens */
+  object-fit: cover; 
 }
 
-/* Content Styling */
+
 .srex-hero-two__box {
   position: relative;
   z-index: 1;
@@ -1725,13 +1725,17 @@ button:focus {
   padding: 20px;
 }
 
-/* Mobile Adjustments */
+
 @media (max-width: 767px) {
   .srex-hero-two {
     height: auto;
     min-height: 500px;
   }
-
+  @media (max-width: 767px) {
+    .srex-hero-two {
+      height: 200px;
+      min-height: 270px;
+    }
   .video-background {
     width: 100%;
     height: auto;
