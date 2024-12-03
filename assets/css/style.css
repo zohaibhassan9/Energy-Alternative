@@ -1731,11 +1731,6 @@ button:focus {
     height: auto;
     min-height: 270px;
   }
-  /* @media (max-width: 767px) {
-    .srex-hero-two {
-      height: 200px;
-      min-height: 270px;
-    } */
 
   .video-background {
     width: 100%;
