@@ -3942,7 +3942,9 @@ line-height: 1.6;
 ------------------------------------*/
 /* General Newsletter Section Styles */
 .srex-news-letter__box {
+  margin-top: 100px;
   background-color: #2D65A7;
+  /* margin-top: 100px */
   padding: 50px;
   border-radius: 20px;
   text-align: center;
