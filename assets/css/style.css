@@ -4179,13 +4179,13 @@ gap: 20px;
 }
 
 .srex-testimonial-two {
+  margin-top: -100px;
   background-color: #F8F7F0;
   background-image: url(../images/home-two/testimonial-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 60px;
   width: 100%;
-  /* border-radius: 40px; */
 }
 @media (max-width: 767px) {
   .srex-testimonial-two {
