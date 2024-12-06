@@ -442,7 +442,7 @@ i {
 	Input
 ------------------------------------*/
 input:focus {
-  outline: none;
+outline: none;
 }
 
 /*------------------------------------
@@ -952,11 +952,11 @@ margin-bottom:20px;
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
-  transition: transform 0.8s ease-in-out; /* Smooth transition */
+  transition: transform 0.8s ease-in-out;
   position: relative;
   overflow: hidden;
-  height: 450px; /* Adjusted height for the card */
-  transform: scale(1); /* Set initial size */
+  height: 450px;
+  transform: scale(1);
 }
 
 .custom-info-box__item__overlay {
