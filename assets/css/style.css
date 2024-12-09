@@ -753,8 +753,7 @@ outline: none;
   }
 }
 
-
-
+/* social icon hover */
   .social-icon:hover {
     transform: scale(1.1); 
   }
