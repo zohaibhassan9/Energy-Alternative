@@ -836,7 +836,7 @@ outline: none;
 /*---------------------
 	Info Box
 ----------------------*/
-/* .srex-info-box .row {
+.srex-info-box .row {
   --bs-gutter-x: 30px;
 }
 .srex-info-box__item {
@@ -942,11 +942,11 @@ margin-bottom:20px;
 }
 .srex-info-box--feature-box .srex-info-box__item__img {
   background: #2D65A7;
-} */
+}
 
 
 /* Affan Info box iamges styling */
-.custom-info-box__item {
+/* .custom-info-box__item {
   border-radius: 20px;
   background-size: cover;
   background-position: center;
@@ -964,12 +964,12 @@ margin-bottom:20px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Light overlay */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .custom-info-box__item:hover {
-  transform: scale(0.9); /* Zoom out on hover */
+  transform: scale(0.9);
 }
 
 
@@ -982,7 +982,7 @@ margin-bottom:20px;
 }
 
 .custom-info-box__item__icon img {
-  width: 80px; /* Size of the icon */
+  width: 80px; 
   height: 80px;
   padding:20px;
   border-radius: 20px;
@@ -994,9 +994,9 @@ margin-bottom:20px;
   bottom: -10px;
   right: -10px;
   width: 90%;
-  background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 1); 
   padding: 20px;
-  border-radius: 20px; /* Rounded bottom corners */
+  border-radius: 20px;
   z-index: 2;
   box-sizing: border-box;
   text-align: left;
@@ -1032,7 +1032,7 @@ margin-bottom:20px;
   color: #2D65A7;
   margin-left: 15px;
   transition: 0.3s;
-}
+} */
 
 
 
