@@ -836,7 +836,7 @@ outline: none;
 /*---------------------
 	Info Box
 ----------------------*/
-.srex-info-box .row {
+/* .srex-info-box .row {
   --bs-gutter-x: 30px;
 }
 .srex-info-box__item {
@@ -942,7 +942,7 @@ margin-bottom:20px;
 }
 .srex-info-box--feature-box .srex-info-box__item__img {
   background: #2D65A7;
-}
+} */
 
 
 /* Affan Info box iamges styling */
