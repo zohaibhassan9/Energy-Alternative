@@ -510,13 +510,14 @@ function openGallery(projectId) {
       <div class="border-line"></div>
   
       <!-- Footer Bottom Section -->
-      <div class="srex-footer__bottom">
-        <div class="row">
-          <div  style="width: 100%; justify-content: center; text-align: center;" class="col-12 col-md-6">
-            <p>© 2024 Energy Alternatives | All Rights Reserved</p>
-          </div>
-        
-      </footer>
+      <div id="footer-placeholder"></div>
+      <script>
+        fetch('footer.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+          });
+      </script>
       <!-- Footer End -->
 <!-- jQuery -->
 <script src ="./assets/vendors/jquery/jquery-3.6.0.min.js"></script>
