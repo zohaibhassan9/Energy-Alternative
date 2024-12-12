@@ -944,6 +944,98 @@ margin-bottom:20px;
   background: #2D65A7;
 }
 
+
+/* Affan Info box iamges styling */
+/* .custom-info-box__item {
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  transition: transform 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  height: 450px;
+  transform: scale(1);
+}
+
+.custom-info-box__item__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.custom-info-box__item:hover {
+  transform: scale(0.9);
+}
+
+
+
+.custom-info-box__item__icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.custom-info-box__item__icon img {
+  width: 80px; 
+  height: 80px;
+  padding:20px;
+  border-radius: 20px;
+  background-color: #fff  ;
+}
+
+.custom-info-box__content {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 1); 
+  padding: 20px;
+  border-radius: 20px;
+  z-index: 2;
+  box-sizing: border-box;
+  text-align: left;
+  margin:30px;
+}
+
+.custom-info-box__item__text {
+  margin-bottom: 2px;
+  font-weight: bold;
+  color: #2D65A7;
+}
+
+.custom-service-text {
+  margin-bottom: 4px;
+  color: #878680;
+}
+
+.custom-info-box__more {
+  display: flex;
+  align-items: center;
+}
+
+.custom-info-box__more a {
+  color: #2D65A7;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.custom-info-box__more i {
+  color: #2D65A7;
+  margin-left: 15px;
+  transition: 0.3s;
+} */
+
+
+
 /* Background images for each card with unique classes */
 .solar-pv {
   background-image: url('../images/services/solarpv.jpg');
