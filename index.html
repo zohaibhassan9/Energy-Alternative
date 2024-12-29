@@ -6,21 +6,51 @@
 <title>Enengy Alternatives Powered By Nature</title>
 <link rel="shortcut icon" href=./assets/images/logo-black.png>
 <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" media="print" onload="this.media='all'">
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
-<link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
-<link rel=stylesheet href=./assets/css/style.css>
+<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel=stylesheet href="./assets/vendors/slick-slider/slick.css">
 <link rel="stylesheet" href="https://energyalternatives.com.pk//css/style.css" media="print" onload="this.media='all'">
-
 <style>
-  body {
+  * {
+    box-sizing: border-box;
+    padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
   }
-  .nav-bar {
-    display: flex;
-    justify-content: space-between;
+
+  body {
+    background-color: #fff;
+    color: #000;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: #24231D;
+    font-family: "Manrope", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    transition: all 0.3s ease-in-out;
   }
 </style>
+
+<!-- Preload CSS -->
+<link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+
+<!-- Fallback -->
+<noscript>
+  <link rel="stylesheet" href="assets/css/style.css">
+</noscript>
 
 </head>
 <body class="body-wrapper home-one" data-scroll-animation=true>
