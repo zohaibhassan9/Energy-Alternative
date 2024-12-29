@@ -61,7 +61,6 @@ Colors
 
 
 /* Import only required weights and styles */
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;700&family=Manrope:wght@400;700&display=swap");
 
 /* Use font-display: swap for improved performance */
 @font-face {
@@ -86,9 +85,6 @@ h1, h2, h3 {
 }
 
 
-/**
- * Fade in animation
-*/
 
 @keyframes fadeIn {
   from {
