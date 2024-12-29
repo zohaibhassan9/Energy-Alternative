@@ -60,11 +60,31 @@ Colors
 ------------------------------------*/
 
 
-@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap");
-.ud-animated {
-animation-duration: 1s;
-animation-fill-mode: both;
+/* Import only required weights and styles */
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@400;700&family=Manrope:wght@400;700&display=swap");
+
+/* Use font-display: swap for improved performance */
+@font-face {
+  font-family: 'Exo';
+  src: url('https://fonts.gstatic.com/s/exo/v29/Exo-Regular.woff2') format('woff2');
+  font-display: swap;
 }
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('https://fonts.gstatic.com/s/manrope/v12/Manrope-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Example usage */
+body {
+  font-family: 'Exo', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+}
+
 
 /**
  * Fade in animation
@@ -527,66 +547,6 @@ input:focus {
   width: 95%;
 }
 
-/*------------------------------------
-	 loader animation
-------------------------------------*/
-.bar-loader {
-  background-color: #f4f4f4;
-  display: flex;
-  width: 100%;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-
-.bar-loader span {
-  display: inline-block;
-  width: 10px;
-  height: 60px;
-  background-color: #3498db;
-  animation: grow-shrink 1.2s infinite ease-in-out;
-}
-
-.loader-text {
-  font-size: 2rem;
-  color: #FAAA1B;
-  margin-left: 10px;
-  font-family: 'Arial', sans-serif;
-  animation: fade-in-out 2s infinite;
-}
-/* Text fade animation */
-@keyframes fade-in-out {
-  0%, 100% { opacity: 0.2; }
-  50% { opacity: 1; }
-}
-
-/* Delay each bar for staggered effect */
-.bar-loader span:nth-child(1) {
-  animation-delay: 0s;
-}
-.bar-loader span:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.bar-loader span:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.bar-loader span:nth-child(4) {
-  animation-delay: 0.6s;
-}
-.bar-loader span:nth-child(5) {
-  animation-delay: 0.8s;
-}
-
-/* Animation: Bars grow and shrink */
-@keyframes grow-shrink {
-  0%, 100% {
-    transform: scaleY(0.4);
-  }
-  50% {
-    transform: scaleY(1);
-  }
-}
 
 
 /*------------------------------------
@@ -815,7 +775,7 @@ input:focus {
 /*------------------------------------
 	Overlay
 ------------------------------------*/
-.overlay {
+/* .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -832,7 +792,7 @@ input:focus {
 .overlay--active {
   opacity: 1;
   visibility: visible;
-}
+} */
 
 /*---------------------
 	Info Box
@@ -947,16 +907,16 @@ margin-bottom:20px;
 
 
 /* Affan Info box iamges styling */
-.custom-info-box__item {
+/* .custom-info-box__item {
   border-radius: 20px;
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
-  transition: transform 0.8s ease-in-out; /* Smooth transition */
+  transition: transform 0.8s ease-in-out;
   position: relative;
   overflow: hidden;
-  height: 450px; /* Adjusted height for the card */
-  transform: scale(1); /* Set initial size */
+  height: 450px; 
+  transform: scale(1);
 }
 
 .custom-info-box__item__overlay {
@@ -965,12 +925,12 @@ margin-bottom:20px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Light overlay */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .custom-info-box__item:hover {
-  transform: scale(0.9); /* Zoom out on hover */
+  transform: scale(0.9);
 }
 
 
@@ -983,7 +943,7 @@ margin-bottom:20px;
 }
 
 .custom-info-box__item__icon img {
-  width: 80px; /* Size of the icon */
+  width: 80px; 
   height: 80px;
   padding:20px;
   border-radius: 20px;
@@ -995,9 +955,9 @@ margin-bottom:20px;
   bottom: -10px;
   right: -10px;
   width: 90%;
-  background-color: rgba(255, 255, 255, 1); /* Semi-transparent white background */
+  background-color: rgba(255, 255, 255, 1); 
   padding: 20px;
-  border-radius: 20px; /* Rounded bottom corners */
+  border-radius: 20px; 
   z-index: 2;
   box-sizing: border-box;
   text-align: left;
@@ -1035,7 +995,7 @@ margin-bottom:20px;
   transition: 0.3s;
 }
 
-
+ */
 
 /* Background images for each card with unique classes */
 .solar-pv {
