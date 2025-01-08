@@ -195,16 +195,22 @@ class="srex-header__call srex-header--home-two__call-two d-flex align-items-cent
 <div style="display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; padding: 50px 0;">
   <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; width: 100%;">
     <h1 style="text-align: center; color: #333;">Join Our Team</h1>
-    <form id="careersForm" action="https://formspree.io/f/meojyppb" method="POST">
+    <form id="careersForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
+      <!-- Anti-spam hidden field -->
+      <input type="hidden" name="_captcha" value="false">
+    
+      <!-- Redirect to Thank You Page -->
+      <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html">
+    
       <label for="name" style="display: block; margin-top: 15px; font-weight: bold;">Full Name:</label>
       <input type="text" id="name" name="name" placeholder="Your full name" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-
+    
       <label for="email" style="display: block; margin-top: 15px; font-weight: bold;">Email Address:</label>
       <input type="email" id="email" name="email" placeholder="Your email" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-
+    
       <label for="phone" style="display: block; margin-top: 15px; font-weight: bold;">Phone Number:</label>
       <input type="tel" id="phone" name="phone" placeholder="Your phone number" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-
+    
       <label for="position" style="display: block; margin-top: 15px; font-weight: bold;">Desired Position:</label>
       <select id="position" name="position" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
         <option value="" disabled selected> Select a position </option>
@@ -212,16 +218,18 @@ class="srex-header__call srex-header--home-two__call-two d-flex align-items-cent
         <option value="manager">Environmental Analyst</option>
         <option value="designer">Sales and Business Development Manager</option>
       </select>
-
+    
       <label for="resume" style="display: block; margin-top: 15px; font-weight: bold;">Upload Resume:</label>
       <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
-
+    
       <button type="submit" style="width: 100%; padding: 10px; margin-top: 5px; border: none; border-radius: 4px; background-color: #28a745; color: #fff; cursor: pointer;" 
               onmouseover="this.style.backgroundColor='#FaAA1B';" 
               onmouseout="this.style.backgroundColor='#28A745';">
         Submit Now 
       </button>
     </form>
+    
+    
     <div id="message" style="margin-top: 20px; text-align: center; font-weight: bold;"></div>
   </div>
 </div>
