@@ -170,9 +170,8 @@
 <button class=next-btn>→</button>
 </div>
 </div>
-<script src=scripts.js></script>
 </body>
-</html>
+
 <script>const projectImages={project1:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/9_c953lw.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/7_oqgrsk.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/8_jyh58n.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/6_he4kz6.jpg"],project2:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_4_vm4csh.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_3_imbmcp.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_2_tnhm62.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_1_qmm2f9.png"],project3:["assets/images/projects/15.jpg","assets/images/projects/16.jpg","assets/images/projects/17.jpg"],project4:["assets/images/projects/18.jpg","assets/images/projects/19.jpg","assets/images/projects/20.jpg"],project5:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/2_ky70ve.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/4_lfuif5.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/3_rfi6ts.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/5_y3cvwa.jpg"], project6:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_4_ukpbe9.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_2_vnzqcp.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_5_nipadr.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_2_vnzqcp.png"]}; function openGallery(e){const s=document.getElementById("gallery-modal"),t=document.getElementById("gallery-image"),r=projectImages[e];let a=0;t.src=r[a],s.style.display="flex";let p=setInterval((()=>{a=(a+1)%r.length,t.src=r[a]}),1500);document.querySelector(".next-btn").addEventListener("click",(()=>{clearInterval(p),a=(a+1)%r.length,t.src=r[a]})),document.querySelector(".prev-btn").addEventListener("click",(()=>{clearInterval(p),a=(a-1+r.length)%r.length,t.src=r[a]})),s.addEventListener("click",(e=>{e.target===s&&(s.style.display="none",clearInterval(p))}))}document.querySelectorAll(".project-card").forEach((e=>{e.addEventListener("click",(s=>{openGallery(e.getAttribute("data-project"))}))}))</script>
 <div class=border-line></div>
 <div id=footer-placeholder></div>
@@ -181,3 +180,8 @@
 <script src=./assets/vendors/wow/wow.min.js></script>
 <script src=./assets/vendors/metismenu/metismenu.js></script>
 <script src=./assets/js/custom.js></script>
+
+
+
+
+</html>
