@@ -132,7 +132,7 @@ display: none;
 }
 
 #hero{
-  background-image: url("https://res.cloudinary.com/db2xlqrrx/image/upload/v1736943763/Cover_kjcbep.webp");
+  background-image: url("https://res.cloudinary.com/db2xlqrrx/image/upload/w_500,h_200/v1736943763/Cover_kjcbep.webp");
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -144,6 +144,11 @@ display: none;
   justify-content: center;
   line-height: 1;
  
+}
+
+
+.heading{
+margin-top: 80px;
 }
 
 #hero h1{
