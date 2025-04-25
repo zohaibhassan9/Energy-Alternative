@@ -3056,8 +3056,8 @@ line-height: 1.6;
   }
 }
 .srex-contact__left input {
-  width: 100%;
-  padding: 18px 30px;
+  width: 90%;
+  padding: 12px 24px;
   border: 1px solid #fff;
   box-sizing: border-box;
   border-radius: 999px;
