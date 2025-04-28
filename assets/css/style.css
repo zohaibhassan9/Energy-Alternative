@@ -3522,8 +3522,8 @@ line-height: 1.6;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -15px;
-  margin-bottom:60px;
+  margin-top: 35px;
+  margin-bottom:20px;
 }
 
 .srex-sponsor__items {
@@ -3569,7 +3569,7 @@ line-height: 1.6;
 }
 
 .srex-sponsor-two {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 @media (max-width: 767px) {
@@ -3879,7 +3879,6 @@ line-height: 1.6;
 ------------------------------------*/
 /* General Newsletter Section Styles */
 .srex-news-letter__box {
-  margin-top: 100px;
   background-color: #2D65A7;
   /* margin-top: 100px */
   padding: 50px;
