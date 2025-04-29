@@ -3,211 +3,200 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Page Title -->
-<title>Enengy Alternatives Powered By Nature</title>
-<!-- Favicon -->
+
+<title>Careers | Energy Alternatives</title>
+
 <link rel="shortcut icon" href="./assets/images/logo-black.png" />
 
-<!--  Bootstrap CSS  -->
+
 <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
-<!-- FontAwesome CSS --> 
+
 <link rel="stylesheet" href="./assets/vendors/font-awesome/css/all.min.css">
-<!-- Main Stylesheet -->
 <link rel="stylesheet" href="assets/css/style.css">
+
+
+<style>
+  /* Global Styles */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('https://images.unsplash.com/photo-1599027644144-226cb51bd94b') no-repeat center/cover;
+    color: white;
+    padding: 120px 20px;
+    text-align: center;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .btn-primary {
+    background-color: #ffaa00;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
+  }
+
+  /* Benefits Section */
+  .benefits {
+    padding: 60px 20px;
+    background: #f8f8f8;
+  }
+  .benefit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .card {
+    flex: 1 1 250px;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  .card i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ffaa00;
+  }
+
+  /* Jobs Section */
+  .jobs {
+    padding: 60px 20px;
+  }
+  .job-listings {
+    display: grid;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .job {
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1.5px solid #FFAA00;
+  }
+  .btn-secondary {
+    background: #000;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    background-color: #ffaa00;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .cta-banner .btn-primary {
+    background: #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2.2rem;
+    }
+    .benefit-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+
 </head>
 <body>
 <div class="overlay"></div>
 
-<header class="srex-header srex-header--home-two">
-<div class="container-fluid">
-<div class="row">
-<div class="col-12">
-<nav
-class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between"
-aria-label="Main Navigation"
->
-<div class="ud-main-menu__logo">
-<a href="index.html">
-<img
-src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734280757/logo-black_sycz2v.png"
-alt="energy_alternatives"
-style="height: 85px;"
-/>
-</a>
-</div>
-<ul class="ud-main-menu__links d-none d-lg-flex">
-<li>
-<a href="index.html"
->Company
-<!-- <i class="fa-solid fa-angle-down"></i> -->
-</a>
-</li>
-<li>
-<a href="about.html">About Us</a>
-</li>
-<li>
-<a href="services.html">Services</a>
 
-</li>
-<li>
-<a href="projects.html">Projects</a>
-
-</li>
-
-<li>
-<a href="contact.html">Contact</a>
-</li>
-</ul>
-
-<div class="ud-hamburger-menu d-block d-lg-none">
-<div class="ud-hamburger-menu__btn">
-<span></span>
-</div>
-</div>
-
-<div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
-
-  <div>
-  <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
-  <a href=tel:04236367373> Get a Quote </a>
-  </h4>
-</div>
-</div>
-</nav>
-</div>
-</div>
-</div>
-<!-- side popup -->
-<div class="ud-side-popup ud-side-popup--home-one" style="overflow: hidden;">
-  <div class=ud-side-popup__header>
-  <button class=side-popup-close>
-  <i class="fa-solid fa-xmark"></i>
-  </button>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Join Our Mission</h1>
+    <p>At Energy Alternatives, we’re driven by innovation and purpose to deliver renewable energy solutions. <br> Join us to make a real impact on a cleaner, sustainable future.</p>
+    <a href="#jobs" class="btn-primary">Explore Openings</a>
   </div>
-  <div class=ud-side-popup__body>
-  <ul class=metismenu id=side-menu>
-  <li>
-  <a href=index.html>Home</a>
-  </li>
-  <li>
-  <a href=about.html>About Us</a>
-  </li>
-  <li>
-  <a href=services.html>Services</a>
-  </li>
-  <li>
-  <a href=projects.html>Projects</a>
-  </li>
-  <li>
-  <a href=contact.html>Contact</a>
-  </li>
-  </ul>
-  </div>
-  <div class=ud-side-popup__bottom>
-  <div class=ud-side-popup__bottom-info>
-  <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
-  <i class="fa-solid fa-phone"></i>
-  <div class=ud-header-info-box__details>
-  <span>Need Help?</span>
-  <h4>
-  <a href=tel:04236367373>(042) 36367373</a>
-  </h4>
-  </div>
-  </div>
-  <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
-  <i class="fa-solid fa-paper-plane"></i>
-  <div class=ud-header-info-box__details>
-  <span>Naqi Arcade Plaza, Mall Road</span>
-  <h4>Lahore, Pakistan</h4>
-  </div>
-  </div>
-  <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
-  <i class="fa-solid fa-envelope"></i>
-  <div class=ud-header-info-box__details>
-  <span>Send email</span>
-  <h4>
-  <a href=mailto:info@energyalternatives.com.pk>info@energyalternatives.com.pk</a>
-  </h4>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- side popup ended -->
-<!--careers section  -->
-<div class="container">
-<section class="header">
-<h1>Careers at Energy Alternatives</h1>
-<p style="margin: 20px 20px;">Join Our Mission for a Sustainable Future</p>
 </section>
 
-<section class="intro">
-<p>At Energy Alternatives, we’re committed to creating a cleaner, more sustainable future. Our team is driven by innovation, passion, and a shared purpose to bring renewable energy solutions to communities and businesses. If you're looking for a career where you can make a real impact, we’d love to hear from you.</p>
+<!-- Benefits Section -->
+<section class="benefits">
+  <h2>Why Work With Us?</h2>
+  <div class="benefit-cards">
+    <div class="card">
+      <i class="fas fa-seedling"></i>
+      <h3>Make an Impact</h3>
+      <p>Your work drives global sustainability.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-solar-panel"></i>
+      <h3>Innovative Projects</h3>
+      <p>Work on next-gen solar and renewable systems.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h3>Collaborative Culture</h3>
+      <p>We grow together — across teams and time zones.</p>
+    </div>
+  </div>
 </section>
 
-<section class="why-work">
-<h2>Why Work with Us?</h2>
-<ul>
-<li><strong>Impactful Work:</strong> Join a company focused on sustainable solutions that benefit the environment and our communities.</li>
-<li><strong>Collaborative Culture:</strong> Work with a team that values collaboration, growth, and inclusivity.</li>
-<li><strong>Professional Development:</strong> We provide resources and opportunities to help you grow and succeed in your role.</li>
-<li><strong>Employee Benefits:</strong> From comprehensive health benefits to flexible work options, we ensure you have the support you need.</li>
-</ul>
+<!-- Jobs Section -->
+<section class="jobs" id="jobs">
+  <h2>Open Positions</h2>
+  <div class="job-listings">
+    <div class="job">
+      <h3>Solar Project Engineer</h3>
+      <p><strong>Location:</strong> Lahore</p>
+      <p>Lead the design and implementation of solar energy systems.</p>
+      <a href="#form-section" class="btn-secondary">Apply Now</a>
+    </div>
+    <div class="job">
+      <h3>Sales Executive - Solar Solutions</h3>
+      <p><strong>Location:</strong> Karachi</p>
+      <p>Connect clients with sustainable solutions and drive sales growth.</p>
+      <a href="#form-section" class="btn-secondary">Apply Now</a>
+    </div>
+  </div>
 </section>
 
-<section class="values">
-<h2>Our Values</h2>
-<ul>
-<li><strong>Sustainability:</strong> Every decision we make prioritizes a positive impact on the planet.</li>
-<li><strong>Innovation:</strong> We continuously strive to develop cutting-edge solutions in renewable energy.</li>
-<li><strong>Integrity:</strong> Honesty, transparency, and respect are at the core of everything we do.</li>
-<li><strong>Customer Commitment:</strong> Our clients are our partners in sustainability, and we aim to exceed their expectations.</li>
-</ul>
+<!-- Call to Action Section -->
+<section class="cta-banner">
+  <div class="cta-content">
+    <h2>Ready to Make a Difference?</h2>
+    <p>We're hiring across engineering, sales, support, and more!</p>
+    <a href="#form-section" class="btn-primary">Send Your CV</a>
+  </div>
 </section>
 
-<section class="positions">
-<h2>Open Positions</h2>
-<div class="position">
-<h3>Solar Technician</h3>
-<p><strong>Location:</strong>Lahore</p>
-<p><strong>Key Requirements:</strong></p>
-<li>Diploma (DAE) is a Preferred.
-</li>
-<li>2-3 Years Experience in Solar Installation and Maintenance.
-</li>
-<p><strong>Skills: </strong>
-</p>
-
-<li>Comprehensive knowledge of Electrical Systems, including troubleshooting and installation.
-</li>
-<li>Excellent communication and interpersonal skills to work with clients and teammates.
-</li>
-<li>Ability to operate effectively both independently and as part of a collaborative team.
-</li>
-<p>
-<strong>Preferred Locations: </strong>
-<li>Location: Lahore, Islamabad, & Karachi</li>
-</p>
-
-</div>
-<div class="position">
-<h3>Environmental Analyst</h3>
-<p><strong>Location:</strong> Lahore</p>
-<p><strong>Description:</strong> Analyze data and support our environmental compliance efforts. Ideal candidates are detail-oriented and have experience with environmental standards and regulations.</p>
-</div>
-<div class="position">
-<h3>Sales and Business Development Manager</h3>
-<p><strong>Location:</strong> Lahore </p>
-<p><strong>Description:</strong> Drive growth by building partnerships and expanding our market reach. Experience in renewable energy sales or similar fields is preferred.</p>
-</div>
-</section>
-
-</div>
 
 
-<!-- career online submission form -->
- <!-- Careers Form Inline CSS  -->
-<div style="display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; padding: 50px 0;">
+<div id="form-section" style="display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; padding: 50px 0;">
   <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; width: 100%;">
     <h1 style="text-align: center; color: #333;">Join Our Team</h1>
     <form id="careersForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
@@ -215,7 +204,7 @@ style="height: 85px;"
       <input type="hidden" name="_captcha" value="false">
     
       <!-- Redirect to Thank You Page -->
-      <input type="hidden" name="_next" value="http://127.0.0.1:5501/thankyou.html">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5501/applicationsubmitedsucessfully.html">
     
       <label for="name" style="display: block; margin-top: 15px; font-weight: bold;">Full Name:</label>
       <input type="text" id="name" name="name" placeholder="Your full name" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">

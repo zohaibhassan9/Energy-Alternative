@@ -1636,7 +1636,6 @@ button:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #000;
   color: #fff;
   text-align: center;
 }
@@ -1652,7 +1651,7 @@ button:focus {
 
 #background-video {
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   pointer-events: none; /* Makes sure it's not clickable */
 }
@@ -3873,6 +3872,27 @@ line-height: 1.6;
 .srex-faq-three .srex-accordion .accordion-collapse .accordion-body {
   padding: 0px 90px 30px 90px;
 }
+
+/*------------------------------------
+header and mobile version styling 4/29/2025
+------------------------------------*/
+
+.ud-side-popup {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: 80%;
+  height: 100%;
+  background: white;
+  z-index: 9999;
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+}
+
+.ud-side-popup.active {
+  display: block;
+}
+
 
 /*------------------------------------
 	17/ News Letter
