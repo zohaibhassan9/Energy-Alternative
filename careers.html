@@ -361,7 +361,7 @@
 </section>
 
 <!-- Benefits Section -->
-<section class="benefits">
+<!-- <section class="benefits">
   <h2>Why Work With Us?</h2>
   <div class="benefit-cards">
     <div class="card">
@@ -380,26 +380,107 @@
       <p>We grow together — across teams and time zones.</p>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Jobs Section -->
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
+  }
+
+  .jobs {
+    padding: 40px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .jobs h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007B55;
+  }
+
+  .job {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+  }
+
+  .job h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #FAAA1B;
+  }
+
+  .job p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .job ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0 20px 0;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FAAA1B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: #005f40;
+  }
+</style>
+</head>
+<body>
+
 <section class="jobs" id="jobs">
   <h2>Open Positions</h2>
   <div class="job-listings">
     <div class="job">
-      <h3>Solar Project Engineer</h3>
-      <p><strong>Location:</strong> Lahore</p>
-      <p>Lead the design and implementation of solar energy systems.</p>
-      <a href="#form-section" class="btn-secondary">Apply Now</a>
-    </div>
-    <div class="job">
-      <h3>Sales Executive - Solar Solutions</h3>
-      <p><strong>Location:</strong> Karachi</p>
-      <p>Connect clients with sustainable solutions and drive sales growth.</p>
+      <h3>Solar Operations Manager</h3>
+      <p><strong>Location:</strong> Multiple Locations</p>
+      <p>Lead safe, efficient solar energy operations and drive business growth.</p>
+      <ul>
+        <li>Manage and optimize solar farm operations</li>
+        <li>Lead and support technicians & engineers</li>
+        <li>Ensure safety and compliance</li>
+        <li>Improve performance through data analysis</li>
+        <li>Work with teams to achieve business goals</li>
+      </ul>
+      <p><strong>Requirements:</strong></p>
+      <ul>
+        <li>Bachelor's degree (preferably in Electrical Engineering)</li>
+        <li>Experience in operations management (solar preferred)</li>
+        <li>Strong leadership and problem-solving skills</li>
+        <li>Knowledge of safety rules and regulations</li>
+      </ul>
+      <p><strong>What We Offer:</strong></p>
+      <ul>
+        <li>Competitive salary + benefits</li>
+        <li>Growth & development opportunities</li>
+        <li>A supportive, forward-thinking environment</li>
+      </ul>
+      <p>If you're passionate about renewable energy and operational excellence — we want to hear from you!</p>
       <a href="#form-section" class="btn-secondary">Apply Now</a>
     </div>
   </div>
 </section>
+
 
 <!-- Call to Action Section -->
 <section class="cta-banner">
@@ -434,9 +515,9 @@
       <label for="position" style="display: block; margin-top: 15px; font-weight: bold;">Desired Position:</label>
       <select id="position" name="position" required style="width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px;">
         <option value="" disabled selected> Select a position </option>
-        <option value="developer">Solar Project Engineer</option>
-        <option value="manager">Environmental Analyst</option>
-        <option value="designer">Sales and Business Development Manager</option>
+        <option value="developer">Solar Operations Manager</option>
+        <!-- <option value="manager">Environmental Analyst</option>
+        <option value="designer">Sales and Business Development Manager</option> -->
       </select>
     
       <label for="resume" style="display: block; margin-top: 15px; font-weight: bold;">Upload Resume:</label>
