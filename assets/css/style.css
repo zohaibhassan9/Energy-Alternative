@@ -2976,113 +2976,57 @@ line-height: 1.6;
 /*------------------------------------
 	13/ Contact
 ------------------------------------*/
-.srex-contact--three__row {
-  background-color: #fff;
-  box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
-  padding: 30px 30px;
-  -ms-flex-align: center;
-      align-items: center;
-}
-.sct{padding:100px 0;}
-.srex-contact--three .srex-contact__img {
-  position: relative;
-  margin-bottom:40px;
-}
-.srex-contact--three .srex-contact__img img {
-  border-radius: 20px;
-  width: 100%;
-}
-.srex-contact--three .srex-contact__img__play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-  background-color: #fff;
-  height: 90px;
-  width: 90px;
-  border-radius: 50%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
-}
-.srex-contact--three .srex-contact__img__play-btn i {
-  color: #2D65A7;
-  font-size: 30px;
-}
-.srex-contact--three .srex-contact__img__play-btn:hover {
-  background-color: #2D65A7;
-}
-.srex-contact--three .srex-contact__img__play-btn:hover i {
-  color: #fff;
-}
-.srex-contact--three .srex-section__head__desc {
-  margin-bottom: 60px;
-  color: #24231D;
-  margin-top: 12px;
-}
-.srex-contact--three .srex-contact__left {
-  padding: 0 0 0 50px;
-  background-color: #fff;
-}
-.srex-contact--three .srex-contact__left input, .srex-contact--three .srex-contact__left textarea {
-  border: 2px solid #e3e3e3;
-}
-.srex-contact--three .srex-contact__left .srex-btn {
-  background-color: #2D65A7;
-}
-.srex-contact--three .srex-contact__left .srex-btn:hover {
-  background-color: #FAAA1B;
-}
-.srex-contact__left {
-  background: #F8F7F0;
-  padding: 60px;
-  border-radius: 20px;
-}
-@media (max-width: 767px) {
-  .srex-contact__left {
-    padding: 30px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-contact__left {
-    padding: 40px;
-  }
-}
-.srex-contact__left input {
-  width: 90%;
-  padding: 12px 24px;
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  border-radius: 999px;
-  margin: 10px 0;
-}
+.srex-contact__left input,
+.srex-contact__left select,
 .srex-contact__left textarea {
   width: 100%;
-  padding: 18px 30px;
-  border: 1px solid #fff;
-  box-sizing: border-box;
-  border-radius: 30px;
+  padding: 14px 24px;
   margin: 10px 0;
-}
-.srex-contact__left input:focus, .srex-contact__left textarea:focus {
-  outline: none;
-}
-.srex-contact__left button {
-  margin-top: 10px;
-  width: 100%;
+  border: 2px solid #e3e3e3;
   border-radius: 999px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+  appearance: none;
+}
+
+.srex-contact__left select {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4L2 0zm0 5L0 3h4l-2 2z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 0.65em auto;
+}
+
+.srex-contact__left textarea {
+  border-radius: 30px;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.srex-contact__left input:focus,
+.srex-contact__left select:focus,
+.srex-contact__left textarea:focus {
+  outline: none;
+  border-color: #2D65A7;
+}
+
+.srex-contact__left button {
+  width: 100%;
+  padding: 14px;
+  background-color: #2D65A7;
+  color: #fff;
   text-transform: uppercase;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.srex-contact__right {
-  background: url(../images/home-one/contact-left.png) no-repeat;
-  background-position: bottom right;
-  padding: 20px 0 60px 0;
+
+.srex-contact__left button:hover {
+  background-color: #FAAA1B;
 }
+
 
 /*------------------------------------
 	14/ Portfolio
