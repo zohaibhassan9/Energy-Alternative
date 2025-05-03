@@ -1,15 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainbility</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EnergyAlternatives - Sustainability Services</title>
+  <link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
+  <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+
+
+  <link rel=stylesheet href=./assets/css/style.css>
+
+<style>/* Base reset & global styles */
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #f5f7f4;
+    color: #1a3c2c;
+    line-height: 1.6;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    background: #204e3a url('hero-image.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #f5f7f4;
+  }
+  
+  .hero-text p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1em;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #34a853;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: #2c8a45;
+  }
+  
+  /* SECTION */
+  .section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .section-desc {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #3c574b;
+  }
+  
+  /* GRID CARDS */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #34a853;
+    transition: transform 0.2s;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #b1dac8;
+  }
+  
+  .card ul {
+    padding-left: 20px;
+    margin: 10px 0;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* CTA FOOTER */
+  .cta {
+    background: #e0f0e6;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .cta h2 {
+    font-size: 1.8em;
+  }
+  
+  .cta p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  
+  /* ✅ RESPONSIVE TWEAKS */
+  @media (max-width: 768px) {
+    .hero-text h1 {
+      font-size: 2em;
+    }
+  
+    .hero-text p {
+      font-size: 1em;
+    }
+  
+    .section h2 {
+      font-size: 1.6em;
+    }
+  
+    .cta h2 {
+      font-size: 1.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      padding: 80px 16px;
+    }
+  
+    .hero-text h1 {
+      font-size: 1.6em;
+    }
+  
+    .btn {
+      padding: 10px 16px;
+      font-size: 0.95em;
+    }
+  
+    .card {
+      padding: 16px;
+    }
+  
+    .cta {
+      padding: 40px 16px;
+    }
+  }
+  </style>
+
 </head>
 <body>
-     
 
 
 
+  <header class="srex-header srex-header--home-two">
+    <div class=container-fluid>
+    <div class=row>
+    <div class=col-12>
+    <nav class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between" aria-label="Main Navigation">
+    <div class=ud-main-menu__logo>
+    <a href=index.html> <img src="./assets/images/logo animate.gif"></a>
+    </div>
+    <ul class="ud-main-menu__links d-none d-lg-flex">
+    <li><a href=index.html> Company </a></li>
+    <li><a href=about.html> About Us </a></li>
+    <li><a href=services.html> Services </a></li>
+    <li><a href=projects.html> Projects </a></li>
+    <li><a href=careers.html target=_blank>Careers</a></li>
+    <li><a href=contact.html> Contact </a></li>
+    </ul>
+    <div class="ud-hamburger-menu d-block d-lg-none">
+    <div class=ud-hamburger-menu__btn>
+    <span></span>
+    </div>
+    </div>
+    <div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
     
+        <div>
+        <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
+        <a href=tel:04236367373> Get a Quote </a>
+        </h4>
+    </div>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </div>
+    <div class=social-icons>
+    <a href=https://www.facebook.com/energyalternatives.pk target=_blank class=social-icon><i class="fab fa-facebook-f"></i></a>
+    <a href=https://pk.linkedin.com/company/ealternativespk target=_blank class=social-icon><i class="fa-brands fa-linkedin"></i></a>
+    <a href=https://x.com/enrgy_altrntiv_ target=_blank class=social-icon><i class="fa-brands fa-x"></i></a>
+    <a href=https://www.instagram.com/energy_alternatives_/ target=_blank class=social-icon><i class="fa-brands fa-instagram"></i></a>
+    <a href=https://www.tiktok.com/@energy_alternatives target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
+    </a>
+    </div>
+    </header>
+    <div class="ud-side-popup ud-side-popup--home-one" style="overflow: hidden;">
+      <div class=ud-side-popup__header>
+      <button class=side-popup-close>
+      <i class="fa-solid fa-xmark"></i>
+      </button>
+      </div>
+      <div class=ud-side-popup__body>
+      <ul class=metismenu id=side-menu>
+      <li>
+      <a href=index.html>Home</a>
+      </li>
+      <li>
+      <a href=about.html>About Us</a>
+      </li>
+      <li>
+      <a href=services.html>Services</a>
+      </li>
+      <li>
+      <a href=projects.html>Projects</a>
+      </li>
+      <li>
+      <a href=contact.html>Contact</a>
+      </li>
+      </ul>
+      </div>
+      <div class=ud-side-popup__bottom>
+      <div class=ud-side-popup__bottom-info>
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+      <i class="fa-solid fa-phone"></i>
+      <div class=ud-header-info-box__details>
+      <span>Need Help?</span>
+      <h4>
+      <a href=tel:04236367373>(042) 36367373</a>
+      </h4>
+      </div>
+      </div>
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+      <i class="fa-solid fa-paper-plane"></i>
+      <div class=ud-header-info-box__details>
+      <span>Naqi Arcade Plaza, Mall Road</span>
+      <h4>Lahore, Pakistan</h4>
+      </div>
+      </div>
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+      <i class="fa-solid fa-envelope"></i>
+      <div class=ud-header-info-box__details>
+      <span>Send email</span>
+      <h4>
+      <a href=mailto:info@energyalternatives.com.pk>info@energyalternatives.com.pk</a>
+      </h4>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Powering a Sustainable Tomorrow</h1>
+      <p>At EnergyAlternatives, we help you reduce your carbon footprint — one solar panel at a time.</p>
+      <a href="#services" class="btn">Learn More</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Our Sustainability Services</h2>
+    <p class="section-desc">At EnergyAlternatives, we go beyond just solar. Our sustainability solutions are designed to help homes, businesses, and communities reduce environmental impact and move toward a greener, cleaner future.</p>
+
+    <div class="services-grid" id="services">
+      <div class="card">
+        <h3>☀ Solar Energy Solutions</h3>
+        <ul>
+          <li>On-grid, off-grid, and hybrid installations</li>
+          <li>Solar street lights & water pumps</li>
+          <li>End-to-end support — from consultation to maintenance</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💧 Water Conservation Systems</h3>
+        <ul>
+          <li>Rainwater harvesting installations</li>
+          <li>Greywater recycling systems</li>
+          <li>Water-saving plumbing upgrades</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💡 Energy Efficiency Upgrades</h3>
+        <ul>
+          <li>LED retrofitting and smart appliances</li>
+          <li>Energy audits and reports</li>
+          <li>Thermal insulation for better control</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔌 EV Charging Infrastructure</h3>
+        <ul>
+          <li>EV station setup (residential & commercial)</li>
+          <li>EV adoption consultancy</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🌱 Green Landscaping Solutions</h3>
+        <ul>
+          <li>Low-water-use plant installations</li>
+          <li>Drip irrigation systems</li>
+          <li>Solar-powered outdoor lighting</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>♻ Waste Management & Recycling</h3>
+        <ul>
+          <li>Safe solar panel recycling</li>
+          <li>Eco battery disposal</li>
+          <li>Waste segregation systems</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🧠 Smart Monitoring</h3>
+        <ul>
+          <li>Smart irrigation & flow sensors</li>
+          <li>Energy monitoring dashboards</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💳 Green Finance & Subsidy</h3>
+        <ul>
+          <li>Help with government subsidies</li>
+          <li>EMI & leasing for solar solutions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🏠 Sustainable Building Consulting</h3>
+        <ul>
+          <li>LEED or EDGE certification support</li>
+          <li>Green material sourcing</li>
+          <li>Site assessments & reports</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📢 Training & Awareness</h3>
+        <ul>
+          <li>Workshops for corporates, schools</li>
+          <li>Webinars & digital eco resources</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="cta">
+    <h2>🌍 Let’s Build a Greener Tomorrow</h2>
+    <p>Partner with EnergyAlternatives and take a confident step toward a sustainable future.</p>
+    <a href="#" class="btn">📩 Request a Free Sustainability Consultation</a>
+  </footer>
+
+
+  <div id=footer-placeholder></div>
+  <script>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
+
 </body>
 </html>

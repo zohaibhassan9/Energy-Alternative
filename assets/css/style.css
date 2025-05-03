@@ -1007,9 +1007,14 @@ margin-bottom:20px;
   background-image: url('../images/services/facility\ management\ service.jpg');
 }
 
+.sustainability{
+  background-image: url('../images/services/suctainbility.jpg');
+}
+
+
+
 .solar-pv-sticky-left{
   @media (min-width: 991px) {
-
   top: 110px; 
   position: -webkit-sticky; /* For Safari */
   position: sticky;
@@ -1020,7 +1025,7 @@ margin-bottom:20px;
 /*------------------------------------
 	Accordion
 ------------------------------------*/
-.srex-accordion .accordion-item {
+/* .srex-accordion .accordion-item {
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
   background-color: #24231D;
   border: 1px solid #2F2E28;
@@ -1052,7 +1057,7 @@ margin-bottom:20px;
 }
 .srex-accordion .accordion-button {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 24px;
   border: 30px;
   padding: 20px;
@@ -1139,7 +1144,7 @@ margin-bottom:20px;
 .srex-tabs .nav-link {
 	padding: 12px 25px!important;
 }
-}
+} */
 
 /*------------------------------------
 	07/ Header
@@ -3630,7 +3635,7 @@ line-height: 1.6;
 
 .srex-question-two .accordion-button {
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 24px;
   border: 30px;
   padding: 20px;
