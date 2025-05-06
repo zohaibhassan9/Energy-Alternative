@@ -2345,9 +2345,9 @@ line-height: 1.6;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center;
+  align-items: center;
   -ms-flex-pack: center;
-      justify-content: center;
+  justify-content: center;
   color: #fff;
   font-size: 12px;
 }
@@ -2392,6 +2392,7 @@ line-height: 1.6;
 .hero-large-image {
   width: 80%;
   border-radius: 25px;
+  margin-top: -90px;
 }
 
 .hero-small-image {
