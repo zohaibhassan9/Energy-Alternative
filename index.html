@@ -34,6 +34,7 @@
 <span></span>
 </div>
 </div>
+
 <div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
 <div>
 <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
@@ -41,6 +42,8 @@
 </h4>
 </div>
 </div>
+
+
 </nav>
 </div>
 </div>
@@ -834,6 +837,36 @@ More Blogs <i class="fa-solid fa-plus"></i>
 <!-- Bootstrap JS FAQ JavaScript -->
 <script src="./assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 <script>const galleryTrack=document.querySelector(".gallery-track"),galleryItems=document.querySelectorAll(".gallery-item");let index=0;function scrollGallery(){index++,index>=galleryItems.length&&(index=0),galleryTrack.style.transform=`translateX(-${100*index}%)`}setInterval(scrollGallery,3e3)</script>
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.querySelector('.ud-hamburger-menu__btn');
+    const sidePopup = document.querySelector('.ud-side-popup');
+    const closeBtn = document.querySelector('.side-popup-close');
+  
+    // Toggle popup when hamburger is clicked
+    hamburgerBtn.addEventListener('click', function () {
+    sidePopup.classList.add('active'); // Show side popup
+    document.querySelector('.overlay').classList.add('active'); // Show overlay
+    });
+  
+    // Close popup when close button or overlay is clicked
+    closeBtn.addEventListener('click', function () {
+    sidePopup.classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+    });
+  
+    document.querySelector('.overlay').addEventListener('click', function () {
+    sidePopup.classList.remove('active');
+    this.classList.remove('active');
+    });
+  });
+  </script>
+
 
 </body>
 </htm

@@ -87,18 +87,21 @@
         ><i class="fa-brands fa-tiktok"></i>
       </a>
         </div>
+		
     </header>
 
     
       <!-- Side Popup -->
       <div class="ud-side-popup ud-side-popup--home-one">
         <div class="ud-side-popup__header">
-          <div class="ud-side-popup__header-logo">
-            <img src="./assets/images/logo-black.png" alt="Energy Alternatives" />
-          </div>
           <button class="side-popup-close">
             <i class="fa-solid fa-xmark"></i>
           </button>
+		  <div>
+			<a href="tel:04236367373" style="background-color: #FAAA1B; padding: 10px 15px; border-radius: 10px;">
+			  Get a Quote
+			</a>
+		  </div>
         </div>
         <div class="ud-side-popup__body">
           <ul class="metismenu" id="side-menu">
@@ -437,5 +440,32 @@
 		  <script src="./assets/vendors/metismenu/metismenu.js"></script>
 	<!-- Custom JS -->
 	<script src="./assets/js/custom.js"></script>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+		  const hamburgerBtn = document.querySelector('.ud-hamburger-menu__btn');
+		  const sidePopup = document.querySelector('.ud-side-popup');
+		  const closeBtn = document.querySelector('.side-popup-close');
+	  
+		  // Toggle popup when hamburger is clicked
+		  hamburgerBtn.addEventListener('click', function () {
+			sidePopup.classList.add('active'); // Show side popup
+			document.querySelector('.overlay').classList.add('active'); // Show overlay
+		  });
+	  
+		  // Close popup when close button or overlay is clicked
+		  closeBtn.addEventListener('click', function () {
+			sidePopup.classList.remove('active');
+			document.querySelector('.overlay').classList.remove('active');
+		  });
+	  
+		  document.querySelector('.overlay').addEventListener('click', function () {
+			sidePopup.classList.remove('active');
+			this.classList.remove('active');
+		  });
+		});
+	  </script>
+	  
 	</body>
 </html>
