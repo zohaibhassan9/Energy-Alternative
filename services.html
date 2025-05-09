@@ -24,13 +24,108 @@
 </a>
 </div>
 <ul class="ud-main-menu__links d-none d-lg-flex">
-<li><a href=index.html> Company </a></li>
-<li><a href=about.html> About Us </a></li>
-<li><a href=services.html> Services </a></li>
-<li><a href=projects.html> Projects </a></li>
-<li><a href=careers.html target=_blank>Careers</a></li>
-<li><a href=contact.html> Contact </a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="sustainbility.html">Sustainability</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="projects.html">Projects</a></li>
+
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+      Shop <span class="arrow"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Solar Panels</a></li>
+      <li><a href="#">Solar Inverters</a></li>
+      <li><a href="#">Batteries</a></li>
+      <li><a href="#">Mounting Structures</a></li>
+      <li><a href="#">Electrical Accessories</a></li>
+    </ul>
+  </li>
+
+  <li><a href="contact.html">Contact</a></li>
 </ul>
+
+<style>/* Reset base */
+  .ud-main-menu__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .ud-main-menu__links li {
+    position: relative;
+  }
+  
+  .ud-main-menu__links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  /* Dropdown styles */
+  .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 1000;
+    padding: 0;
+  }
+  
+  .dropdown .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+  }
+  
+  .dropdown .dropdown-menu li a:hover {
+    background-color: #f89e1f;
+    color: #000;
+  }
+  
+  /* Arrow styles */
+  .dropdown-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .dropdown-toggle .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+  }
+  
+  /* Show dropdown */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  
+  /* Rotate arrow when open */
+  .dropdown.open .arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Responsive for mobile if needed */
+  @media (max-width: 991px) {
+    .ud-main-menu__links {
+      flex-direction: column;
+    }
+  
+    .dropdown .dropdown-menu {
+      position: static;
+      box-shadow: none;
+    }
+  }
+  </style>
 <div class="ud-hamburger-menu d-block d-lg-none">
 <div class=ud-hamburger-menu__btn>
 <span></span>
@@ -72,22 +167,26 @@
     </div>
     <div class="ud-side-popup__body">
       <ul class="metismenu" id="side-menu">
-        <li>
-          <a href="index.html">Home</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="sustainbility.html">Sustainability</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+            Shop <span class="arrow"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Solar Panels</a></li>
+            <li><a href="#">Solar Inverters</a></li>
+            <li><a href="#">Batteries</a></li>
+            <li><a href="#">Mounting Structures</a></li>
+            <li><a href="#">Electrical Accessories</a></li>
+          </ul>
         </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <a href="services.html">Services</a>
-        </li>
-        <li>
-          <a href="projects.html">Projects</a>
-        </li>
-         
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
+      
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="ud-side-popup__bottom">
@@ -425,7 +524,21 @@ Support & Services</h2>
       });
     });
   </script>
+<!-- shop menu dropdown -->
+<script>
+  function toggleDropdown(event) {
+    event.preventDefault(); // prevent default link behavior
+    const parentLi = event.currentTarget.closest('.dropdown');
+    parentLi.classList.toggle('open');
+  }
 
+  // Optional: Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      if (!drop.contains(e.target)) drop.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>

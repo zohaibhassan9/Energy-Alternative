@@ -25,14 +25,107 @@
 </a>
 </div>
 <ul class="ud-main-menu__links d-none d-lg-flex">
-<li><a href=index.html> Home </a></li>
-<li> <a href="sustainbility.html">Sustainability</a></li>
-<li><a href=services.html> Services </a></li>
-<li><a href=projects.html> Projects </a></li>
-<li><a href=https://energyalternativesstore.com target="_blank"> Shop </a></li>
-<li><a href=careers.html target=_blank>Careers</a></li>
-<li><a href=contact.html> Contact </a></li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="sustainbility.html">Sustainability</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="projects.html">Projects</a></li>
+
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+      Shop <span class="arrow"></span>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a href="#">Solar Panels</a></li>
+      <li><a href="#">Solar Inverters</a></li>
+      <li><a href="#">Batteries</a></li>
+      <li><a href="#">Mounting Structures</a></li>
+      <li><a href="#">Electrical Accessories</a></li>
+    </ul>
+  </li>
+
+  <li><a href="contact.html">Contact</a></li>
 </ul>
+
+<style>/* Reset base */
+  .ud-main-menu__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .ud-main-menu__links li {
+    position: relative;
+  }
+  
+  .ud-main-menu__links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  /* Dropdown styles */
+  .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 1000;
+    padding: 0;
+  }
+  
+  .dropdown .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+  }
+  
+  .dropdown .dropdown-menu li a:hover {
+    background-color: #f89e1f;
+    color: #000;
+  }
+  
+  /* Arrow styles */
+  .dropdown-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .dropdown-toggle .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+  }
+  
+  /* Show dropdown */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  
+  /* Rotate arrow when open */
+  .dropdown.open .arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Responsive for mobile if needed */
+  @media (max-width: 991px) {
+    .ud-main-menu__links {
+      flex-direction: column;
+    }
+  
+    .dropdown .dropdown-menu {
+      position: static;
+      box-shadow: none;
+    }
+  }
+  </style>
 <div class="ud-hamburger-menu d-block d-lg-none">
 <div class=ud-hamburger-menu__btn>
 <span></span>
@@ -73,22 +166,25 @@
     </div>
     <div class="ud-side-popup__body">
       <ul class="metismenu" id="side-menu">
-        <li>
-          <a href="index.html">Home</a>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sustainbility.html">Sustainability</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+            Shop <span class="arrow"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Solar Panels</a></li>
+            <li><a href="#">Solar Inverters</a></li>
+            <li><a href="#">Batteries</a></li>
+            <li><a href="#">Mounting Structures</a></li>
+            <li><a href="#">Electrical Accessories</a></li>
+          </ul>
         </li>
-        <li>
-          <a href="about.html">About Us</a>
-        </li>
-        <li>
-          <a href="services.html">Services</a>
-        </li>
-        <li>
-          <a href="projects.html">Projects</a>
-        </li>
-         
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
+      
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="ud-side-popup__bottom">
@@ -154,11 +250,12 @@
 
 <div class=about-hero-section>
 <div class=hero-image-container>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/about_hero_primary_g0klva.jpg alt="Solar Panels" class=hero-large-image>
+<img class="wow ud-fade-in-down" data-wow-delay="200ms" src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/about_hero_primary_g0klva.jpg alt="Solar Panels" class=hero-large-image>
 <img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/about_hero_secondary_wt50dl.jpg alt="Solar Panel on Roof" class=hero-small-image>
 <img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283179/dots_eazli9.png alt=dots class=hero-dots-image>
 </div>
-<div class=hero-text-container>
+<div class=hero-text-container >
+  <div class="wow ud-fade-in-up" data-wow-delay="300ms">
 <h2>About Energy Alternatives</h2>
 <p>
 <b>Energy Alternatives</b> is a highly diversified and progressive company involved in the business of sales & Services for Renewable energy projects in all sectors of Pakistan, including Residential, Agricultural & industrial solar power plants and equipment. <br>
@@ -171,11 +268,12 @@
 <p>Energy Alternatives’ mission is to revolutionize Pakistan’s energy future by delivering sustainable, high performance renewable energy solutions that empower communities and drive economic progress. We are committed to accelerating the adoption of clean energy, reducing the nation’s carbon footprint and helping build a greener, more resilient Pakistan. Quality is at the core of everything we do. From our exclusive on-site testing facility to our in-house engineering and fabrication capabilities, we ensure every project is executed with precision and meets the highest standards of durability, safety and performance. We strive to make clean energy accessible and affordable for all, helping individuals and organizations reduce their environmental impact and move toward energy independence.</p>
 </div>
 </div>
-
+</div>
 
 <section class=ceo-message-section>
 <div class=ceo-message-container>
 <div class=ceo-text-container>
+  <div class="wow ud-fade-in-up" data-wow-delay="300ms">
 <h2>Trust in us</h2>
 <p>
 Energy Alternatives has 12 years, splendid history of exclusive distribution of world’s leading prestigious technology partners all over the world particularly from Germany, US, Turkey, China etc. in Pakistan. Energy Alternatives enjoys status of diversified business preposition having departments in engineering, fabrication, trading, servicing and consultation sectors of Pakistan. <br><br>
@@ -188,11 +286,15 @@ Business Approach
 </h2>
 <p>Our people excel in any environment to pursue customer satisfaction through exquisite delivery that guarantees optimum profits for clients and robust growth for ourselves.</p>
 </div>
+</div>
+<div class="wow ud-fade-in-down" data-wow-delay="300ms">
 <div class=ceo-image-container>
 <img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283179/about-us-bottom_oei88t.webp alt="CEO Image" class=ceo-image>
 </div>
 </div>
+</div>
 </section>
+<div class="wow ud-fade-in-up" data-wow-delay="400ms">
 <section class=ceo-message-section>
 <div class=ceo-message-container>
 <div class=ceo-image-container>
@@ -214,8 +316,58 @@ Eng. Muhammad Altaf <br>
 </div>
 </div>
 </section>
+</div>
 
 
+<div class="certificate-section">
+  <h2>Our Certifications</h2>
+  <div class="certificates">
+    <img src="./assets/images/1 certificate_Chamber of Commerce.png" alt="Certificate 1" />
+    <img src="./assets/images/2 certificate_EA-QHSE-CERTS-PDF-SCANNED-1.png" alt="Certificate 2" />
+    <img src="./assets/images/3 certificate_EA-QHSE-CERTS-PDF-SCANNED-2.png" />
+    <img src="./assets/images/4 certificate_EA-QHSE-CERTS-PDF-SCANNED-3.png" />
+    <img src="./assets/images/5 certificate_EA-QHSE-CERTS-PDF-SCANNED-4.png" />
+    <img src="./assets/images/6 certificate_EA-QHSE-CERTS-PDF-SCANNED-5.png" />
+    <img src="./assets/images/7 certificate_EA-QHSE-CERTS-PDF-SCANNED-6.png" />
+    <img src="./assets/images/8 certificate_PEC-Certificate-1.png" />
+    <img src="./assets/images/10 certificate_PSA MEMBERSHIP.png" />
+    <img src="./assets/images/11 certificate_PSA.png" />
+    <img src="./assets/images/13 certificate_Trade Mark Registry.png" />
+    <img src="./assets/images/12 certificate_SRA-Certificate-1.png" />
+   </div>
+</div>
+
+
+<style>.certificate-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.certificates {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certificates img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Responsive: stack images on small screens */
+@media (max-width: 768px) {
+  .certificates {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+<div class="wow ud-fade-in-left" data-wow-delay="300ms">
 <div class=call-us-shell>
 <div class=call-us-section>
 <div class=call-us-image>
@@ -261,6 +413,24 @@ Eng. Muhammad Altaf <br>
       });
     });
   </script>
+
+
+
+<!-- shop menu dropdown -->
+<script>
+  function toggleDropdown(event) {
+    event.preventDefault(); // prevent default link behavior
+    const parentLi = event.currentTarget.closest('.dropdown');
+    parentLi.classList.toggle('open');
+  }
+
+  // Optional: Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      if (!drop.contains(e.target)) drop.classList.remove('open');
+    });
+  });
+</script>
 
 </body>
 </html>
