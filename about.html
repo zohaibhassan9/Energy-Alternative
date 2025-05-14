@@ -11,7 +11,6 @@
 <link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
 </head>
 
-
 <body class="body-wrapper home-one" data-scroll-animation=true>
 <div class=overlay></div>
 <header class="srex-header srex-header--home-two">
@@ -20,9 +19,7 @@
 <div class=col-12>
 <nav class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between" aria-label="Main Navigation">
 <div class=ud-main-menu__logo>
-<a href=index.html>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734280759/footer-logo-2_ohoctn.png alt=alter style=height:85px>
-</a>
+<a href=index.html> <img style="max-inline-size: 190px;" src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif"></a>
 </div>
 <ul class="ud-main-menu__links d-none d-lg-flex">
   <li><a href="index.html">Home</a></li>
@@ -133,10 +130,10 @@
 </div>
 <div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
 
-    <div>
-    <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
-    <a href=tel:04236367373> Get a Quote </a>
-    </h4>
+<div>
+<h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
+<a href=tel:04236367373> Get a Quote </a>
+</h4>
 </div>
 </div>
 </nav>
@@ -268,26 +265,99 @@
 </div>
 </div>
 
-<section style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; max-width: 1200px; margin: 60px auto; padding: 40px 20px; box-sizing: border-box;">
-  <!-- Text content on the left -->
-  <div style="flex: 1 1 50%; padding: 20px; text-align: left;">
-    <div style="animation: fadeInUp 1s ease forwards; animation-delay: 300ms;">
-      <h2 style="font-size: 32px; margin-bottom: 20px; color: #222;">Why Choose Us</h2>
-      <ul style="list-style: disc; padding-left: 20px; color: #555; font-size: 16px; line-height: 1.8;">
-        <li>Over 12 years of proven experience in the solar energy industry.</li>
-        <li>Trusted partners with globally recognized solar technology brands.</li>
-        <li>Wide network across the country supported by expert local teams.</li>
-        <li>Comprehensive services covering consultation, design, installation, and maintenance.</li>
-        <li>Unwavering commitment to sustainability, innovation, and customer satisfaction.</li>
-      </ul>
-    </div>
+<style>
+  .why-choose-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .why-choose-text, .why-choose-image {
+    flex: 1 1 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .why-choose-text {
+    text-align: left;
+  }
+
+  .why-choose-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .why-choose-text ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .why-choose-image {
+    text-align: center;
+  }
+
+  .why-choose-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Responsive breakpoints */
+  @media (min-width: 768px) {
+    .why-choose-text {
+      flex: 1 1 50%;
+    }
+
+    .why-choose-image {
+      flex: 1 1 40%;
+      text-align: right;
+    }
+  }
+
+  /* Animation (optional) */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 300ms;
+  }
+</style>
+
+<section class="why-choose-section">
+  <div class="why-choose-text fade-in-up">
+    <h2>Why Choose Us</h2>
+    <ul>
+      <li>Over 12 years of proven experience in the solar energy industry.</li>
+      <li>Trusted partners with globally recognized solar technology brands.</li>
+      <li>Wide network across the country supported by expert local teams.</li>
+      <li>Comprehensive services covering consultation, design, installation, and maintenance.</li>
+      <li>Unwavering commitment to sustainability, innovation, and customer satisfaction.</li>
+    </ul>
   </div>
 
-  <!-- Image on the right -->
-  <div style="flex: 1 1 40%; padding: 20px; text-align: right;">
-    <img src="your-image.jpg" alt="Why Choose Us" style="max-width: 100%; height: auto; border-radius: 8px;">
+  <div class="why-choose-image">
+    <img src="./assets/images/why choose us.png" alt="Why Choose Us">
   </div>
 </section>
+
 
 
 <div class="wow ud-fade-in-up" data-wow-delay="400ms">
