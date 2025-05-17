@@ -270,7 +270,7 @@
 <a href=https://pk.linkedin.com/company/ealternativespk target=_blank class=social-icon><i class="fa-brands fa-linkedin"></i></a>
 <a href=https://www.youtube.com/@energyalternatives-pakistan target=_blank class=social-icon><i class="fa-brands fa-youtube"></i></a>
 <a href=https://www.instagram.com/energy_alternatives_/ target=_blank class=social-icon><i class="fa-brands fa-instagram"></i></a>
-<a href=https://www.tiktok.com/@energy_alternatives target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
+<a href=https://www.tiktok.com/@energy_alternatives_ target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
 </a>
 </div>
 </header>
@@ -513,7 +513,7 @@
 <div id="form-section" style="display: flex; justify-content: center; align-items: center; background-color: #f9f9f9; padding: 50px 0;">
   <div style="background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; width: 100%;">
     <h1 style="text-align: center; color: #333;">Join Our Team</h1>
-    <form id="careersForm" action="https://formsubmit.co/info@energyalternatives.com.pk" method="POST" enctype="multipart/form-data">
+    <form id="careersForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
       <!-- Anti-spam hidden field -->
       <input type="hidden" name="_captcha" value="false">
     
@@ -620,6 +620,24 @@
     });
   });
 </script>
+<!-- Pop up for again entry into application form -->
+<script>
+  document.getElementById("careersForm").addEventListener("submit", function (e) {
+    const email = document.getElementById("email").value.toLowerCase();
+    const position = document.getElementById("position").value;
+
+    const key = `applied_${email}_${position}`;
+
+    if (localStorage.getItem(key)) {
+      e.preventDefault();
+      alert("⚠️ You have already applied to this position.");
+    } else {
+      // Mark as applied
+      localStorage.setItem(key, "true");
+    }
+  });
+</script>
+
 
 </body>
 </html>
