@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Service - Get a Quote</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            max-width: 700px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: grid;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        select, input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Get a Solar Quote</h1>
+        <form id="quoteForm">
+            <label for="systemType">System Type:</label>
+            <select id="systemType" required>
+                <option value="">Select</option>
+                <option value="Hybrid">Hybrid</option>
+                <option value="Grid Tie">Grid Tie</option>
+            </select>
+
+            <label for="panelType">Panel Type (e.g., Jinko):</label>
+            <input type="text" id="panelType" placeholder="Enter panel brand/type" required />
+
+            <label for="structureType">Structure Type:</label>
+            <input type="text" id="structureType" placeholder="Enter structure type" required />
+
+            <label for="inverterType">Inverter Type:</label>
+            <select id="inverterType" required>
+                <option value="">Select</option>
+                <option value="Hybrid Inverter">Hybrid Inverter</option>
+                <option value="Grid Tie Inverter">Grid Tie Inverter</option>
+            </select>
+
+            <label for="batteryRequired">Battery (Hybrid only):</label>
+            <input type="text" id="batteryRequired" placeholder="Specify battery capacity (if any)" />
+
+            <label for="earthing">Earthing Required:</label>
+            <select id="earthing" required>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="netMetering">Net Metering Required:</label>
+            <select id="netMetering" required>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Submit Quote Request</button>
+        </form>
+        <p id="output" style="margin-top:20px;color:green;"></p>
+    </div>
+
+    <script>
+        document.getElementById("quoteForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const systemType = document.getElementById("systemType").value;
+            const panelType = document.getElementById("panelType").value;
+            const structureType = document.getElementById("structureType").value;
+            const inverterType = document.getElementById("inverterType").value;
+            const batteryRequired = document.getElementById("batteryRequired").value;
+            const earthing = document.getElementById("earthing").value;
+            const netMetering = document.getElementById("netMetering").value;
+
+            let output = `Quote Request Submitted!\nSystem Type: ${systemType}\nPanel Type: ${panelType}\nStructure: ${structureType}\nInverter: ${inverterType}`;
+            if (systemType === "Hybrid") {
+                output += `\nBattery: ${batteryRequired || 'Not Specified'}`;
+            }
+            output += `\nEarthing: ${earthing}\nNet Metering: ${netMetering}`;
+
+            document.getElementById("output").innerText = output;
+        });
+    </script>
+</body>
+</html>
