@@ -2449,7 +2449,7 @@ line-height: 1.6;
 }
 
 .call-us-telephone {
-  background: #4CAF50;
+  background: #FAAA1B;
   padding: 17px;
   border-radius: 50%;
   margin-left: -36px;
@@ -2457,7 +2457,7 @@ line-height: 1.6;
 }
 
 .call-us-telephone:hover {
-  background: #88EA5F;
+  background: #2D65A7;
 }
 
 .call-us-content {
@@ -2473,7 +2473,7 @@ line-height: 1.6;
 }
 
 .call-us-content h2 span {
-  color: #4CAF50;
+  color: #FAAA1B;
 }
 
 .call-us-content p {
