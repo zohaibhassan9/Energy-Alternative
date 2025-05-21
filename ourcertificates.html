@@ -1,19 +1,155 @@
-<!doctype html>
-<html lang=eng>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Enengy Alternatives Powered By Nature</title>
-<link rel="shortcut icon" href=./assets/images/logo-black.png>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Certifications</title>
+ <link rel="shortcut icon" href=./assets/images/logo-black.png>
 <link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
 <link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
 <link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
-</head>
 
-<body class="body-wrapper home-one" data-scroll-animation=true>
-<div class=overlay></div>
-<header class="srex-header srex-header--home-two">
+    <style>
+        :root {
+            --primary-color: #326DAC;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .certificates-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .certificate-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .certificate-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .certificate-logo {
+            height: 100px;
+            margin-bottom: 20px;
+            object-fit: contain;
+            max-width: 100%;
+        }
+        
+        .certificate-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .certificate-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: #FAAA1B;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: auto;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .certificates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+   .certificates-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 1.5rem 0;
+}
+        }
+    </style>
+    <header class="srex-header srex-header--home-two">
 <div class = container-fluid>
 <div class=row>
 <div class=col-12>
@@ -245,201 +381,65 @@
     </div>
   </div>
 
+</head>
 
-<div class=about-hero-section>
-<div class=hero-image-container>
-<img style="border-radius: 20px;" class="wow ud-fade-in-down" data-wow-delay="200ms" src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/about_hero_primary_g0klva.jpg alt="Solar Panels" class=hero-large-image>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/about_hero_secondary_wt50dl.jpg alt="Solar Panel on Roof" class=hero-small-image>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283179/dots_eazli9.png alt=dots class=hero-dots-image>
+<body>
+    <section class="certificates-section">
+        <div class="section-header">
+            <h2>Our Certifications</h2>
+            <p>We are proud to be recognized by these prestigious organizations, demonstrating our commitment to excellence and compliance with international standards.</p>
+        </div>
+        
+        <div class="certificates-grid">
+            <div class="certificate-card">
+                <img src="./assets/images/certificates logo_Arab Emirates System International.png" alt="AE System International" class="certificate-logo">
+                <h3>AE System International</h3>
+                <p>Certified by the Arab Emirates System International</p>
+                <span class="badge">International Standard</span>
+            </div>
+            
+            <div class="certificate-card">
+                <img src="./assets/images/certificates logo_Intellectual Property Organisation Trade Marks Registry.png" alt="IPO Pakistan" class="certificate-logo">
+                <h3>IPO Pakistan</h3>
+                <p>Registered with Intellectual Property Organization of Pakistan</p>
+                <span class="badge">Intellectual Property</span>
+            </div>
+            
+            <div class="certificate-card">
+                <img src="./assets/images/certificates logo_Pakistan Solar Association Membership Certificate.png" alt="Pakistan Solar Association" class="certificate-logo">
+                <h3>PSA Member</h3>
+                <p>Recognized member of Pakistan Solar Association</p>
+                <span class="badge">Renewable Energy</span>
+            </div>
+            
+            <div class="certificate-card">
+                <img src="./assets/images/certificates logo_Sindh Revenue Board Sindh Sales Tax Registration Certificate.png" alt="Sindh Revenue Board" class="certificate-logo">
+                <h3>Generating Revenue for People</h3>
+                <p>Registered for Sindh Sales Tax compliance</p>
+                <span class="badge">Tax Compliance</span>
+            </div>
+
+   <div class="certificate-card">
+                <img src="./assets/images/certificates logo_Pakistan Engineering Council Licence of Pakistani Constructor.png" alt="Sindh Revenue Board" class="certificate-logo">
+                <h3>PEC Licensed Constructor</h3>
+    <p>Engineering professional accredited by Pakistan Engineering Council</p>
+    <span class="badge">Engineering Authority</span>
 </div>
-<div class=hero-text-container >
-  <div class="wow ud-fade-in-up" data-wow-delay="300ms">
-<h2>About Energy Alternatives</h2>
-<p>Energy Alternatives is a leading provider of solar energy solutions across Pakistan. We offer sales, services, and installation of renewable energy systems for homes, farms, and industries. Our experienced team delivers complete solar projects — from planning and design to setup and support.</p>
-<i class="fas fa-check-circle" style=color:#4caf50></i>⠀<strong>Our Vision</strong>
-<P>To power Pakistan with clean, reliable, and affordable energy, helping build a greener and self-sufficient future.</P>
-<i class="fas fa-check-circle" style=color:#4caf50></i>⠀<strong>Our Mission</strong>
-<P>To provide smart solar solutions that reduce energy costs, protect the environment, and improve lives. We focus on quality, safety, and long-term performance in every project.
-</P>
-</div>
-</div>
-</div>
-
-<style>
-  .why-choose-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 40px 20px;
-    box-sizing: border-box;
-  }
-
-  .why-choose-text, .why-choose-image {
-    flex: 1 1 100%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .why-choose-text {
-    text-align: left;
-  }
-
-  .why-choose-text h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #222;
-  }
-
-  .why-choose-text ul {
-    list-style: disc;
-    padding-left: 20px;
-    color: #555;
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  .why-choose-image {
-    text-align: center;
-  }
-
-  .why-choose-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Responsive breakpoints */
-  @media (min-width: 768px) {
-    .why-choose-text {
-      flex: 1 1 50%;
-    }
-
-    .why-choose-image {
-      flex: 1 1 40%;
-      text-align: right;
-    }
-  }
-
-  /* Animation (optional) */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in-up {
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 300ms;
-  }
-</style>
-
-<section class="why-choose-section">
-  <div class="why-choose-text fade-in-up">
-    <h2 style="color: #2D65A7; font-weight: 700;">Why Choose Us</h2>
-    <ul>
-      <li>Over 12 years of proven experience in the solar energy industry.</li>
-      <li>Trusted partners with globally recognized solar technology brands.</li>
-      <li>Wide network across the country supported by expert local teams.</li>
-      <li>Comprehensive services covering consultation, design, installation, and maintenance.</li>
-      <li>Unwavering commitment to sustainability, innovation, and customer satisfaction.</li>
-    </ul>
-  </div>
-
-  <div class="why-choose-image">
-    <img src="./assets/images/why choose us.png" alt="Why Choose Us">
-  </div>
-</section>
+            
+            
+            <div class="certificate-card">
+                <img src="./assets/images/certificates logo_The Lahore Chamber of Commerce & Industry.png" alt="Lahore Chamber of Commerce" class="certificate-logo">
+                <h3>LCCI Member</h3>
+                <p>Member of Lahore Chamber of Commerce & Industry</p>
+                <span class="badge">Business Excellence</span>
+            </div>
+        </div>
+    </section>
 
 
 
-<div class="wow ud-fade-in-up" data-wow-delay="400ms">
-<section style="margin-top: -40px;" class=ceo-message-section>
-<div class=ceo-message-container>
-<div class=ceo-image-container>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/2_r3gnhb.jpg alt="CEO Image" class=ceo-image>
-</div>
-<div class=ceo-text-container>
-<h2>A Message from Our CEO</h2>
-<p>“At Energy Alternatives, we believe in creating a better tomorrow with clean energy. Our goal is simple — to make solar power accessible, affordable, and effective for everyone in Pakistan.”
-</p>
-<b>Eng. Muhammad Altaf</b> <br>
-(CEO, Energy Alternatives)
-</p>
-<p class=ceo-signature> </p>
-</div>
-</div>
-</section>
-</div>
 
-
-<div class="certificate-section">
-  <h2 style="color: #2D65A7; font-weight: 700;">Our Certifications</h2>
-  <div class="certificates">
-    <img class="wow ud-fade-in-down" data-wow-delay="200ms" src="./assets/images/1 certificate_Chamber of Commerce.png" alt="Certificate 1" />
-    <img class="wow ud-fade-in-down" data-wow-delay="200ms" src="./assets/images/2 certificate_EA-QHSE-CERTS-PDF-SCANNED-1.png" alt="Certificate 2" />
-    <img class="wow ud-fade-in-down" data-wow-delay="200ms" src="./assets/images/3 certificate_EA-QHSE-CERTS-PDF-SCANNED-2.png" />
-    <img class="wow ud-fade-in-up" data-wow-delay="300ms" src="./assets/images/4 certificate_EA-QHSE-CERTS-PDF-SCANNED-3.png" />
-    <img class="wow ud-fade-in-up" data-wow-delay="300ms" src="./assets/images/5 certificate_EA-QHSE-CERTS-PDF-SCANNED-4.png" />
-    <img class="wow ud-fade-in-up" data-wow-delay="300ms" src="./assets/images/6 certificate_EA-QHSE-CERTS-PDF-SCANNED-5.png" />
-    <img class="wow ud-fade-in-up" data-wow-delay="200ms" src="./assets/images/7 certificate_EA-QHSE-CERTS-PDF-SCANNED-6.png" />
-    <img class="wow ud-fade-in-right" data-wow-delay="200ms" src="./assets/images/8 certificate_PEC-Certificate-1.png" />
-    <img class="wow ud-fade-in-right" data-wow-delay="200ms" src="./assets/images/10 certificate_PSA MEMBERSHIP.png" />
-    <img class="wow ud-fade-in-right" data-wow-delay="200ms" src="./assets/images/11 certificate_PSA.png" />
-    <img class="wow ud-fade-in-right" data-wow-delay="300ms" src="./assets/images/13 certificate_Trade Mark Registry.png" />
-    <img class="wow ud-fade-in-right" data-wow-delay="300ms" src="./assets/images/12 certificate_SRA-Certificate-1.png" />
-   </div>
-</div>
-
-
-<style>.certificate-section {
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.certificates {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.certificates img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Responsive: stack images on small screens */
-@media (max-width: 768px) {
-  .certificates {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
-<div class="wow ud-fade-in-left" data-wow-delay="300ms">
-<div class=call-us-shell>
-<div class=call-us-section>
-<div class=call-us-image>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1735142092/call-us_eeawqh.png alt="Worker on solar panels">
-</div>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1735142089/telephone_f7epyg.svg alt=Telephone class=call-us-telephone>
-<div class=call-us-content>
-<h2 style="color: #2D65A7; font-weight: 700;">Have a Question? <br><span>Call Us</span> 0300 111 6366</h2>
-<p>Solar energy is a sustainable choice that ensures long-term savings and energy independence.</p>
-</div>
-</div>
-<div id=footer-placeholder></div>
+    <div id=footer-placeholder></div>
 <script defer>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
 <script src=./assets/vendors/jquery/jquery-3.6.0.min.js></script>
 <script src=./assets/vendors/wow/wow.min.js></script>
@@ -491,6 +491,5 @@
     });
   });
 </script>
-
 </body>
 </html>
