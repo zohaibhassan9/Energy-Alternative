@@ -74,6 +74,19 @@
         .content-section:last-child {
             border-bottom: none;
         }
+
+
+        .error-tooltip {
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: block;
+}
+
+select.error {
+    border-color: var(--error) !important;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F44336' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+}
         
         h2 {
             color: var(--primary);
@@ -389,7 +402,7 @@
         <div class="content-section">
             <h2><i class="fas fa-info-circle"></i>Learn More → Start Close Values</h2>
             <div class="highlight-box">
-                <i class="fas fa-bolt"></i>
+                
                 <div class="highlight-box-content">
                     <p>Receive a true earth within a day when you fill out this form. Or call us at <strong>+92 300 111 6366</strong></p>
                     <a href="tel:+923001116366"><i class="fas fa-phone"></i> Call Now</a>
@@ -412,52 +425,65 @@
                 <h3>Error!</h3>
                 <p>There was a problem submitting your form. Please try again later.</p>
             </div>
-            
-            <form id="solarQuoteForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST">
+        <form id="solarQuoteForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_subject" value="New Solar Quote Request">
                 <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_next" value="#success">
                 <input type="hidden" name="_captcha" value="false">
-                
                 <div class="form-group">
                     <label class="required-field">Which system do you prefer?</label>
                     <div class="system-options">
-                        <div class="system-option selected" data-value="Solar Plant">
-                            <i class="fas fa-solar-panel"></i>
-                            <h3>Solar Plant</h3>
-                        </div>
-                        <div class="system-option" data-value="Grid Independent">
-                            <i class="fas fa-plug"></i>
-                            <h3>Grid Independent</h3>
-                        </div>
-                        <div class="system-option" data-value="Solar Power Plant">
-                            <i class="fas fa-industry"></i>
-                            <h3>Solar Power Plant</h3>
-                        </div>
+                        <div class="system-option selected" data-value="Solar Plant"><i class="fas fa-solar-panel"></i><h3>Solar Plant</h3></div>
+                        <div class="system-option" data-value="Grid Independent"><i class="fas fa-plug"></i><h3>Grid Independent</h3></div>
+                        <div class="system-option" data-value="Solar Power Plant"><i class="fas fa-industry"></i><h3>Solar Power Plant</h3></div>
                     </div>
                     <input type="hidden" id="systemType" name="systemType" value="Solar Plant" required>
                 </div>
-                
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="panelType" class="required-field">Panel Type</label>
+                        <label for="panelType" class="required-field">Panel Brand</label>
                         <select id="panelType" name="panelType" required>
-                            <option value="">Select panel manufacturer</option>
+                            <option value="">Select panel brand</option>
                             <option value="Canadian Solar">Canadian Solar</option>
                             <option value="Jinko Solar">Jinko Solar</option>
                             <option value="Trina Solar">Trina Solar</option>
                             <option value="JA Solar">JA Solar</option>
                             <option value="Longi Solar">Longi Solar</option>
-                            <option value="Other">Other (please specify in notes)</option>
+                            <option value="Other">Other (specify in notes)</option>
                         </select>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="batteryType" class="required-field">Battery Brand</label>
+                        <select id="batteryType" name="batteryType" required>
+                            <option value="">Select battery brand</option>
+                            <option value="EA Power">EA Power</option>
+                            <option value="Narada Batteries">Narada Batteries</option>
+                            <option value="Dyness Batteries">Dyness Batteries</option>
+                            <option value="Pylontech">Pylontech</option>
+                            <option value="Sacred Sun>">Sacred Sun</option>
+                            <option value="Other">Other (specify in notes)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="inverterType" class="required-field">Inverter Brand</label>
+                        <select id="inverterType" name="inverterType" required>
+                            <option value="">Select inverter brand</option>
+                            <option value="GoodWe Inverters">GoodWe Inverters</option>
+                            <option value="Solis Inverters">Solis Inverters</option>
+                            <option value="Huawei">Huawei</option>
+                            <option value="Growatt">Growatt</option>
+                            <option value="Canadian Inverters">Canadian Inverters</option>
+                            <option value="Inverex Inverters">Inverex Inverters</option>
+                            <option value="Other">Other (specify in notes)</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label for="electricUsage" class="required-field">Monthly electric usage (kWh/unit)?</label>
                         <input type="number" id="electricUsage" name="electricUsage" placeholder="Enter your monthly usage" required>
                     </div>
                 </div>
-                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="structureType" class="required-field">Solar Structure Type</label>
@@ -468,25 +494,31 @@
                             <option value="Carport">Carport</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
                         <label for="sanctionedLoad">Sanctioned Load</label>
                         <input type="text" id="sanctionedLoad" name="sanctionedLoad" placeholder="Enter sanctioned load">
                     </div>
                 </div>
-                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="budget">Budget (USD)</label>
                         <input type="text" id="budget" name="budget" placeholder="e.g. 4000" value="4000">
                     </div>
-                    
                     <div class="form-group">
-                        <label for="roofArea">Roof Area (sq ft)</label>
-                        <input type="number" id="roofArea" name="roofArea" placeholder="Enter roof area">
+                        <label for="roofArea" class="required-field">Roof Area (sq ft)</label>
+                        <input type="number" id="roofArea" name="roofArea" placeholder="Enter roof area" required>
                     </div>
                 </div>
-                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="electricBill" class="required-field">Electricity Bill (Image)</label>
+                        <input type="file" id="electricBill" name="electricBill" accept="image/*" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roofMedia">Roof Photos/Videos</label>
+                        <input type="file" id="roofMedia" name="roofMedia[]" accept="image/*,video/*" multiple>
+                    </div>
+                </div>
                 <div class="form-row">
                     <div class="form-group">
                         <label for="fullName" class="required-field">Your full name</label>
@@ -497,7 +529,6 @@
                         <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your contact number" required>
                     </div>
                 </div>
-                
                 <div class="form-row">
                     <div class="form-group">
                         <label for="email" class="required-field">Your email address</label>
@@ -508,17 +539,11 @@
                         <input type="text" id="location" name="location" placeholder="Enter your city/area" required>
                     </div>
                 </div>
-               
-                
                 <div class="form-group">
                     <label for="notes">Additional Notes</label>
                     <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or notes..."></textarea>
                 </div>
-                
-                <button type="submit" class="btn btn-block">
-                    <i class="fas fa-paper-plane"></i> Submit Request
-                </button>
-                
+                <button type="submit" class="btn btn-block"><i class="fas fa-paper-plane"></i> Submit Request</button>
                 <div class="form-footer">
                     <p>We respect your privacy. Your information will not be shared with third parties.</p>
                 </div>
@@ -631,6 +656,52 @@
                 });
             });
         });
+
+
+// Add this to your form validation section
+const selectFields = form.querySelectorAll('select[required]');
+selectFields.forEach(select => {
+    if (!select.value) {
+        select.style.borderColor = 'var(--error)';
+        isValid = false;
+        
+        // Create error tooltip
+        const errorTooltip = document.createElement('div');
+        errorTooltip.className = 'error-tooltip';
+        errorTooltip.textContent = 'This field is required';
+        errorTooltip.style.color = 'var(--error)';
+        errorTooltip.style.fontSize = '0.8rem';
+        errorTooltip.style.marginTop = '5px';
+        
+        // Insert after the select
+        select.parentNode.insertBefore(errorTooltip, select.nextSibling);
+    }
+});
+
+
+// Replace your entire fetch block with this:
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validation (keep your existing code)
+    
+    if (isValid) {
+        // Show loading state
+        const submitBtn = form.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+        
+        // Use FormSubmit.co's native form submission
+        form.submit();
+        
+        // Fallback in case FormSubmit fails
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
+        }, 5000);
+    }
+});
+
     </script>
 </body>
 </html>
