@@ -12,7 +12,7 @@
     --secondary-color: #002366;
     --text-color: #333;
     --light-bg: #f8f8f8;
-    --dark-bg: #000;
+    --dark-bg: #335ca1;
     --white: #fff;
     --whatsapp-green: #25D366;
     --transition: all 0.3s ease;
@@ -83,17 +83,24 @@ body {
 
 /* Navigation Bar */
 .nav-container {
-    background-color: var(--dark-bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  width: 90%;
+  margin: 0 auto; /* This centers the container */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  text-align: center;
+  background-color: var(--dark-bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
+
 .nav-bar {
+  
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -475,7 +482,7 @@ button:focus-visible {
     }
 
     .contact-label {
-        font-size: 12px;
+        font-size: 14px;
         color: #888;
         text-transform: uppercase;
         margin-bottom: 2px;
@@ -484,7 +491,7 @@ button:focus-visible {
     .contact-link {
         color: #333;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 800;
         transition: color 0.3s;
     }
 
@@ -493,7 +500,7 @@ button:focus-visible {
     }
 
     .contact-hours {
-        font-size: 12px;
+        font-size: 14px;
         color: #666;
         margin-top: 3px;
     }
