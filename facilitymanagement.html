@@ -43,68 +43,151 @@ href="./assets//vendors/magnific-popup/magnific-popup.css"
 <!-- Overlay -->
 <div class="overlay"></div>
 
-<!-- Top Header Start -->
-<div class="srex-top-header d-none d-md-block">
-<div class="container-fluid">
-<div class="row">
-<div class="col-6 col-md-8">
-<p>Embrace the power of the sun with solar energy!</p>
-</div>
-<div class="col-6 col-md-4">
-<ul>
-<li>
-<a href=""><i class="fa-brands fa-facebook"></i></a>
-<a href=""><i class="fa-brands fa-instagram"></i></a>
-<a href=""><i class="fa-brands fa-x"></i></a>
-<a href=""><i class="fa-brands fa-linkedin"></i></a>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+
 <!-- Top Header End -->
 
-<!-- Header Start -->
+<div class=overlay></div>
 <header class="srex-header srex-header--home-two">
-<div class="container-fluid">
-<div class="row">
-<div class="col-12">
-<nav
-class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between"
-aria-label="Main Navigation"
->
-<div class="ud-main-menu__logo">
-<a href="index.html">
-<img
-src="assets/images/logo-black.png"
-alt="energyalternatives"
-style="height: 85px;"
-/>
+<div class=container-fluid>
+<div class=row>
+<div class=col-12>
+<nav class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between" aria-label="Main Navigation">
+<div class=ud-main-menu__logo>
+<a href=index.html> <img style="max-inline-size: 190px;" src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Logo">
 </a>
 </div>
+
 <ul class="ud-main-menu__links d-none d-lg-flex">
-<li>
-<a href="index.html">Home</a>
-</li>
-<li>
-<a href="about.html">About Us</a>
-</li>
-<li>
-<a href="services.html">Services</a>
-<li>
-<a href="projects.html">Projects</a>
-</li>
-<li>
-<a href="contact.html">Contact</a>
-</li>
+  <li><a href="index.html">Company</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="services.html">Services</a></li>
+
+  <!-- Projects ▸ Projects Gallery ▸ sub‑items -->
+  <li class="has-dropdown">
+    <a href="projects.html">Projects</a>
+    <ul class="dropdown">
+      <li class="has-dropdown">
+        <p><a href="projects.html">Projects Gallery</a></p>
+       
+        <ul class="dropdown">
+          <li><a href="http://127.0.0.1:5501/industrial.html">Industrial</a></li>
+          <li><a href="http://127.0.0.1:5501/commercial.html">Commercial</a></li>
+          <li><a href="projects-domestic.html">Residential</a></li>
+        </ul>
+         <a href="projects-gallery.html">Projects Videos</a>
+        <a href="projects-gallery.html">Case Studies</a>
+      </li>
+    </ul>
+  </li>
+  <li><a href="https://energyalternativesstore.com" target="_blank">Shop</a></li>
+  <li><a href="careers.html" target="_blank">Careers</a></li>
+  <li><a href="contact.html">Contact</a></li>
 </ul>
+
+<style>
+ /* =====================
+   Responsive Multi‑level Navbar
+   Author: <Your Name>
+   ===================== */
+
+/* ---------- RESET ---------- */
+.ud-main-menu__links, .ud-main-menu__links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- LAYOUT ---------- */
+.ud-main-menu__links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.ud-main-menu__links > li { position: relative; }
+
+/* ---------- LINKS ---------- */
+.ud-main-menu__links a {
+  display: block;
+  padding: 5px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #222;
+  transition: color .2s ease;
+  white-space: nowrap;
+}
+.ud-main-menu__links a:hover,
+.ud-main-menu__links a:focus { color: #005fa3; }
+
+/* ---------- DROPDOWN ---------- */
+.ud-main-menu__links .dropdown {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 12rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all .25s ease;
+  z-index: 1000;
+}
+.has-dropdown:hover > .dropdown,
+.has-dropdown:focus-within > .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* nested levels */
+.dropdown .has-dropdown > .dropdown {
+  left: -100%;
+  top: 0;
+}
+
+/* item spacing + divider */
+.dropdown > li > a {
+  padding: .55rem 1.25rem;
+  line-height: 1;
+  border-bottom: 1px solid #000;
+}
+.dropdown > li:last-child > a { border-bottom: none; }
+/* equal‑height rows inside Projects Gallery */
+.dropdown .dropdown { display: flex; flex-direction: column; }
+.dropdown .dropdown > li { flex: 1; }
+
+/* ---------- MOBILE (≤991 px) ---------- */
+@media (max-width: 991px){
+  .ud-main-menu__links { flex-direction: column; gap:0; }
+  .ud-main-menu__links > li { width: 100%; }
+  .ud-main-menu__links a { padding: .75rem 1rem; }
+
+  /* accordion style */
+  .ud-main-menu__links .dropdown {
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    transition: max-height .3s ease;
+  }
+  /* open state toggled with JS (adds .open) */
+  .has-dropdown.open > .dropdown { max-height: 800px; }
+}
+
+</style>
+
+
 <div class="ud-hamburger-menu d-block d-lg-none">
-<div class="ud-hamburger-menu__btn">
+<div class=ud-hamburger-menu__btn>
 <span></span>
 </div>
 </div>
-
 <div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
 
   <div>
@@ -117,107 +200,71 @@ style="height: 85px;"
 </div>
 </div>
 </div>
-
-<!-- Side Popup -->
-<!-- Side Popup -->
-      <div class="ud-side-popup ud-side-popup--home-one">
-        <div class="ud-side-popup__header">
-          <div class="ud-side-popup__header-logo">
-            <img src="./assets/images/logo-black.png" alt="Energy Alternatives" />
-          </div>
-          <button class="side-popup-close">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-        <div class="ud-side-popup__body">
-          <ul class="metismenu" id="side-menu">
-            <li>
-              <a href="index.html">Home</a>
-            </li>
-            <li>
-              <a href="about.html">About Us</a>
-            </li>
-            <li>
-              <a href="#"> Services <i class="fa-solid fa-plus"></i> </a>
-              <ul class="sub-menu collapse" aria-expanded="false">
-                <li>
-                  <a href="services.html">Services</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#"> Projects <i class="fa-solid fa-plus"></i> </a>
-              <ul class="sub-menu collapse" aria-expanded="false">
-                <li>
-                  <a href="projects.html">Projects</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="ud-side-popup__bottom">
-          <div class="ud-side-popup__bottom-info">
-            <div
-              class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-            >
-              <i class="fa-solid fa-phone"></i>
-              <div class="ud-header-info-box__details">
-                <span>Need Help?</span>
-                <h4>
-                  <a href="tel:04236367373">(042) 36367373</a>
-                </h4>
-              </div>
-            </div>
-            <div
-              class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-            >
-              <i class="fa-solid fa-paper-plane"></i>
-              <div class="ud-header-info-box__details">
-                <span>Naqi Arcade Plaza, Mall Road</span>
-                <h4>Lahore, Pakistan</h4>
-              </div>
-            </div>
-            <div
-              class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-            >
-              <i class="fa-solid fa-envelope"></i>
-              <div class="ud-header-info-box__details">
-                <span>Send email</span>
-                <h4>
-                  <a href="mailto:info@energyalternatives.com.pk">info@energyalternatives.com.pk</a>
-                </h4>
-              </div>
-            </div>
-          </div>
-          <ul class="ud-side-popup__bottom-socials">
-            <li>
-              <a href="https://www.facebook.com/energyalternatives.pk">
-                <i class="fa-brands fa-facebook-f"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.youtube.com/@energyalternatives-pakistan">
-                <i class="fa-brands fa-youtube"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/energy_alternatives_/">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://pk.linkedin.com/company/ealternativespk">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+<div class=social-icons>
+<a href=https://www.facebook.com/energyalternatives.pk target=_blank class=social-icon><i class="fab fa-facebook-f"></i></a>
+<a href=https://pk.linkedin.com/company/ealternativespk target=_blank class=social-icon><i class="fa-brands fa-linkedin"></i></a>
+<a href=https://x.com/enrgy_altrntiv_ target=_blank class=social-icon><i class="fa-brands fa-x"></i></a>
+<a href=https://www.instagram.com/energy_alternatives_/ target=_blank class=social-icon><i class="fa-brands fa-instagram"></i></a>
+<a href=https://www.tiktok.com/@energy_alternatives_ target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
+</a>
+</div>
 </header>
-<!-- Header End -->
+
+<div class="ud-side-popup ud-side-popup--home-one" style="overflow: hidden;">
+    <div class=ud-side-popup__header>
+    <button class=side-popup-close>
+    <i class="fa-solid fa-xmark"></i>
+    </button>
+    </div>
+    <div class=ud-side-popup__body>
+    <ul class=metismenu id=side-menu>
+    <li>
+    <a href=index.html>Home</a>
+    </li>
+    <li>
+    <a href=about.html>About Us</a>
+    </li>
+    <li>
+    <a href=services.html>Services</a>
+    </li>
+    <li>
+    <a href=projects.html>Projects</a>
+    </li>
+    <li>
+    <a href=contact.html>Contact</a>
+    </li>
+    </ul>
+    </div>
+    <div class=ud-side-popup__bottom>
+    <div class=ud-side-popup__bottom-info>
+    <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+    <i class="fa-solid fa-phone"></i>
+    <div class=ud-header-info-box__details>
+    <span>Need Help?</span>
+    <h4>
+    <a href=tel:04236367373>(042) 36367373</a>
+    </h4>
+    </div>
+    </div>
+    <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+    <i class="fa-solid fa-paper-plane"></i>
+    <div class=ud-header-info-box__details>
+    <span>Naqi Arcade Plaza, Mall Road</span>
+    <h4>Lahore, Pakistan</h4>
+    </div>
+    </div>
+    <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+    <i class="fa-solid fa-envelope"></i>
+    <div class=ud-header-info-box__details>
+    <span>Send email</span>
+    <h4>
+    <a href=mailto:info@energyalternatives.com.pk>info@energyalternatives.com.pk</a>
+    </h4>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 <!-- START SECTION TOP -->
 <section class="section-top">
