@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
+<link rel="icon" href="https://res.cloudinary.com/db2xlqrrx/image/upload/v1735532617/energy_alternatives_pakistan_1_ebndfk.png" type="image/x-icon">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+<link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
+<link rel=stylesheet href=./assets/css/style.css>
+  <title>Document</title>
+</head>
+<body>
+<header class="srex-header srex-header--home-two">
+<div class = container-fluid>
+<div class=row>
+<div class=col-12>
+<nav class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between" aria-label="Main Navigation">
+<div class=ud-main-menu__logo>
+<a href=index.html> <img style="max-inline-size: 190px;" src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif"></a>
+</div>
+<ul class="ud-main-menu__links d-none d-lg-flex">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="sustainbility.html">Sustainability</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="projects.html">Projects</a></li>
+
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)"> Shop <span class="arrow"></span>
+</a>
+<ul class="dropdown-menu">
+<li><a href="https://energyalternativesstore.com/solar-panels-categories/">Solar Panels</a></li>
+<li><a href="https://energyalternativesstore.com/inverters/">Solar Inverters</a></li>
+<li><a href="https://energyalternativesstore.com/batteries-categories/">Batteries</a></li>
+<li><a href="https://energyalternativesstore.com/mounting-structures/">Mounting Structures</a></li>
+<li><a href="https://energyalternativesstore.com/electrical-asseries/">Electrical Accessories</a></li>
+</ul>
+</li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+<style>/* Reset base */
+  .ud-main-menu__links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .ud-main-menu__links li {
+    position: relative;
+  }
+  
+  .ud-main-menu__links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    color: #111;
+    font-weight: 500;
+  }
+  
+  /* Dropdown styles */
+  .dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 180px;
+    z-index: 1000;
+    padding: 0;
+  }
+  
+  .dropdown .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+  }
+  
+  .dropdown .dropdown-menu li a:hover {
+    background-color: #f89e1f;
+    color: #000;
+  }
+  
+  /* Arrow styles */
+  .dropdown-toggle {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .dropdown-toggle .arrow {
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+    font-size: 12px;
+  }
+  
+  /* Show dropdown */
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+  
+  /* Rotate arrow when open */
+  .dropdown.open .arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Responsive for mobile if needed */
+  @media (max-width: 991px) {
+    .ud-main-menu__links {
+      flex-direction: column;
+    }
+  
+    .dropdown .dropdown-menu {
+      position: static;
+      box-shadow: none;
+    }
+  }
+  </style>
+<div class="ud-hamburger-menu d-block d-lg-none">
+<div class=ud-hamburger-menu__btn>
+<span></span>
+</div>
+</div>
+<div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
+
+<div>
+<h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
+<a href=tel:04236367373> Get a Quote </a>
+</h4>
+</div>
+</div>
+</nav>
+</div>
+</div>
+</div>
+<div class=social-icons>
+<a href=https://www.facebook.com/energyalternatives.pk target=_blank class=social-icon><i class="fab fa-facebook-f"></i></a>
+<a href=https://pk.linkedin.com/company/ealternativespk target=_blank class=social-icon><i class="fa-brands fa-linkedin"></i></a>
+<a href=https://www.youtube.com/@energyalternatives-pakistan target=_blank class=social-icon><i class="fa-brands fa-youtube"></i></a>
+<a href=https://www.instagram.com/energy_alternatives_/ target=_blank class=social-icon><i class="fa-brands fa-instagram"></i></a>
+<a href=https://www.tiktok.com/@energy_alternatives_ target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
+</a>
+</div>
+</header>
+
+   <!-- Side Popup -->
+   <div class="ud-side-popup ud-side-popup--home-one">
+    <div class="ud-side-popup__header">
+      <button class="side-popup-close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+  <div>
+  <a href="tel:04236367373" style="background-color: #FAAA1B; padding: 10px 15px; border-radius: 10px;">
+    Get a Quote
+  </a>
+  </div>
+    </div>
+    <div class="ud-side-popup__body">
+      <ul class="metismenu" id="side-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sustainbility.html">Sustainability</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+            Shop <span class="arrow"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Solar Panels</a></li>
+            <li><a href="#">Solar Inverters</a></li>
+            <li><a href="#">Batteries</a></li>
+            <li><a href="#">Mounting Structures</a></li>
+            <li><a href="#">Electrical Accessories</a></li>
+          </ul>
+        </li>
+      
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ud-side-popup__bottom">
+      <div class="ud-side-popup__bottom-info">
+        <div
+          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
+        >
+          <i class="fa-solid fa-phone"></i>
+          <div class="ud-header-info-box__details">
+            <span>Need Help?</span>
+            <h4>
+              <a href="tel:04236367373">(042) 36367373</a>
+              <br><a href="tel:03001116366">03001116366</a>
+            </h4>
+          </div>
+        </div>
+        <div
+          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
+        >
+          <i class="fa-solid fa-paper-plane"></i>
+          <div class="ud-header-info-box__details">
+            <span>Naqi Arcade Plaza, Mall Road</span>
+            <h4>Lahore, Pakistan</h4>
+          </div>
+        </div>
+        <div
+          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
+        >
+          <i class="fa-solid fa-envelope"></i>
+          <div class="ud-header-info-box__details">
+            <span>Send email</span>
+            <h4>
+              <a href="mailto:info@energyalternatives.com.pk">info@energyalternatives.com.pk</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <ul class="ud-side-popup__bottom-socials">
+        <li>
+          <a href="https://www.facebook.com/energyalternatives.pk">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@energyalternatives-pakistan">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/energy_alternatives_/">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://pk.linkedin.com/company/ealternativespk">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const hamburgerBtn = document.querySelector('.ud-hamburger-menu__btn');
+    const sidePopup = document.querySelector('.ud-side-popup');
+    const closeBtn = document.querySelector('.side-popup-close');
+  
+    // Toggle popup when hamburger is clicked
+    hamburgerBtn.addEventListener('click', function () {
+    sidePopup.classList.add('active'); // Show side popup
+    document.querySelector('.overlay').classList.add('active'); // Show overlay
+    });
+  
+    // Close popup when close button or overlay is clicked
+    closeBtn.addEventListener('click', function () {
+    sidePopup.classList.remove('active');
+    document.querySelector('.overlay').classList.remove('active');
+    });
+  
+    document.querySelector('.overlay').addEventListener('click', function () {
+    sidePopup.classList.remove('active');
+    this.classList.remove('active');
+    });
+  });
+  </script>
+
+<!-- shop menu dropdown -->
+<script>
+  function toggleDropdown(event) {
+    event.preventDefault(); // prevent default link behavior
+    const parentLi = event.currentTarget.closest('.dropdown');
+    parentLi.classList.toggle('open');
+  }
+
+  // Optional: Close dropdown when clicking outside
+  window.addEventListener('click', function (e) {
+    document.querySelectorAll('.dropdown').forEach(drop => {
+      if (!drop.contains(e.target)) drop.classList.remove('open');
+    });
+  });
+</script>
+
+
+</body>
+</html>
