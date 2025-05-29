@@ -1,85 +1,364 @@
-<footer class=srex-footer-two>
-  <div class=container>
-  <div class="srex-footer-two__links footer-two">
-  <div class=row>
-  <div class="col-12 col-lg-3 col-md-6">
-  <div class=srex-footer-two__links__logo>
-    <a href=index.html> <img style="max-inline-size: 190px;" src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif"></a>
+<footer class="srex-footer-two">
+  <style>/* Define your CSS variables if you haven't already */
+:root {
+    --primary-color: #f7a500; /* Example: A warm orange color */
+    --secondary-color: #3b4255; /* The dark background from your image */
+    --text-color-light: #ffffff; /* White text for contrast */
+    --text-color-medium: #c0c0c0; /* Lighter grey for subtle text */
+    --text-color-dark: #808080; /* Darker grey for copyright */
+    --input-bg: #5a627a; /* Background for newsletter input */
+    --input-placeholder: #a0a8be; /* Placeholder color */
+}
 
-  <p class=srex-footer-two__links__logo__text>
-  Energy alternatives is a highly diversified and progressive company involved in the business of sales & renewable energy projects in all sectors of Pakistan.
-  </p>
-  <style>@media (max-width:780px){.srex-footer-two__links__logo__text{margin-bottom:40px}}</style>
-  </div>
-  </div>
-  <div class="col-6 col-lg-3 col-md-6">
-  <div class=srex-footer__links__wrapper>
-  <h4>Useful Links</h4>
-  <div class=srex-footer__links__content>
-  <ul class=srex-footer__links__list>
-  <li>
-  <a href=about.html>About US</a>
-  </li>
-  <li>
-  <a href=services.html>Our Service</a>
-  </li>
-  <li>
-  <a href=projects.html>Projects</a>
-  </li>
-  <li><a href=https://energyalternativesstore.com target="_blank"> Shop </a></li>
 
-  <li>
-  <a href=careers.html target=_blank>Careers</a>
-  </li>
-  <li>
-  <a href=contact.html>Contact</a>
-  </li>
-  </ul>
-  </div>
-  </div>
-  </div>
-  <div class="col-6 col-lg-3 col-md-6">
-  <div class=srex-footer__links__wrapper>
-  <h4>Requesting A Call</h4>
-  <div class=srex-footer__links__content>
-  <ul class=srex-footer__links__list>
-  <li>
-  <p>(042) 36367373</p>
-  <p>0300 111 6366</p>
-  </li>
-  
-  <h4>Location</h4>
-  <p> Office No.19-23 Naqi Arcade <br> Plazza Mall Road Lahore Pakistan</p>
-  </ul>
-  </div>
-  </div>
-  </div>
-  <div class="col-12 col-lg-3 col-md-6">
-  <div class=srex-footer__links__wrapper>
-  <h4>Newsletter</h4>
-  <div class=srex-footer__links__content>
-  <div class=srex-footer__newsletter>
-  <p>
-  Stay updated with our latest news, promotions, and exclusive offers. Subscribe now!
-  </p>
-  <div class=srex-footer__form>
-  <form action="https://formsubmit.co/info@www.energyalternatives.com.pk" method="POST" enctype="multipart/form-data">
-  <input name=email placeholder="Enter your email" type=email required>
-  <button type=submit>
-  <i class="fa-solid fa-paper-plane"></i>
-  </button>
-  </form>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class=border-line></div>
-  <div class=srex-footer__bottom>
-  <div class=row>
-  <div style=width:100%;justify-content:center;text-align:center class="col-12 col-md-6">
-  <p>© 2025 Energy Alternatives | All Rights Reserved</p>
-  </div>
-  </div></div></div></footer>
+/* --- Footer Two Styles (Updated for Image Match) --- */
+.srex-footer-two {
+    background-color: var(--secondary-color); /* Dark background from image */
+    padding: 80px 0 20px; /* Increased top padding for more space */
+    color: var(--text-color-light); /* White text for contrast */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6; /* Improved readability */
+}
+
+.srex-footer-two .container {
+    max-width: 1200px; /* Standard container width */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.srex-footer-two__links.footer-two .row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Adjust margin to align columns to the image's spacing */
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.srex-footer-two__links .col-12,
+.srex-footer-two__links .col-lg-3,
+.srex-footer-two__links .col-md-6 {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 40px; /* Space between columns, especially for mobile stacking */
+}
+
+/* Specific column widths to match image distribution */
+@media (min-width: 992px) { /* Large devices (desktops) */
+    .srex-footer-two__links .col-lg-3:nth-child(1) { /* Logo column */
+        flex: 0 0 28%; /* Roughly 28% to give space for other columns */
+        max-width: 28%;
+    }
+    .srex-footer-two__links .col-lg-3:nth-child(2) { /* Useful Links */
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+    .srex-footer-two__links .col-lg-3:nth-child(3) { /* Request a Call/Location */
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .srex-footer-two__links .col-lg-3:nth-child(4) { /* Newsletter */
+        flex: 0 0 27%;
+        max-width: 27%;
+    }
+}
+
+
+/* Logo and Text */
+.srex-footer-two__links__logo {
+    text-align: left; /* Align left as in the image */
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.srex-footer-two__links__logo img {
+    max-width: 190px; /* Keep original max-width */
+    height: auto;
+    margin-bottom: 25px; /* Space below logo */
+    transition: transform 0.3s ease;
+}
+
+.srex-footer-two__links__logo img:hover {
+    transform: scale(1.03); /* Subtle hover */
+}
+
+.srex-footer-two__links__logo__text {
+    font-size: 0.9rem; /* Slightly smaller text for the description */
+    line-height: 1.8;
+    color: var(--text-color-medium); /* Lighter grey for this text */
+    margin-bottom: 0;
+}
+
+/* Footer Links Wrapper */
+.srex-footer__links__wrapper {
+    margin-bottom: 0; /* Space handled by column margin */
+}
+
+.srex-footer__links__wrapper h4 {
+    font-size: 1.15rem; /* Slightly smaller heading size */
+    color: var(--text-color-light); /* White for headings */
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase; /* Match image's uppercase headings */
+    letter-spacing: 0.5px;
+}
+
+/* Underline effect for headings (as in image) */
+.srex-footer__links__wrapper h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px; /* Shorter underline */
+    height: 2px; /* Thinner line */
+    background-color: var(--primary-color); /* Orange color */
+}
+
+/* Useful Links List */
+.srex-footer__links__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.srex-footer__links__list li {
+    margin-bottom: 12px; /* Adjusted spacing */
+}
+
+.srex-footer__links__list li:last-child {
+    margin-bottom: 0;
+}
+
+.srex-footer__links__list li a,
+.srex-footer__links__list li p {
+    color: var(--text-color-medium); /* Lighter grey for links/text */
+    text-decoration: none;
+    font-size: 0.9rem; /* Consistent smaller text size */
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.srex-footer__links__list li a:hover {
+    color: var(--primary-color); /* Orange on hover */
+    /* Removed transform for a cleaner hover as in the image */
+}
+
+/* Location text and heading (adjusted spacing) */
+.location-heading {
+    margin-top: 35px; /* More space above location heading */
+    margin-bottom: 20px; /* Consistent margin below heading */
+}
+
+.location-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-color-medium); /* Lighter grey for location text */
+}
+
+/* Newsletter Section */
+.srex-footer__newsletter p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-color-medium); /* Lighter grey */
+    margin-bottom: 25px; /* Space above input */
+}
+
+.srex-footer__form {
+    position: relative;
+}
+
+.srex-footer__form input[type="email"] {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--input-bg); /* Darker grey background for input */
+    color: var(--text-color-light); /* White text in input */
+    font-size: 0.9rem;
+    outline: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.srex-footer__form input[type="email"]::placeholder {
+    color: var(--input-placeholder); /* Lighter grey placeholder */
+}
+
+.srex-footer__form input[type="email"]:focus {
+    background-color: var(--input-bg);
+    box-shadow: 0 0 0 2px var(--primary-color); /* Orange focus glow */
+}
+
+.srex-footer__form button[type="submit"] {
+    position: absolute;
+    right: 15px; /* Adjust right position */
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--primary-color); /* Orange icon */
+    font-size: 1rem; /* Smaller icon size */
+    cursor: pointer;
+    padding: 5px; /* Smaller padding */
+    transition: color 0.3s ease;
+}
+
+.srex-footer__form button[type="submit"]:hover {
+    color: var(--text-color-light); /* White on hover */
+}
+
+
+/* Border line before bottom text */
+.border-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px; /* Increased margin for more separation */
+    margin-bottom: 20px;
+}
+
+/* Footer Bottom */
+.srex-footer__bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.srex-footer__bottom p {
+    font-size: 0.85rem; /* Smaller copyright text */
+    color: var(--text-color-dark); /* Darker grey for copyright */
+    margin: 0;
+}
+
+/* --- Responsive Adjustments (Refined for Image Match) --- */
+@media (max-width: 991px) { /* Tablets and smaller desktops */
+    .srex-footer-two__links__logo {
+        text-align: center; /* Center logo on tablets */
+    }
+
+    .srex-footer-two__links__logo img {
+        margin-left: auto;
+        margin-right: auto; /* Center logo image */
+    }
+
+    .srex-footer__links__wrapper h4::after {
+        left: 50%; /* Center underline for centered headings */
+        transform: translateX(-50%);
+    }
+
+    /* Adjust column widths for better tablet layout (2 columns) */
+    .srex-footer-two__links .col-md-6 {
+        flex: 0 0 50%; /* Each takes 50% width */
+        max-width: 50%;
+        text-align: center; /* Center content in these columns */
+    }
+
+    /* Specific adjustments for certain columns on tablet */
+    .srex-footer-two__links .col-md-6:nth-child(1) { /* Logo column */
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) { /* Small devices (phones) */
+    .srex-footer-two {
+        padding: 50px 0 15px; /* Adjust padding for phones */
+    }
+
+    .srex-footer-two__links .col-12,
+    .srex-footer-two__links .col-md-6 { /* All columns stack */
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 30px; /* Smaller margin for stacked columns */
+    }
+
+    .srex-footer__links__wrapper h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .srex-footer__form input[type="email"] {
+        padding: 10px 45px 10px 10px;
+    }
+
+    .srex-footer__form button[type="submit"] {
+        font-size: 1.1rem;
+        padding: 6px;
+    }
+}</style>
+    <div class="container">
+        <div class="srex-footer-two__links footer-two">
+            <div class="row">
+                <div class="col-12 col-lg-3 col-md-6">
+                    <div class="srex-footer-two__links__logo">
+                        <a href="index.html">
+                            <img src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Energy Alternatives Logo">
+                        </a>
+                        <p class="srex-footer-two__links__logo__text">
+                            Energy alternatives is a highly diversified and progressive company involved in the business of sales & renewable energy projects in all sectors of Pakistan.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="srex-footer__links__wrapper">
+                        <h4>Useful Links</h4>
+                        <div class="srex-footer__links__content">
+                            <ul class="srex-footer__links__list">
+                                <li><a href="about.html">About US</a></li>
+                                <li><a href="services.html">Our Service</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="https://energyalternativesstore.com" target="_blank" rel="noopener noreferrer">Shop</a></li>
+                                <li><a href="careers.html" target="_blank" rel="noopener noreferrer">Careers</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3 col-md-6">
+                    <div class="srex-footer__links__wrapper">
+                        <h4>Request a Call</h4>
+                        <div class="srex-footer__links__content">
+                            <ul class="srex-footer__links__list">
+                                <li>
+                                    <a href="tel:+924236367373">(042) 36367373</a>
+                                </li>
+                                <li>
+                                    <a href="tel:+923001116366">0300 111 6366</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <h4 class="location-heading">Location</h4>
+                        <p class="location-text">
+                            Office No.19-23 Naqi Arcade <br> Plazza Mall Road Lahore Pakistan
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3 col-md-6">
+                    <div class="srex-footer__links__wrapper">
+                        <h4>Newsletter</h4>
+                        <div class="srex-footer__links__content">
+                            <div class="srex-footer__newsletter">
+                                <p>
+                                    Stay updated with our latest news, promotions, and exclusive offers. Subscribe now!
+                                </p>
+                                <div class="srex-footer__form">
+                                    <form action="https://formsubmit.co/info@www.energyalternatives.com.pk" method="POST" enctype="multipart/form-data">
+                                        <input name="email" placeholder="Enter your email" type="email" required aria-label="Enter your email for newsletter">
+                                        <button type="submit" aria-label="Subscribe to newsletter">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-line"></div>
+        <div class="srex-footer__bottom">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>© 2025 Energy Alternatives | All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

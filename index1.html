@@ -9,534 +9,6 @@
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
 <link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
 <link rel=stylesheet href=./assets/css/style.css>
-
-<style>
-
-:root {
-    --primary-color: #FAAA1B;
-    --secondary-color: #002366;
-    --text-color: #333;
-    --light-bg: #f8f8f8;
-    --dark-bg: #335ca1;
-    --white: #fff;
-    --whatsapp-green: #25D366;
-    --transition: all 0.3s ease;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Top Info Bar */
-.top-bar {
-    background-color: rgb(0, 0, 0);
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    flex-wrap: wrap;
-    gap: 15px;
-    border-bottom: 1px solid #b8b8b8; /* Add a subtle border */
-}
-
-.installations {
-    font-weight: bold;
-    font-size: 1.125rem; /* 18px */
-    color: var(--primary-color);
-    /* Initially visible, but we'll hide it on mobile */
-    display: block; 
-}
-
-.contact-info {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-}
-
-.contact-item {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.7;
-    align-items: flex-start;
-}
-
-/* Hide contact-item by default on mobile based on new requirements */
-@media (max-width: 1024px) {
-    .contact-item {
-        display: none;
-    }
-}
-
-.whatsapp-link { /* This class is not currently used in your HTML, consider whatsapp-btn */
-    color: var(--white);
-    font-weight: bold;
-    text-decoration: none;
-    background-color: var(--whatsapp-green);
-    padding: 6px 12px;
-    border-radius: 4px;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    transition: var(--transition);
-}
-
-.whatsapp-link:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-}
-/* Existing CSS for .whatsapp-btn (no change here) */
-.whatsapp-btn {
-    display: inline-flex; /* Keep it visible by default on larger screens */
-    align-items: center;
-    gap: 8px;
-    background: var(--whatsapp-green);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s;
-}
-
-.whatsapp-btn:hover {
-    background: #128C7E;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* NEW ADDITION: Hide whatsapp-btn on screens up to 1024px (mobile/tablet) */
-@media (max-width: 1024px) {
-    .whatsapp-btn {
-        display: none !important; /* Use !important to override any potential inline or conflicting rules */
-    }
-}
-
-
-/* Navigation Bar */
-.nav-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    background-color: var(--dark-bg);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav-bar {
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 90px;
-    padding: 0 20px;
-}
-
-.logo img {
-    height: 80px;
-    transition: transform 0.3s;
-}
-
-.logo img:hover {
-    transform: scale(1.05);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-    height: 100%;
-    align-items: center;
-}
-
-.nav-links > li {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 600;
-    font-size: 0.9375rem; /* 15px */
-    text-transform: uppercase;
-    padding: 10px 15px;
-    transition: var(--transition);
-    border-radius: 4px;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-    background-color: rgba(0, 35, 102, 0.1);
-}
-
-.nav-links a.active {
-    color: var(--primary-color);
-    font-weight: 700;
-}
-
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.dropdown-toggle .arrow {
-    font-size: 12px;
-    transition: transform 0.3s;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--dark-bg);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    border-radius: 4px;
-    padding: 10px 0;
-    min-width: 220px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: var(--transition);
-    z-index: 1000;
-}
-
-.dropdown:hover .dropdown-menu,
-.dropdown.open .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.dropdown:hover .arrow,
-.dropdown.open .arrow {
-    transform: rotate(180deg);
-}
-
-.dropdown-menu li {
-    padding: 0;
-}
-
-.dropdown-menu a {
-    text-transform: none;
-    font-weight: 500;
-    padding: 8px 20px;
-    display: block;
-    white-space: nowrap;
-}
-
-.dropdown-menu a:hover {
-    background-color: #FAAA1B;
-    color: var(--white);
-}
-
-/* Get Quote Button */
-.quote-btn {
-    padding: 8px 20px;
-    border: 2px solid var(--primary-color);
-    border-radius: 6px;
-    background: var(--primary-color);
-    font-weight: 600;
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: var(--transition);
-    margin-left: 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.quote-btn:hover {
-    background: var(--secondary-color);
-    color: var(--white);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-}
-
-/* Mobile Menu Button (Hamburger) */
-.mobile-menu-btn {
-    display: none; /* Hidden by default, shown in media queries */
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--white);
-    background: none;
-    border: none;
-    padding: 5px;
-    order: 2; /* Position it to the right */
-}
-
-/* Mobile Menu Panel */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%; /* Initially off-screen */
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background-color: var(--dark-bg);
-    z-index: 1100;
-    transition: right 0.4s ease-in-out;
-    overflow-y: auto;
-    padding: 20px;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-}
-
-.mobile-menu.active {
-    right: 0;
-}
-
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-.mobile-menu-header .logo {
-    text-align: center; /* Center the logo inside the mobile menu header */
-    flex-grow: 1; /* Allow logo to take available space */
-}
-
-.mobile-menu-header .logo img {
-    height: 50px; /* Adjust logo size for mobile menu */
-    width: auto;
-    max-width: 100%;
-}
-
-.close-menu-btn {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.8rem;
-    cursor: pointer;
-}
-
-.mobile-nav-links {
-    list-style: none;
-}
-
-.mobile-nav-links li {
-    margin-bottom: 5px;
-}
-
-.mobile-nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    display: block;
-    padding: 12px 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: background-color 0.3s;
-}
-
-.mobile-nav-links a:hover,
-.mobile-nav-links a:focus {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.mobile-dropdown-toggle {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 10px;
-    color: var(--white);
-    text-decoration: none;
-    cursor: pointer;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    transition: background-color 0.3s;
-}
-
-.mobile-dropdown-toggle:hover,
-.mobile-dropdown-toggle:focus {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.mobile-dropdown-menu {
-    padding-left: 15px;
-    list-style: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-.mobile-dropdown-menu.active {
-    max-height: 500px;
-}
-
-.mobile-dropdown-menu a {
-    padding: 10px 15px;
-    font-size: 0.9em;
-    border-bottom: none;
-}
-
-/* Mobile specific quote button inside menu */
-.quote-btn-mobile {
-    display: none; /* Hidden by default */
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 12px 10px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-top: 20px;
-    border: none;
-    transition: var(--transition);
-}
-
-.quote-btn-mobile:hover {
-    background: var(--secondary-color);
-    color: var(--white);
-}
-
-/* Installations text inside mobile menu */
-.installations-mobile {
-    display: none; /* Hidden by default */
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.125rem;
-    text-align: center;
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 15px;
-}
-
-
-/* Overlay for mobile menu */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    z-index: 1050;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
-}
-
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Responsive styles */
-@media (max-width: 1024px) {
-    .top-bar {
-        padding: 10px 5%;
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px;
-        text-align: center;
-        align-items: center; /* Center align items */
-    }
-    
-    .installations {
-        display: none; /* Hide installations text in top bar for mobile */
-    }
-
-    .contact-info {
-        justify-content: center; /* Center contact details horizontally */
-        gap: 15px;
-        flex-direction: column; /* Stack contact items */
-        width: 100%;
-    }
-
-    /* .contact-item { is hidden via general rule above */
-
-    .whatsapp-btn {
-        margin-top: 10px; /* Add some space above whatsapp button */
-    }
-
-    .logo {
-        width: auto; /* Allow logo to size naturally */
-        order: 1; /* Keep the logo on the left */
-        flex-grow: 0; /* Don't let it take extra space */
-    }
-
-    .nav-links,
-    .quote-btn {
-        display: none; /* Hide desktop navigation and quote button */
-    }
-    
-    .mobile-menu-btn {
-        display: block; /* Show mobile menu button */
-        order: 2; /* Ensure it's on the right */
-    }
-    
-    .nav-bar {
-        height: 70px;
-        padding: 0 20px;
-        justify-content: space-between; /* Space out logo and hamburger */
-    }
-    
-    .logo img {
-        height: 60px; /* Smaller logo for navigation bar on mobile */
-    }
-
-    /* Show mobile-specific elements */
-    .mobile-menu-header .logo {
-        display: block; /* Ensure logo is visible in mobile menu header */
-    }
-
-    .quote-btn-mobile,
-    .installations-mobile {
-        display: block; /* Show mobile specific quote button and installations text */
-    }
-}
-
-@media (max-width: 768px) {
-    .whatsapp-btn {
-        font-size: 14px;
-        padding: 8px 12px;
-        width: 90%; /* Make whatsapp button wider on smaller screens */
-    }
-
-    .nav-bar {
-        padding: 0 15px; /* Adjust padding for very small screens */
-    }
-}
-
-/* Accessibility improvements */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-/* Focus styles for accessibility */
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-}
-
-</style>
-
 </head>
 <body class="body-wrapper home-one" data-scroll-animation=true>
 
@@ -635,122 +107,7 @@ button:focus-visible {
       }
     </style>
   
-    <div class="top-bar" style="background-color: #dcdcdc81;">
-       <div class="logo">
-                <a href="index.html"> <img src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Energy Alternatives Logo"></a>
-            </div>         <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                    <div class="contact-label">Email us</div>
-                    <a href="mailto:info@energyalternatives.com.pk" class="contact-link">
-                        info@energyalternatives.com.pk
-                    </a>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fas fa-mobile-alt"></i>
-                </div>
-                <div class="contact-details">
-                    <a href="tel:+923001116366" class="contact-link">
-                        +92 300 111 6366
-                    </a>
-                    <div class="contact-hours">Mon to Fri: 09 AM - 06 PM</div>
-                </div>
-            </div>
-
-            <div class="contact-item">
-                <div class="contact-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="contact-details">
-                    <a href="tel:+924236367373" class="contact-link">
-                        (042) 3636 7373
-                    </a>
-                    <div class="contact-hours">Mon to Fri: 09 AM - 06 PM</div>
-                </div>
-            </div>
-
-            <a href="https://wa.me/923001116366" class="whatsapp-btn" target="_blank" rel="noopener">
-                <i class="fab fa-whatsapp"></i>
-                Chat on WhatsApp
-            </a>
-        </div>
-    </div>
-    
-    <div class="nav-container">
-        <div class="nav-bar">
-
-            
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="sustainbility.html">Sustainability</a></li>
-                <li><a href="ourcertificates.html">Our Certificates</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="pro.html">Projects</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" aria-expanded="false">Shop <span class="arrow">▼</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="https://energyalternativesstore.com/solar-panels-categories/"><i class="fas fa-solar-panel"></i> Solar Panels</a></li>
-                        <li><a href="https://energyalternativesstore.com/inverters/"><i class="fas fa-bolt"></i> Solar Inverters</a></li>
-                        <li><a href="https://energyalternativesstore.com/batteries-categories/"><i class="fas fa-battery-full"></i> Batteries</a></li>
-                        <li><a href="https://energyalternativesstore.com/mounting-structures/"><i class="fas fa-th"></i> Mounting Structures</a></li>
-                        <li><a href="https://energyalternativesstore.com/electrical-asseries/"><i class="fas fa-plug"></i> Electrical Accessories</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            
-            <a href="getaquoate.html" class="quote-btn">Get a Quote</a>
-             <div class="installations-mobile">#565MW+ Installations</div>
-            <button class="mobile-menu-btn" aria-label="Open mobile menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </div>
-
-    <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Main menu">
-    
-        <div class="mobile-menu-header">
-            
-
-            <button class="close-menu-btn" aria-label="Close mobile menu">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-       
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="sustainbility.html">Sustainability</a></li>
-            <li><a href="ourcertificates.html">Our Certificates</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="pro.html">Projects</a></li>
-            <li class="mobile-dropdown">
-                <div class="mobile-dropdown-toggle">
-                    Shop <span class="arrow">▼</span>
-                </div>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="https://energyalternativesstore.com/solar-panels-categories/"><i class="fas fa-solar-panel"></i> Solar Panels</a></li>
-                    <li><a href="https://energyalternativesstore.com/inverters/"><i class="fas fa-bolt"></i> Solar Inverters</a></li>
-                    <li><a href="https://energyalternativesstore.com/batteries-categories/"><i class="fas fa-battery-full"></i> Batteries</a></li>
-                    <li><a href="https://energyalternativesstore.com/mounting-structures/"><i class="fas fa-th"></i> Mounting Structures</a></li>
-                    <li><a href="https://energyalternativesstore.com/electrical-asseries/"><i class="fas fa-plug"></i> Electrical Accessories</a></li>
-                </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a href="getaquoate.html" class="quote-btn-mobile"><i class="fas fa-phone-alt"></i> Get a Quote</a>
-    </div>
-<!-- 
-    <div class="overlay"></div> -->
-
-
+  
   <!-- Popup Form -->
   <div class="popup-container" id="popupForm">
     <div class="popup-form">
@@ -840,13 +197,112 @@ button:focus-visible {
       </form>
     </div>
   </div>
-<!-- ✅ Overlay for mobile menu -->
-<!-- <div class="overlay"></div>
- -->
+  
 
+<!-- ✅ Overlay for mobile menu -->
+<div class="overlay"></div>
+
+<header class="srex-header srex-header--home-two">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <nav class="ud-main-menu d-flex align-items-center justify-content-between" aria-label="Main Navigation">
+          <!-- Logo -->
+          <div class="ud-main-menu__logo">
+            <a href="index.html">
+              <img style="max-inline-size: 190px;" src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Logo">
+            </a>
+          </div>
+
+          <!-- Hamburger Menu -->
+          <div class="ud-hamburger-menu d-block">
+            <div class="ud-hamburger-menu__btn">
+              <span></span>
+            </div>
+          </div>
+
+          <!-- CTA Button (optional on larger screens) -->
+          <div class="srex-header__call d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
+            <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px; background: #FAAA1B;">
+              <a href="tel:04236367373"> Get a Quote </a>
+            </h4>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Icons -->
+  <div class="social-icons">
+    <a href="https://www.facebook.com/energyalternatives.pk" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://pk.linkedin.com/company/ealternativespk" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.youtube.com/@energyalternatives-pakistan" target="_blank" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://www.instagram.com/energy_alternatives_/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@energy_alternatives_" target="_blank" class="social-icon"><i class="fa-brands fa-tiktok"></i></a>
+  </div>
+</header>
+
+<!-- ✅ Mobile Side Popup Menu -->
+<div class="ud-side-popup">
+  <div class="ud-side-popup__header">
+    <button class="side-popup-close"><i class="fa-solid fa-xmark"></i></button>
+    <div>
+      <a href="tel:04236367373" style="background-color: #FAAA1B; padding: 10px 15px; border-radius: 10px;">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="ud-side-popup__body">
+    <ul class="metismenu" id="side-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="ourcertificates.html">Certifications</a></li>
+      <li><a href="sustainbility.html">Sustainability</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">Shop <span class="arrow"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="https://energyalternativesstore.com/solar-panels-categories/">Solar Panels</a></li>
+          <li><a href="https://energyalternativesstore.com/inverters/">Solar Inverters</a></li>
+          <li><a href="https://energyalternativesstore.com/batteries-categories/">Batteries</a></li>
+          <li><a href="https://energyalternativesstore.com/mounting-structures/">Mounting Structures</a></li>
+          <li><a href="https://energyalternativesstore.com/electrical-asseries/">Electrical Accessories</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="ud-side-popup__bottom">
+    <div class="ud-side-popup__bottom-info">
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+        <i class="fa-solid fa-phone"></i>
+        <div class="ud-header-info-box__details">
+          <span>Need Help?</span>
+          <h4><a href="tel:04236367373">(042) 36367373</a><br><a href="tel:03001116366">03001116366</a></h4>
+        </div>
+      </div>
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+        <i class="fa-solid fa-paper-plane"></i>
+        <div class="ud-header-info-box__details">
+          <span>Naqi Arcade Plaza, Mall Road</span>
+          <h4>Lahore, Pakistan</h4>
+        </div>
+      </div>
+      <div class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="ud-header-info-box__details">
+          <span>Send email</span>
+          <h4><a href="mailto:info@energyalternatives.com.pk">info@energyalternatives.com.pk</a></h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 <!-- ✅ Styles to make mobile menu primary -->
-<!-- <style>
+<style>
   .ud-main-menu__links {
     display: none !important;
   }
@@ -911,7 +367,7 @@ button:focus-visible {
   .dropdown.open .arrow {
     transform: rotate(180deg);
   }
-</style> -->
+</style>
 
 <!-- ✅ Mobile menu toggle scripts -->
 
@@ -1786,19 +1242,20 @@ More Blogs <i class="fa-solid fa-plus"></i>
 <script>const galleryTrack=document.querySelector(".gallery-track"),galleryItems=document.querySelectorAll(".gallery-item");let index=0;function scrollGallery(){index++,index>=galleryItems.length&&(index=0),galleryTrack.style.transform=`translateX(-${100*index}%)`}setInterval(scrollGallery,3e3)</script>
 
 
- <!-- Toggle popup when hamburger is clicked
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const hamburgerBtn = document.querySelector('.ud-hamburger-menu__btn');
     const sidePopup = document.querySelector('.ud-side-popup');
     const closeBtn = document.querySelector('.side-popup-close');
   
-  
+    // Toggle popup when hamburger is clicked
     hamburgerBtn.addEventListener('click', function () {
     sidePopup.classList.add('active'); // Show side popup
-    document.querySelector('.overlay').classList.add('active'); 
+    document.querySelector('.overlay').classList.add('active'); // Show overlay
     });
-
+  
+    // Close popup when close button or overlay is clicked
     closeBtn.addEventListener('click', function () {
     sidePopup.classList.remove('active');
     document.querySelector('.overlay').classList.remove('active');
@@ -1809,7 +1266,7 @@ More Blogs <i class="fa-solid fa-plus"></i>
     this.classList.remove('active');
     });
   });
-  </script> -->
+  </script>
 
 
 
@@ -1826,113 +1283,23 @@ More Blogs <i class="fa-solid fa-plus"></i>
 </script>
 
 
-<!-- shop menu dropdown
+<!-- shop menu dropdown -->
 <script>
   function toggleDropdown(event) {
-    event.preventDefault();
+    event.preventDefault(); // prevent default link behavior
     const parentLi = event.currentTarget.closest('.dropdown');
     parentLi.classList.toggle('open');
   }
 
-
+  // Optional: Close dropdown when clicking outside
   window.addEventListener('click', function (e) {
     document.querySelectorAll('.dropdown').forEach(drop => {
       if (!drop.contains(e.target)) drop.classList.remove('open');
     });
   });
-</script> -->
+</script>
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Desktop dropdown functionality
-            const desktopDropdowns = document.querySelectorAll('.nav-links .dropdown');
-
-            desktopDropdowns.forEach(dropdown => {
-                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-                dropdownToggle.addEventListener('click', function(e) {
-                    if (window.innerWidth > 1024) { // Only for desktop
-                        e.preventDefault();
-                        dropdown.classList.toggle('open');
-                        this.setAttribute('aria-expanded', dropdown.classList.contains('open'));
-                    }
-                });
-
-                // Close dropdown when mouse leaves the dropdown area
-                dropdown.addEventListener('mouseleave', () => {
-                    if (window.innerWidth > 1024) {
-                        dropdown.classList.remove('open');
-                        dropdownToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-
-            // Mobile menu functionality
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const closeMenuBtn = document.querySelector('.close-menu-btn');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.overlay');
-            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-
-            function openMobileMenu() {
-                mobileMenu.classList.add('active');
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling body
-                mobileMenuBtn.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restore body scrolling
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                // Close any open mobile dropdowns when menu closes
-                mobileDropdownToggles.forEach(toggle => {
-                    toggle.nextElementSibling.classList.remove('active');
-                    toggle.querySelector('.arrow').style.transform = 'rotate(0deg)';
-                });
-            }
-
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-            closeMenuBtn.addEventListener('click', closeMobileMenu);
-            overlay.addEventListener('click', closeMobileMenu); // Close when clicking overlay
-
-            // Mobile dropdown toggles
-            mobileDropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const dropdownMenu = this.nextElementSibling;
-                    const arrow = this.querySelector('.arrow');
-                    dropdownMenu.classList.toggle('active');
-                    arrow.style.transform = dropdownMenu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-                });
-            });
-
-            // Close mobile menu if a link is clicked
-            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    // Only close if it's not a dropdown toggle that was clicked
-                    if (!link.closest('.mobile-dropdown-toggle')) {
-                        closeMobileMenu();
-                    }
-                });
-            });
-
-            // Adjust event listeners based on screen size changes (for desktop vs. mobile)
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 1024) {
-                    // Ensure mobile menu is closed and body scroll is restored if resizing to desktop
-                    if (mobileMenu.classList.contains('active')) {
-                        closeMobileMenu();
-                    }
-                    // Ensure desktop dropdowns are not stuck open if resized from mobile
-                    desktopDropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('open');
-                        dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 </htm

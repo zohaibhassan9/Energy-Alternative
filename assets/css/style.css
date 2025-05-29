@@ -956,7 +956,7 @@ margin-bottom:20px;
 /*-----------------
     Main Menu
 -------------------*/
-.ud-main-menu ul {
+/* .ud-main-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1019,7 +1019,7 @@ margin-bottom:20px;
 
 .srex-header--home-two .ud-main-menu__sub-menu li a {
   padding: 15px !important;
-}
+} */
 
 /*---------------------
 	Header Side Popup
@@ -1037,172 +1037,6 @@ margin-bottom:20px;
     Header Hamburger Menu
 ----------------------*/
 
-
-.ud-hamburger-menu {
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-.ud-hamburger-menu .ud-hamburger-menu__btn--active span {
-  -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-}
-.ud-hamburger-menu .ud-hamburger-menu__btn--active span::before {
-  top: 0;
-  -ms-transform: rotate(0);
-      transform: rotate(0);
-}
-.ud-hamburger-menu .ud-hamburger-menu__btn--active span::after {
-  top: 0;
-  -ms-transform: rotate(90deg);
-      transform: rotate(90deg);
-}
-.ud-hamburger-menu__btn {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  width: 26px;
-  height: 26px;
-  position: relative;
-  cursor: pointer;
-}
-
-.ud-hamburger-menu__btn span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #2D65A7;
-  transition: all 0.3s ease-in-out;
-}
-.ud-hamburger-menu__btn span::before, .ud-hamburger-menu__btn span::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  background-color: #2D65A7;
-  transition: all 0.3s ease-in-out;
-}
-.ud-hamburger-menu__btn span::before {
-  top: -8px;
-}
-.ud-hamburger-menu__btn span::after {
-  top: 8px;
-}
-
-
-
-/*
-    Projects Section 
-                        */
-.projects-section {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  padding: 20px;
-}
-
-.project-card {
-  cursor: pointer;
-  border: 2px solid #ddd;
-  padding: 10px;
-  width: 530px;
-  text-align: center;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-.project-card p {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* Gallery Modal */
-
-.gallery-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;;
-  background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.gallery-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 100%;
-  height: auto;
-}
-
-.gallery-images {
-  text-align: center;
-}
-
-.gallery-images img {
-  width: 700px;
-  height: auto;
-  border-radius: 12px;
-}
-
-button { 
-  background-color: rgba(255, 255, 255, 0.7);
-  border: none;
-  padding: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 30%;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-button:focus {
-  outline: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .gallery-images img {
-      width: 100%;
-  } 
-}
-
-.about-section {
-  text-align: center;
-  padding: 20px;
-  margin: 0 auto 20px auto; 
-  max-width: 60%;       
-}
-
-.about-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.about-section p {
-  font-size: 16px;
-  color: #666;
-}
 
   /*------------------------------------
     Hero Two
@@ -2703,7 +2537,7 @@ line-height: 1.6;
 header and mobile version styling 4/29/2025
 ------------------------------------*/
 
-.ud-side-popup {
+/* .ud-side-popup {
   display: none;
   position: fixed;
   top: 0; right: 0;
@@ -2718,7 +2552,7 @@ header and mobile version styling 4/29/2025
 .ud-side-popup.active {
   display: block;
 }
-
+ */
 
 /*------------------------------------
 	17/ News Letter
@@ -3605,153 +3439,6 @@ ul li {
 .srex-footer-one hr {
   border-color: #24231D;
 } */
-
-.srex-footer-two {
-  background-color: #24231D;
-  padding-top: 50px;
-  background-image: url(background-image: url(https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283235/footer-3-bg_elcion.png);
-);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-footer-two__top__content {
-    padding: 20px;
-  }
-}
-
-.srex-footer-two__top__content p {
-  color: #fff;
-}
-
-.srex-footer-two__top__content p a {
-  font-size: 20px;
-  font-weight: 700;
-  color: #fff;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .srex-footer-two__top__content p a {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 767px) {
-  .srex-footer-two__links__logo img {
-    padding-bottom: 20px;
-  }
-}
-
-.srex-footer-two__links__logo img {
-  padding-bottom: 20px;
-  height: 130px;
-}
-
-.srex-footer-two__links__logo__text {
-  padding: 0px 0px 30px 0;
-  color: #fff;
-  font-weight: semibold;
-  width: 80%;
-}
-
-@media (max-width: 767px) {
-  .srex-footer-two__links__logo__text {
-    padding: 0;
-  }
-}
-
-.srex-footer-two__links__social_links {
-  display: flex;
-  gap: 10px;
-}
-
-@media (max-width: 767px) {
-  .srex-footer-two__links__social_links {
-    padding: 25px 0;
-  }
-}
-
-.srex-footer-two__links__social_links a {
-  background: #24231D;
-  border: 1px solid #2D65A7;
-  color: #fff;
-  cursor: pointer;
-  height: 35px;
-  width: 35px;
-  border-radius: 999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.srex-footer-two__links__social_links a:hover {
-  background-color: #2D65A7;
-  color: #fff;
-}
-
-.srex-footer-two .border-line {
-  margin-top: 15px;
-  height: 1px;
-  width: 100%;
-  background: #fff;
-  opacity: 0.2;
-}
-
-.srex-footer-two .srex-footer__bottom li a:hover {
-  color: #fff;
-}
-
-.footer-two .srex-footer__links__wrapper h4 {
-  color: #fff;
-}
-
-.footer-two .srex-footer__links__wrapper li a {
-  color: #878680;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.footer-two .srex-footer__links__wrapper li a:hover {
-  color: #fff;
-}
-
-.footer-two .srex-footer__form {
-  position: relative;
-}
-.srex-footer__form{
- margin-top: 30px;
-}
-
-.footer-two .srex-footer__form input {
-  border-radius: 999px;
-  padding: 16px;
-  padding-right: 80px;
-  margin-right: 10px;
-  background: #24231D;
-  border: 2px solid #2F2E28;
-  width: 100%;
-  color: #fff;
-}
-.footer-two .srex-footer__form input:focus {
-  outline: none;
-}
-
-.footer-two .srex-footer__form button {
-  width: 60px;
-  height: 60px;
-  background: #2D65A7;
-  border-radius: 999px;
-  position: absolute;
-  right: -5px;
-  top: 0;
-}
-
-.footer-two .srex-footer__form button i {
-  font-size: 16px;
-  color: #fff;
-}
 
 
 
