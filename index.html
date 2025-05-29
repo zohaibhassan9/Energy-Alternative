@@ -10,6 +10,7 @@
 <link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
 <link rel=stylesheet href=./assets/css/style.css>
 
+
 <style>
 
 :root {
@@ -623,11 +624,11 @@ button:focus-visible {
         position: absolute;
         top: 12px;
         right: 15px;
-        font-size: 20px;
+        font-size: 30px;
         background: none;
         border: none;
         cursor: pointer;
-        color: #aaa;
+        color: #000000;
       }
   
       .close-btn:hover {
@@ -1842,97 +1843,49 @@ More Blogs <i class="fa-solid fa-plus"></i>
   });
 </script> -->
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const closeMenuBtn = document.querySelector('.close-menu-btn');
+        const overlay = document.querySelector('.overlay');
 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Desktop dropdown functionality
-            const desktopDropdowns = document.querySelectorAll('.nav-links .dropdown');
-
-            desktopDropdowns.forEach(dropdown => {
-                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
-                dropdownToggle.addEventListener('click', function(e) {
-                    if (window.innerWidth > 1024) { // Only for desktop
-                        e.preventDefault();
-                        dropdown.classList.toggle('open');
-                        this.setAttribute('aria-expanded', dropdown.classList.contains('open'));
-                    }
-                });
-
-                // Close dropdown when mouse leaves the dropdown area
-                dropdown.addEventListener('mouseleave', () => {
-                    if (window.innerWidth > 1024) {
-                        dropdown.classList.remove('open');
-                        dropdownToggle.setAttribute('aria-expanded', 'false');
-                    }
-                });
-            });
-
-            // Mobile menu functionality
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const closeMenuBtn = document.querySelector('.close-menu-btn');
-            const mobileMenu = document.querySelector('.mobile-menu');
-            const overlay = document.querySelector('.overlay');
-            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-
-            function openMobileMenu() {
+        if (mobileMenuBtn && mobileMenu && closeMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
                 mobileMenu.classList.add('active');
-                overlay.classList.add('active');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling body
-                mobileMenuBtn.setAttribute('aria-expanded', 'true');
-            }
-
-            function closeMobileMenu() {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
-                document.body.style.overflow = ''; // Restore body scrolling
-                mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                // Close any open mobile dropdowns when menu closes
-                mobileDropdownToggles.forEach(toggle => {
-                    toggle.nextElementSibling.classList.remove('active');
-                    toggle.querySelector('.arrow').style.transform = 'rotate(0deg)';
-                });
-            }
-
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-            closeMenuBtn.addEventListener('click', closeMobileMenu);
-            overlay.addEventListener('click', closeMobileMenu); // Close when clicking overlay
-
-            // Mobile dropdown toggles
-            mobileDropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function() {
-                    const dropdownMenu = this.nextElementSibling;
-                    const arrow = this.querySelector('.arrow');
-                    dropdownMenu.classList.toggle('active');
-                    arrow.style.transform = dropdownMenu.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
-                });
-            });
-
-            // Close mobile menu if a link is clicked
-            document.querySelectorAll('.mobile-nav-links a').forEach(link => {
-                link.addEventListener('click', () => {
-                    // Only close if it's not a dropdown toggle that was clicked
-                    if (!link.closest('.mobile-dropdown-toggle')) {
-                        closeMobileMenu();
-                    }
-                });
-            });
-
-            // Adjust event listeners based on screen size changes (for desktop vs. mobile)
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 1024) {
-                    // Ensure mobile menu is closed and body scroll is restored if resizing to desktop
-                    if (mobileMenu.classList.contains('active')) {
-                        closeMobileMenu();
-                    }
-                    // Ensure desktop dropdowns are not stuck open if resized from mobile
-                    desktopDropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('open');
-                        dropdown.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
-                    });
+                if (overlay) {
+                    overlay.classList.add('active');
                 }
             });
-        });
+
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('active');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            });
+
+            if (overlay) {
+                overlay.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            }
+        }
+
+        // Mobile Dropdown Toggle for "Shop"
+        const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+        const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+
+        if (mobileDropdownToggle && mobileDropdownMenu) {
+            mobileDropdownToggle.addEventListener('click', function() {
+                mobileDropdownMenu.classList.toggle('active');
+                // Optional: Rotate the arrow icon
+                this.querySelector('.arrow').classList.toggle('rotate');
+            });
+        }
+    });
     </script>
 </body>
 </htm
