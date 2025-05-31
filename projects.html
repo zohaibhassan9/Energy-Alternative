@@ -1,561 +1,675 @@
-<!doctype html>
-<html lang=eng>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Enengy Alternatives Powered By Nature</title>
-<link rel="icon" href="https://res.cloudinary.com/db2xlqrrx/image/upload/v1735532617/energy_alternatives_pakistan_1_ebndfk.png" type="image/x-icon">
-<link rel="shortcut icon" href=./assets/images/logo-black.png>
-<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
-<link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
-</head>
-<body class="body-wrapper home-one" data-scroll-animation=true>
-<div class=overlay></div>
-<header class="srex-header srex-header--home-two">
-<div class=container-fluid>
-<div class=row>
-<div class=col-12>
-<nav class="ud-main-menu ud-main-menu--home-one d-flex align-items-center justify-content-between" aria-label="Main Navigation">
-<div class=ud-main-menu__logo>
-<a href=index.html><img src=https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_140,h_80/energy_alternatives_pakistan_solar_project_company_wsdorv.png alt=energy_alternatives_pakistan>
-</a>
-</div>
-
-<ul class="ud-main-menu__links d-none d-lg-flex">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="sustainbility.html">Sustainability</a></li>
-
-  <li><a href="services.html">Services</a></li>
-
-  <!-- Projects ▸ Projects Gallery ▸ sub‑items -->
-  <li class="has-dropdown">
-    <a href="projects.html">Projects</a>
-    <ul class="dropdown">
-      <li class="has-dropdown">
-        <p><a href="projects.html">Projects Gallery</a></p>
-       
-        <ul class="dropdown">
-          <li><a href="industrial.html">Industrial</a></li>
-          <li><a href="commercial.html">Commercial</a></li>
-          <li><a href="residentialprojects.html">Residential</a></li>
-        </ul>
-         <a href="projects-gallery.html">Projects Videos</a>
-      </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
-      Shop <span class="arrow"></span>
-    </a>
-  <ul class="dropdown-menu">
-    <li><a href="#">Solar Panels</a></li>
-    <li><a href="#">Solar Inverters</a></li>
-    <li><a href="#">Batteries</a></li>
-    <li><a href="#">Mounting Structures</a></li>
-    <li><a href="#">Electrical Accessories</a></li>
-  </ul> </li>
-
-  <li><a href="contact.html">Contact</a></li>
-</ul>
-
-<style>/* Reset base */
-  .ud-main-menu__links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding-left: 0;
-    margin: 0;
-  }
-  
-  .ud-main-menu__links li {
-    position: relative;
-  }
-  
-  .ud-main-menu__links a {
-    text-decoration: none;
-    padding: 10px 15px;
-    display: inline-block;
-    color: #111;
-    font-weight: 500;
-  }
-  
-  /* Dropdown styles */
-  .dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-width: 180px;
-    z-index: 1000;
-    padding: 0;
-  }
-  
-  .dropdown .dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-  }
-  
-  .dropdown .dropdown-menu li a:hover {
-    background-color: #f89e1f;
-    color: #000;
-  }
-  
-  /* Arrow styles */
-  .dropdown-toggle {
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  .dropdown-toggle .arrow {
-    margin-left: 5px;
-    transition: transform 0.3s ease;
-    font-size: 12px;
-  }
-  
-  /* Show dropdown */
-  .dropdown.open .dropdown-menu {
-    display: block;
-  }
-  
-  /* Rotate arrow when open */
-  .dropdown.open .arrow {
-    transform: rotate(180deg);
-  }
-  
-  /* Responsive for mobile if needed */
-  @media (max-width: 991px) {
-    .ud-main-menu__links {
-      flex-direction: column;
-    }
-  
-    .dropdown .dropdown-menu {
-      position: static;
-      box-shadow: none;
-    }
-  }
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Solutions Pakistan - Projects Gallery</title>
+<script src="header.js"></script>
 <style>
- /* =====================
-   Responsive Multi‑level Navbar
-   Author: <Your Name>
-   ===================== */
-
-/* ---------- RESET ---------- */
-.ud-main-menu__links, .ud-main-menu__links ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Base Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ---------- LAYOUT ---------- */
-.ud-main-menu__links {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.ud-main-menu__links > li { position: relative; }
-
-/* ---------- LINKS ---------- */
-.ud-main-menu__links a {
-  display: block;
-  padding: 5px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  color: #222;
-  transition: color .2s ease;
-  white-space: nowrap;
-}
-.ud-main-menu__links a:hover,
-.ud-main-menu__links a:focus { color: #005fa3; }
-
-/* ---------- DROPDOWN ---------- */
-.ud-main-menu__links .dropdown {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  min-width: 12rem;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all .25s ease;
-  z-index: 1000;
-}
-.has-dropdown:hover > .dropdown,
-.has-dropdown:focus-within > .dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+body {
+background-color: #f8f9fa;
+color: #333;
 }
 
-/* nested levels */
-.dropdown .has-dropdown > .dropdown {
-  left: -100%;
-  top: 0;
+.container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 20px;
 }
 
-/* item spacing + divider */
-.dropdown > li > a {
-  padding: .55rem 1.25rem;
-  line-height: 1;
-  border-bottom: 1px solid #000;
-}
-.dropdown > li:last-child > a { border-bottom: none; }
-/* equal‑height rows inside Projects Gallery */
-.dropdown .dropdown { display: flex; flex-direction: column; }
-.dropdown .dropdown > li { flex: 1; }
-
-/* ---------- MOBILE (≤991 px) ---------- */
-@media (max-width: 991px){
-  .ud-main-menu__links { flex-direction: column; gap:0; }
-  .ud-main-menu__links > li { width: 100%; }
-  .ud-main-menu__links a { padding: .75rem 1rem; }
-
-  /* accordion style */
-  .ud-main-menu__links .dropdown {
-    position: static;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 1;
-    visibility: visible;
-    border: none;
-    box-shadow: none;
-    transform: none;
-    transition: max-height .3s ease;
-  }
-  /* open state toggled with JS (adds .open) */
-  .has-dropdown.open > .dropdown { max-height: 800px; }
+header {
+text-align: center;
+padding: 40px 0;
+background: #f49a09;
+color: white;
+margin-bottom: 30px;
+border-radius: 8px;
 }
 
+h1 {
+font-size: 2.5rem;
+margin-bottom: 15px;
+}
+
+.filter-controls {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-bottom: 30px;
+flex-wrap: wrap;
+}
+
+.filter-btn {
+padding: 8px 20px;
+background: white;
+border: 2px solid #0677a7;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s;
+font-weight: 600;
+}
+
+.filter-btn:hover, .filter-btn.active {
+background: #0677a7;
+color: white;
+}
+
+/* Projects Grid */
+.projects-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+gap: 25px;
+padding: 20px 0;
+}
+
+.project-card {
+background: white;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+cursor: pointer;
+height: 350px;
+position: relative;
+}
+
+.project-card:hover {
+transform: translateY(-10px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.project-label {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 15px;
+text-align: center;
+font-weight: bold;
+}
+
+/* Gallery Modal */
+.gallery-modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.95);
+z-index: 1000;
+overflow: hidden;
+}
+
+.gallery-container {
+position: relative;
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.gallery-slide {
+display: none;
+text-align: center;
+max-width: 90%;
+max-height: 90%;
+}
+
+.gallery-slide.active {
+display: block;
+}
+
+.gallery-slide img {
+max-width: 100%;
+max-height: 80vh;
+object-fit: contain;
+border-radius: 5px;
+}
+
+.gallery-caption {
+color: white;
+margin-top: 20px;
+font-size: 1.2rem;
+padding: 0 20px;
+}
+
+/* Navigation Controls */
+.gallery-nav {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 50px;
+height: 50px;
+color: white;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+background-color: rgba(0, 0, 0, 0.5);
+border: none;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1001;
+}
+
+.gallery-prev {
+left: 30px;
+}
+
+.gallery-next {
+right: 30px;
+}
+
+.gallery-close {
+position: absolute;
+top: 30px;
+right: 30px;
+color: white;
+font-size: 40px;
+font-weight: bold;
+cursor: pointer;
+z-index: 1001;
+}
+
+/* Thumbnails */
+.gallery-thumbnails {
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+display: flex;
+justify-content: center;
+gap: 10px;
+padding: 10px;
+overflow-x: auto;
+}
+
+.thumbnail {
+width: 70px;
+height: 70px;
+object-fit: cover;
+cursor: pointer;
+border: 3px solid transparent;
+border-radius: 5px;
+opacity: 0.7;
+transition: all 0.3s;
+}
+
+.thumbnail:hover, .thumbnail.active {
+opacity: 1;
+border-color: #0d6efd;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+.projects-grid {
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+}
+
+@media (max-width: 768px) {
+.projects-grid {
+grid-template-columns: 1fr;
+}
+
+.project-card {
+height: 300px;
+}
+
+.gallery-nav {
+width: 40px;
+height: 40px;
+font-size: 24px;
+}
+
+.thumbnail {
+width: 50px;
+height: 50px;
+}
+}
 </style>
+</head>
+<body>
+<div id="hea-placeholder"></div>
+
+<div class="container">
+<header>
+<h1>Solar Energy Projects</h1>
+<p>Explore our project gallery to see how we deliver quality, creativity, and innovative solutions tailored to client needs.</p>        </header>
+
+<div class="filter-controls">
+<button class="filter-btn active" data-filter="all">All Projects</button>
+<button class="filter-btn" data-filter="industrial">Industrial</button>
+<button class="filter-btn" data-filter="commercial">Commercial</button>
+<button class="filter-btn" data-filter="pumping">Pumping Solutions</button>
+<button class="filter-btn" data-filter="hybrid">Hybrid Systems</button>
+<button class="filter-btn" data-filter="grid-tie">Grid-Tie Systems</button>
+</div>
+
+<div class="projects-grid">
+<!-- 5MW Industrial Projects -->
+<div class="project-card" data-project="multan-road" data-category="industrial">
+<img src="assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore.png" alt="5MW Industrial Project">
+<div class="project-label">5MW Industrial Project, Multan Road Lahore</div>
+</div>
+
+<!-- Fauji Fertilizer Projects -->
+<div class="project-card" data-project="fauji-fertilizer-1.5mw" data-category="industrial">
+<img src="assets/images/Projects images (1)/1.5MW At Fauji Fertilizer Company Limited, Rawalpindi  3.png" alt="1.5MW at Fauji Fertilizer">
+<div class="project-label">1.5MW at Fauji Fertilizer Company, Rawalpindi</div>
+</div>
+
+<!-- Sundar Industrial Projects -->
+<div class="project-card" data-project="sundar-industrial" data-category="industrial">
+<img src="assets/images/Projects images (1)/213KWP Industrial Project At Sundar Industrial State, Lahore.png" alt="213KWP Industrial Project">
+<div class="project-label">213KWP Industrial Project, Sundar Industrial State</div>
+</div>
+
+<!-- Pumping Solutions -->
+<div class="project-card" data-project="shahjeawana-pumping" data-category="pumping">
+<img src="assets/images/Projects images (1)/10hP - 9 Sites At Shahjeawana Near Jhang City.png" alt="10hP Pumping Solution">
+<div class="project-label">10hP Pumping Solution (9 Sites), Shahjeawana</div>
+</div>
+
+<!-- Hybrid Systems -->
+<div class="project-card" data-project="central-park-hybrid" data-category="hybrid">
+<img src="assets/images/Projects images (1)/15kw hybrid system - Central Park Lahore 1.png" alt="15kw Hybrid System">
+<div class="project-label">15kw Hybrid System, Central Park Lahore</div>
+</div>
+
+<!-- Grid-Tie Systems -->
+<div class="project-card" data-project="sonex-gridtie" data-category="grid-tie">
+<img src="assets/images/Projects images (1)/20KWP Grid Tie at Sonex House Gujranwala.png" alt="20KWP Grid-Tie System">
+<div class="project-label">20KWP Grid-Tie System, Sonex House Gujranwala</div>
+</div>
+
+<!-- Commercial Projects -->
+<div class="project-card" data-project="air-university" data-category="commercial">
+<img src="assets/images/Projects images (1)/500KW Commercial at Air University Islamabad.png" alt="500KW Commercial Project">
+<div class="project-label">500KW Commercial Project, Air University Islamabad</div>
+</div>
 
 
-<div class="ud-hamburger-menu d-block d-lg-none">
-<div class=ud-hamburger-menu__btn>
-<span></span>
+<div class="project-card" data-project="jamia-gridtie" data-category="grid-tie">
+<img src="assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 2.png" alt="30KW Grid-Tie System">
+<div class="project-label">30KW Grid-Tie System, Jamia Salafia Islamabad</div>
+</div>
+
+<div class="project-card" data-project="albadar-gridtie" data-category="grid-tie">
+<img src="assets/images/Projects images (1)/200KW grid tie - al badar cold store 1.png" alt="200KW grid tie">
+<div class="project-label">200KW grid tie - Al Badar Cold Store</div>
+</div>
+
+<div class="project-card" data-project="attock-pumping" data-category="pumping">
+<img src="assets/images/Projects images (1)/15hP Pumping Solution at Attock 2.png" alt="15hP Pumping Solution">
+<div class="project-label">15hP Pumping Solution at Attock</div>
+</div>
+
+<div class="project-card" data-project="lhr-border-pumping" data-category="pumping">
+<img src="assets/images/Projects images (1)/25hP Pumping Site near Lahore Border.png" alt="25hP Pumping Site near Lahore Border">
+<div class="project-label">25hP Pumping Site near Lahore Border</div>
+</div>
+<div class="project-card" data-project="ryk-pumping" data-category="pumping">
+<img src="assets/images/Projects images (1)/25hP Pumping Solution at Rahim Yar Khan 2.png" alt="25hP Pumping Solution at Rahim Yar Khan">
+<div class="project-label">25hP Pumping Solution at Rahim Yar Khan</div>
+</div>
+<div class="project-card" data-project="ryk-turbine" data-category="pumping">
+<img src="assets/images/Projects images (1)/30hP Turbine Solution at Rahim Yar Khan 2.png" alt="30hP Turbine Solution at Rahim Yar Khan">
+<div class="project-label">30hP Turbine Solution at Rahim Yar Khan</div>
+</div>
+<div class="project-card" data-project="ryk-turbine" data-category="pumping">
+<img src="assets/images/Projects images (1)/30KW Hybrid Solution  At Carport Gulberg Green Rawalpindi 2.png" alt="30KW Hybrid Solution At Carport Gulberg Green Rawalpindi">
+<div class="project-label">30KW Hybrid Solution At Carport Gulberg Green Rawalpindi
 </div>
 </div>
-<div class="srex-header__call srex-header--home-two__call-two d-flex align-items-center gap-2 m-0 d-none d-xl-flex">
-
-  <div>
-  <h4 style="padding: 6px 14px; border: 2px solid black; border-radius: 10px;   background: #FAAA1B;">
-  <a href=tel:04236367373> Get a Quote </a>
-  </h4>
+<div class="project-card" data-project="uaf-gridtie" data-category="grid-tie">
+<img src="assets/images/Projects images (1)/125KWP Grid Tie At University of Agriculture, Faisalabad 2.png" alt="125KWP Grid Tie At University of Agriculture">
+<div class="project-label">125KWP Grid Tie At University of Agriculture, Faisalabad
 </div>
 </div>
-</nav>
+
+
+<!-- Image Gallery Modal -->
+<div class="gallery-modal">
+<span class="gallery-close">&times;</span>
+<div class="gallery-container">
+<button class="gallery-nav gallery-prev">&#10094;</button>
+
+<div class="gallery-slide active">
+<img src="" alt="" class="gallery-image">
+<div class="gallery-caption"></div>
+</div>
+
+<button class="gallery-nav gallery-next">&#10095;</button>
+
+<div class="gallery-thumbnails"></div>
 </div>
 </div>
-</div>
-<div class=social-icons>
-<a href=https://www.facebook.com/energyalternatives.pk target=_blank class=social-icon><i class="fab fa-facebook-f"></i></a>
-<a href=https://pk.linkedin.com/company/ealternativespk target=_blank class=social-icon><i class="fa-brands fa-linkedin"></i></a>
-<a href=https://www.instagram.com/energy_alternatives_/ target=_blank class=social-icon><i class="fa-brands fa-instagram"></i></a>
-<a href=https://www.tiktok.com/@energy_alternatives_ target=_blank class=social-icon><i class="fa-brands fa-tiktok"></i>
-</a>
-</div>
-</header>
 
-   <!-- Side Popup -->
-   <div class="ud-side-popup ud-side-popup--home-one">
-    <div class="ud-side-popup__header">
-      <button class="side-popup-close">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-  <div>
-  <a href="tel:04236367373" style="background-color: #FAAA1B; padding: 10px 15px; border-radius: 10px;">
-    Get a Quote
-  </a>
-  </div>
-    </div>
-    <div class="ud-side-popup__body">
-      <ul class="metismenu" id="side-menu">
-        <li><a href="index.html">Home</a></li>
-  <li><a href="about.html">About Us</a></li>
-  <li><a href="sustainbility.html">Sustainability</a></li>
-  <li><a href="services.html">Services</a></li>
+<script>
+// Project Data Structure
+        const projectsData = {
+            // 5MW Industrial Projects
+            "multan-road": {
+                title: "5MW Industrial Project, Multan Road Lahore",
+                images: [
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore.png", caption: "5MW Industrial Project at Multan Road, Lahore" },
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore 2.png", caption: "5MW Industrial Project at Multan Road, Lahore" },
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore 3.png", caption: "5MW Industrial Project at Multan Road, Lahore" },
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore 4.png", caption: "5MW Industrial Project at Multan Road, Lahore" },
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project, Multan road Lahore 5.png", caption: "5MW Industrial Project at Multan Road, Lahore" }
+                ],
+                contact: "0300-1116366"
+            },
+            
+            "meezan-cola": {
+                title: "5MW Industrial Project at Meezan Cola Lahore",
+                images: [
+                    { url: "assets/images/Projects images (1)/5MW Industrial Project at Meezan Cola Lahore.png", caption: "5MW Industrial Project at Meezan Cola, Lahore" }
+                ],
+                contact: "0300-1116366"
+            },
+            
+            // Fauji Fertilizer Projects
+"fauji-fertilizer-1.5mw": {
+title: "1.5MW at Fauji Fertilizer Company Limited, Rawalpindi",
+images: [
+{ url: "assets/images/Projects images (1)/1.5MW At Fauji Fertilizer Company Limited, Rawalpindi  3.png", caption: "1.5MW at Fauji Fertilizer Company, Rawalpindi" },
+{ url: "assets/images/Projects images (1)/1.5MW At Fauji Fertilizer Company Limited, Rawalpindi  2.png", caption: "1.5MW at Fauji Fertilizer Company, Rawalpindi" },
+{ url: "assets/images/Projects images (1)/1.5MW At Fauji Fertilizer Company Limited, Rawalpindi  4.png", caption: "1.5MW at Fauji Fertilizer Company, Rawalpindi" },
+{ url: "assets/images/Projects images (1)/1.5MW At Fauji Fertilizer Company Limited, Rawalpindi.png", caption: "1.5MW at Fauji Fertilizer Company, Rawalpindi" }
+],
+contact: "0300-1116366"
+},
+            // Sundar Industrial Projects
+            "sundar-industrial": {
+                title: "213KWP Industrial Project At Sundar Industrial State, Lahore",
+                images: [
+                    { url: "assets/images/Projects images (1)/213KWP Industrial Project At Sundar Industrial State, Lahore.png", caption: "213KWP Industrial Project, Sundar Industrial State, Lahore" },
+                    { url: "assets/images/Projects images (1)/213KWP Industrial Project At Sundar Industrial State, Lahore 2.png", caption: "213KWP Industrial Project, Sundar Industrial State, Lahore" },
+                    { url: "assets/images/Projects images (1)/213KWP Industrial Project At Sundar Industrial State, Lahore 3.png", caption: "213KWP Industrial Project, Sundar Industrial State, Lahore" }
+                ],
+                contact: "0300-1116366"
+            },
+            // Pumping Solutions
+            "shahjeawana-pumping": {
+                title: "10hP Pumping Solution (9 Sites) At Shahjeawana Near Jhang City",
+                images: [
+                      { url: "assets/images/Projects images (1)/10hP - 9 Sites At Shahjeawana Near Jhang City.png", caption: "10hP - 9 Sites At Shahjeawana Near Jhang City" },
+                     { url: "assets/images/Projects images (1)/10hP - 9 Sites At Shahjeawana Near Jhang City 2.png", caption: "10hP - 9 Sites At Shahjeawana Near Jhang City" },
+                     { url: "assets/images/Projects images (1)/10hP - 9 Sites At Shahjeawana Near Jhang City 3.png", caption: "10hP - 9 Sites At Shahjeawana Near Jhang City" }
 
-      
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
-            Shop <span class="arrow"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Solar Panels</a></li>
-            <li><a href="#">Solar Inverters</a></li>
-            <li><a href="#">Batteries</a></li>
-            <li><a href="#">Mounting Structures</a></li>
-            <li><a href="#">Electrical Accessories</a></li>
-          </ul>
-        </li>
-      
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="ud-side-popup__bottom">
-      <div class="ud-side-popup__bottom-info">
-        <div
-          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-        >
-          <i class="fa-solid fa-phone"></i>
-          <div class="ud-header-info-box__details">
-            <span>Need Help?</span>
-            <h4>
-              <a href="tel:04236367373">(042) 36367373</a>
-              <br><a href="tel:03001116366">03001116366</a>
-            </h4>
-          </div>
-        </div>
-        <div
-          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-        >
-          <i class="fa-solid fa-paper-plane"></i>
-          <div class="ud-header-info-box__details">
-            <span>Naqi Arcade Plaza, Mall Road</span>
-            <h4>Lahore, Pakistan</h4>
-          </div>
-        </div>
-        <div
-          class="ud-side-popup__bottom-info-box d-flex align-items-center gap-3 py-0 m-0"
-        >
-          <i class="fa-solid fa-envelope"></i>
-          <div class="ud-header-info-box__details">
-            <span>Send email</span>
-            <h4>
-              <a href="mailto:info@energyalternatives.com.pk">info@energyalternatives.com.pk</a>
-            </h4>
-          </div>
-        </div>
-      </div>
-      <ul class="ud-side-popup__bottom-socials">
-        <li>
-          <a href="https://www.facebook.com/energyalternatives.pk">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/@energyalternatives-pakistan">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/energy_alternatives_/">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://pk.linkedin.com/company/ealternativespk">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
+                ],
+                contact: "0300-1116366"
+            },
+            "attock-pumping": {
+                title: "15hP Pumping Solution at Attock",
+                images: [
+     { url: "assets/images/Projects images (1)/15hP Pumping Solution at Attock.png", caption: "15hP Pumping Solution at Attock" },
+  { url: "assets/images/Projects images (1)/15hP Pumping Solution at Attock 2.png", caption: "15hP Pumping Solution at Attock" }
+                ],
+                contact: "0300-1116366"
+            },
+            "lhr-border-pumping": {
+                title: "25hP Pumping Site near Lahore Border",
+                images: [
+                   { url: "assets/images/Projects images (1)/25hP Pumping Site near Lahore Border.png", caption: "25hP Pumping Site near Lahore Border" },
+    { url: "assets/images/Projects images (1)/25hP Pumping Site 2.png", caption: "25hP Pumping Site" },
+    { url: "assets/images/Projects images (1)/25hP Pumping Site 3.png", caption: "25hP Pumping Site" }
+                ],
+                contact: "0300-1116366"
+            },
+            "ryk-pumping": {
+                title: "25hP Pumping Solution at Rahim Yar Khan",
+                images: [
+  { url: "assets/images/Projects images (1)/25hP Pumping Solution at Rahim Yar Khan.png", caption: "25hP Pumping Solution at Rahim Yar Khan" },
+  { url: "assets/images/Projects images (1)/25hP Pumping Solution at Rahim Yar Khan 2.png", caption: "25hP Pumping Solution at Rahim Yar Khan" },
+  { url: "assets/images/Projects images (1)/25hP Pumping Solution at Rahim Yar Khan 3.png", caption: "25hP Pumping Solution at Rahim Yar Khan" }
+                ],
+                contact: "0300-1116366"
+            },
+            "ryk-turbine": {
+                title: "30hP Turbine Solution at Rahim Yar Khan",
+                images: [
+{ url: "assets/images/Projects images (1)/30hP Turbine Solution at Rahim Yar Khan.png", caption: "30hP Turbine Solution, Rahim Yar Khan" },
+{ url: "assets/images/Projects images (1)/30hP Turbine Solution at Rahim Yar Khan 2.png", caption: "30hP Turbine Solution, Rahim Yar Khan" },
+{ url: "assets/images/Projects images (1)/30hP Turbine Solution at Rahim Yar Khan 3.png", caption: "30hP Turbine Solution, Rahim Yar Khan" }
+                ],
+                contact: "0300-1116366"
+            },
+            // Hybrid Systems
+            "central-park-hybrid": {
+                title: "15kw Hybrid System - Central Park Lahore",
+                images: [
+                    { url: "assets/images/Projects images (1)/15kw hybrid system - Central Park Lahore 1.png", caption: "15kw Hybrid System, Central Park Lahore" },
+                    { url: "assets/images/Projects images (1)/15kw hybrid system - Central Park Lahore 2.png", caption: "15kw Hybrid System, Central Park Lahore" },
+                    { url: "assets/images/Projects images (1)/15kw hybrid system - Central Park Lahore 3.png", caption: "15kw Hybrid System, Central Park Lahore" },
+                    { url: "assets/images/Projects images (1)/15kw hybrid system - Central Park Lahore 4.png", caption: "15kw Hybrid System, Central Park Lahore" }
+                ],
+                contact: "0300-1116366"
+            },
+            "gulberg-hybrid": {
+                title: "30KW Hybrid Solution At Carport Gulberg Green Rawalpindi",
+                images: [
+                    { url: "assets/images/Projects images (1)/30KW Hybrid Solution At Carport Gulberg Green Rawalpindi.png", caption: "30KW Hybrid Solution, Gulberg Green Rawalpindi" },
+                    { url: "assets/images/Projects images (1)/30KW Hybrid Solution At Carport Gulberg Green Rawalpindi 2.png", caption: "30KW Hybrid Solution, Gulberg Green Rawalpindi" },
+                    { url: "assets/images/Projects images (1)/30KW Hybrid Solution At Carport Gulberg Green Rawalpindi 3.png", caption: "30KW Hybrid Solution, Gulberg Green Rawalpindi" },
+                    { url: "assets/images/Projects images (1)/30KW Hybrid Solution At Carport Gulberg Green Rawalpindi 4.png", caption: "30KW Hybrid Solution, Gulberg Green Rawalpindi" }
+                ],
+                contact: "0300-1116366"
+            },
+            // Grid-Tie Systems
+            "sonex-gridtie": {
+                title: "20KWP Grid Tie at Sonex House Gujranwala",
+                images: [
+                    { url: "assets/images/Projects images (1)/20KWP Grid Tie at Sonex House Gujranwala.png", caption: "20KWP Grid-Tie System, Sonex House Gujranwala" },
+                    { url: "assets/images/Projects images (1)/20KWP Grid Tie at Sonex House Gujranwala 2.png", caption: "20KWP Grid-Tie System, Sonex House Gujranwala" },
+                    { url: "assets/images/Projects images (1)/20KWP Grid Tie at Sonex House Gujranwala 3.png", caption: "20KWP Grid-Tie System, Sonex House Gujranwala" }
+                ],
+                contact: "0300-1116366"
+            },
+            "jamia-gridtie": {
+                title: "30KW grid tie - jamia salafia islamabad",
+                images: [
+                    { url: "assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 1.png", caption: "30KW Grid-Tie System, Jamia Salafia Islamabad" },
+                    { url: "assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 2.png", caption: "30KW Grid-Tie System, Jamia Salafia Islamabad" },
+                    { url: "assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 3.png", caption: "30KW Grid-Tie System, Jamia Salafia Islamabad" },
+                    { url: "assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 4.png", caption: "30KW Grid-Tie System, Jamia Salafia Islamabad" },
+                    { url: "assets/images/Projects images (1)/30KW grid tie - jamia salafia islamabad 5.png", caption: "30KW Grid-Tie System, Jamia Salafia Islamabad" }
+                ],
+                contact: "0300-1116366"
+            },
+            "uaf-gridtie": {
+                title: "125KWP Grid Tie At University of Agriculture, Faisalabad",
+                images: [
+                    { url: "assets/images/Projects images (1)/125KWP Grid Tie At University of Agriculture, Faisalabad.png", caption: "125KWP Grid-Tie System, University of Agriculture, Faisalabad" },
+                    { url: "assets/images/Projects images (1)/125KWP Grid Tie At University of Agriculture, Faisalabad 2.png", caption: "125KWP Grid-Tie System, University of Agriculture, Faisalabad" },
+                    { url: "assets/images/Projects images (1)/125KWP Grid Tie At University of Agriculture, Faisalabad 3.png", caption: "125KWP Grid-Tie System, University of Agriculture, Faisalabad" },
+                    { url: "assets/images/Projects images (1)/125KWP Grid Tie At University of Agriculture, Faisalabad 4.png", caption: "125KWP Grid-Tie System, University of Agriculture, Faisalabad" }
+                ],
+                contact: "0300-1116366"
+            },
+            "albadar-gridtie": {
+                title: "200KW grid tie - al badar cold store",
+                images: [
+                    { url: "assets/images/Projects images (1)/200KW grid tie - al badar cold store 1.png", caption: "200KW Grid-Tie System, Al Badar Cold Store" },
+                    { url: "assets/images/Projects images (1)/200KW grid tie - al badar cold store 2.png", caption: "200KW Grid-Tie System, Al Badar Cold Store" },
+                    { url: "assets/images/Projects images (1)/200KW grid tie - al badar cold store 3.png", caption: "200KW Grid-Tie System, Al Badar Cold Store" },
+                    { url: "assets/images/Projects images (1)/200KW grid tie - al badar cold store 4.png", caption: "200KW Grid-Tie System, Al Badar Cold Store" },
+                    { url: "assets/images/Projects images (1)/200KW grid tie - al badar cold store 5.png", caption: "200KW Grid-Tie System, Al Badar Cold Store" }
+                ],
+                contact: "0300-1116366"
+            },
+            // Commercial Projects
+            "air-university": {
+                title: "500KW Commercial at Air University Islamabad",
+                images: [
+                    { url: "assets/images/Projects images (1)/500KW Commercial at Air University Islamabad.png", caption: "500KW Commercial Project, Air University Islamabad" },
+                    { url: "assets/images/Projects images (1)/500KW Commercial at Air University Islamabad 2.png", caption: "500KW Commercial Project, Air University Islamabad" },
+                    { url: "assets/images/Projects images (1)/500KW Commercial at Air University Islamabad 3.png", caption: "500KW Commercial Project, Air University Islamabad" },
+                    { url: "assets/images/Projects images (1)/500KW Commercial at Air University Islamabad 4.png", caption: "500KW Commercial Project, Air University Islamabad" },
+                    { url: "assets/images/Projects images (1)/500KW Commercial at Air University Islamabad 5.png", caption: "500KW Commercial Project, Air University Islamabad" }
+                ],
+                contact: "0300-1116366"
+            }
+        };
+
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectsGrid = document.querySelector('.projects-grid');
+        const galleryModal = document.querySelector('.gallery-modal');
+        const galleryImage = document.querySelector('.gallery-image');
+        const galleryCaption = document.querySelector('.gallery-caption');
+        const galleryThumbnailsContainer = document.querySelector('.gallery-thumbnails');
+        const prevBtn = document.querySelector('.gallery-prev');
+        const nextBtn = document.querySelector('.gallery-next');
+        const closeBtn = document.querySelector('.gallery-close');
+
+        let currentProjectImages = [];
+        let currentImageIndex = 0;
+
+        // Filter functionality
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.dataset.filter;
+
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to the clicked button
+                button.classList.add('active');
+
+                // Show/hide project cards based on filter
+                document.querySelectorAll('.project-card').forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Gallery Modal functionality
+        projectsGrid.addEventListener('click', (e) => {
+            const projectCard = e.target.closest('.project-card');
+            if (projectCard) {
+                const projectId = projectCard.dataset.project;
+                currentProjectImages = projectsData[projectId].images;
+                currentImageIndex = 0;
+                openGallery();
+            }
+        });
+
+        closeBtn.addEventListener('click', closeGallery);
+        prevBtn.addEventListener('click', showPrevImage);
+        nextBtn.addEventListener('click', showNextImage);
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && galleryModal.style.display === 'block') {
+                closeGallery();
+            } else if (e.key === 'ArrowLeft' && galleryModal.style.display === 'block') {
+                showPrevImage();
+            } else if (e.key === 'ArrowRight' && galleryModal.style.display === 'block') {
+                showNextImage();
+            }
+        });
+
+        // Close modal when clicking outside the image (but within the modal)
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeGallery();
+            }
+        });
+
+        function openGallery() {
+            galleryModal.style.display = 'block';
+            updateGallery();
+        }
+
+        function closeGallery() {
+            galleryModal.style.display = 'none';
+            galleryThumbnailsContainer.innerHTML = ''; // Clear thumbnails
+        }
+
+        function updateGallery() {
+            const currentImage = currentProjectImages[currentImageIndex];
+            galleryImage.src = currentImage.url;
+            galleryImage.alt = currentImage.caption;
+            galleryCaption.textContent = currentImage.caption;
+            updateThumbnails();
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + currentProjectImages.length) % currentProjectImages.length;
+            updateGallery();
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % currentProjectImages.length;
+            updateGallery();
+        }
+
+        function updateThumbnails() {
+            galleryThumbnailsContainer.innerHTML = '';
+            currentProjectImages.forEach((image, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = image.url;
+                thumbnail.alt = image.caption;
+                thumbnail.classList.add('thumbnail');
+                if (index === currentImageIndex) {
+                    thumbnail.classList.add('active');
+                }
+                thumbnail.addEventListener('click', () => {
+                    currentImageIndex = index;
+                    updateGallery();
+                });
+                galleryThumbnailsContainer.appendChild(thumbnail);
+            });
+            // Scroll active thumbnail into view
+            const activeThumbnail = galleryThumbnailsContainer.querySelector('.thumbnail.active');
+            if (activeThumbnail) {
+                activeThumbnail.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+    </script>
 
 
-<section class=about-section style=width:70%;justify-content:center>
-<h2>About Our Projects</h2>
-<p>Our project gallery showcases a range of works that highlight our commitment to quality and creativity. Each project reflects our dedication to meeting client needs with innovative solutions and high standards of excellence. Explore the projects below to learn more about our capabilities and past accomplishments.</p>
-</section> 
 
-<!-- <section class="srex-portfolio sp_pad srex-section">
-  <div class="container-fluid">
-    <div class="controls wow ud-fade-in-up" data-wow-delay="200ms">
-      <ul id="filters">
-        <li class="filter active" data-filter="all">All</li>
-        <li class="filter" data-filter=".power">Industrial</li>
-        <li class="filter" data-filter=".eco-solar">
-          Commercial
-        </li>
-        <li class="filter" data-filter=".solar-pro">
-          Residiential
-        </li>
-        <li class="filter" data-filter=".energy">Agricultural</li>
-      </ul>
-    </div>
-    <div class="row" id="srex-ho-filter">
-      <div class="col-md-6 col-lg-4 col-x
-      l-4 col-12 filter-item solar-pro">
-        <a href="./projectsresidential.html">
-          <div class="srex-portfolio__item wow ud-fade-in-up" data-wow-delay="200ms">
-            <img
-              src="assets/images/portfolio/portfolio-1.png"
-              alt="portfolio-1"
-            >
-            <div class="srex-portfolio__item__title">
-              <h2>01</h2>
-              <h3>Equality and solidarity</h3>
-            </div>
-          </div>
-        </a>
-      </div> -->
-      <section class="projects-section" style="margin-bottom:100px;margin-top:40px">
 
-        <!-- INDUSTRIAL / COMMERCIAL (Descending by Capacity) -->
-        <div class="project-card" data-project="project40">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283292/2_ky70ve.jpg" alt=""/>
-          <p>5MW Industrial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project5">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283292/1_rihwup.jpg" alt=""/>
-          <p>5MW Industrial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project42">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283317/26_gbtsts.jpg" alt=""/>
-          <p>5MW Industrial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project44">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283316/24_p4zgob.jpg" alt=""/>
-          <p>2MW Commercial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project43">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283316/25_g11jmj.jpg" alt=""/>
-          <p>1MW Industrial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project41">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283338/27_fygxpj.jpg" alt=""/>
-          <p>500KW Commercial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project3">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283308/15_pixkle.jpg" alt=""/>
-          <p>213KWP Industrial Project</p>
-        </div>
-      
-        <div class="project-card" data-project="project2">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_4_vm4csh.png" alt=""/>
-          <p>200KW GRID TIE - Albadar Cold Store</p>
-        </div>
-      
-        <div class="project-card" data-project="project00">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_3_aqckhz.png" alt=""/>
-          <p>30KW Grid Tie Jamia Salafia Islamabad</p>
-        </div>
-      
-        <div class="project-card" data-project="project1">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283298/6_he4kz6.jpg" alt=""/>
-          <p>25HP Pumping solution</p>
-        </div>
-      
-        <div class="project-card" data-project="project4">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283310/19_f0vxvu.jpg" alt=""/>
-          <p>10HP - 9Sites</p>
-        </div>
-      
-        <!-- RESIDENTIAL (Always at the end) -->
-        <div class="project-card" data-project="project01">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1745921300/18kw_t_t_housing_society_szkd8a.png" alt=""/>
-          <p>18kw t&t Housing Society</p>
-        </div>
-      
-        <div class="project-card" data-project="project02">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1746164961/toba_tek_singh_15kw_u8a8cb.png" alt=""/>
-          <p>toba tek singh 15kw</p>
-        </div>
-      
-        <div class="project-card" data-project="project02">
-          <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1745921300/valencia_town_6kw_uf3qkh.png" alt=""/>
-          <p>Valencia Town 6kw</p>
-        </div>
-      
-      </section>
-      
-      
-
-<div id=gallery-modal class=gallery-modal>
-<div class=gallery-content>
-<button class=prev-btn>←</button>
-<div class=gallery-images>
-<img id=gallery-image src="" alt="Gallery Image">
-</div>
-<button class=next-btn>→</button>
-</div>
-</div>
-</body>
-
-<script>const projectImages={project1:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/9_c953lw.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/7_oqgrsk.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/8_jyh58n.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/6_he4kz6.jpg"],project2:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_4_vm4csh.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_3_imbmcp.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_2_tnhm62.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/200KW_grid_tie_-_al_badar_cold_store_1_qmm2f9.png"],project3:["assets/images/projects/15.jpg","assets/images/projects/16.jpg","assets/images/projects/17.jpg"],project4:["assets/images/projects/18.jpg","assets/images/projects/19.jpg","assets/images/projects/20.jpg"],project5:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/2_ky70ve.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/4_lfuif5.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/3_rfi6ts.jpg", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/5_y3cvwa.jpg"], project6:["https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_4_ukpbe9.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_2_vnzqcp.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_5_nipadr.png", "https://res.cloudinary.com/db2xlqrrx/image/upload/f_auto,q_auto,w_800/30KW_grid_tie_-_jamia_salafia_islamabad_2_vnzqcp.png"]};
-
-function openGallery(e){const s=document.getElementById("gallery-modal"),t=document.getElementById("gallery-image"),r=projectImages[e];let a=0;t.src=r[a],s.style.display="flex";let p=setInterval((()=>{a=(a+1)%r.length,t.src=r[a]}),1500);document.querySelector(".next-btn").addEventListener("click",(()=>{clearInterval(p),a=(a+1)%r.length,t.src=r[a]})),document.querySelector(".prev-btn").addEventListener("click",(()=>{clearInterval(p),a=(a-1+r.length)%r.length,t.src=r[a]})),s.addEventListener("click",(e=>{e.target===s&&(s.style.display="none",clearInterval(p))}))}document.querySelectorAll(".project-card").forEach((e=>{e.addEventListener("click",(s=>{openGallery(e.getAttribute("data-project"))}))}))</script>
-<div class=border-line></div>
 <div id=footer-placeholder></div>
-<script>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
-<script src=./assets/vendors/jquery/jquery-3.6.0.min.js></script>
-<script src=./assets/vendors/wow/wow.min.js></script>
-<script src=./assets/vendors/metismenu/metismenu.js></script>
-<script src=./assets/js/custom.js></script>
-<!-- ⬤ Projects dropdown JS ⬤ -->
-<script>
-  document.querySelectorAll('.has-dropdown > a').forEach(link=>{
-    link.addEventListener('click',e=>{
-      // if submenu is closed on touch, open it & prevent navigation
-      if(matchMedia('(hover:none)').matches && link.getAttribute('aria-expanded')==='false'){
-        e.preventDefault();
-        link.setAttribute('aria-expanded','true');
-        link.parentElement.classList.toggle('open');
-      }
-    });
-  });
-  </script>
-
-
-
+<script defer>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const hamburgerBtn = document.querySelector('.ud-hamburger-menu__btn');
-    const sidePopup = document.querySelector('.ud-side-popup');
-    const closeBtn = document.querySelector('.side-popup-close');
-  
-    // Toggle popup when hamburger is clicked
-    hamburgerBtn.addEventListener('click', function () {
-    sidePopup.classList.add('active'); // Show side popup
-    document.querySelector('.overlay').classList.add('active'); // Show overlay
-    });
-  
-    // Close popup when close button or overlay is clicked
-    closeBtn.addEventListener('click', function () {
-    sidePopup.classList.remove('active');
-    document.querySelector('.overlay').classList.remove('active');
-    });
-  
-    document.querySelector('.overlay').addEventListener('click', function () {
-    sidePopup.classList.remove('active');
-    this.classList.remove('active');
-    });
-  });
-  </script>
-
-
-
-<!-- shop menu dropdown -->
-<script>
-  function toggleDropdown(event) {
-    event.preventDefault(); // prevent default link behavior
-    const parentLi = event.currentTarget.closest('.dropdown');
-    parentLi.classList.toggle('open');
-  }
-
-  // Optional: Close dropdown when clicking outside
-  window.addEventListener('click', function (e) {
-    document.querySelectorAll('.dropdown').forEach(drop => {
-      if (!drop.contains(e.target)) drop.classList.remove('open');
-    });
-  });
+fetch("hea.html")
+.then(response => response.text())
+.then(data => {
+document.getElementById("hea-placeholder").innerHTML = data;
+ });
 </script>
-
+</body>
 </html>
+
+
+
+
+
