@@ -8,7 +8,6 @@
 <link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
 <link rel=stylesheet href=./assets/css/style.css>
 <script src="header.js"></script>
-
 </head>
 <body class="body-wrapper home-one" data-scroll-animation=true>
   <div id="hea-placeholder"></div>
@@ -1050,13 +1049,7 @@ More Blogs <i class="fa-solid fa-plus"></i>
 <div id=footer-placeholder></div>
 <script defer>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
 
-<script>
-fetch("hea.html")
-.then(response => response.text())
-.then(data => {
-document.getElementById("hea-placeholder").innerHTML = data;
- });
-</script>
+<script defer>fetch("hea.html").then((e => e.text())).then((e => {document.getElementById("hea-placeholder").innerHTML = e}))</script>
 
 <script src=./assets/vendors/jquery/jquery-3.6.0.min.js defer></script>
 <script src=./assets/vendors/slick-slider/slick.js defer></script>
