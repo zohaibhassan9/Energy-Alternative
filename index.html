@@ -144,7 +144,7 @@
   
       /* Form Styling */
       .popup-form {
-        background: rgba(255, 179, 1, 0.782);
+        background: #F7A500;
         width: 90%;
         max-width: 600px;
         padding: 30px;
@@ -198,7 +198,8 @@
       }
   
       .popup-form button[type="submit"]:hover {
-        background: #0056b3;
+        background: #ffffff;
+        color: #000000;
       }
   
       .close-btn {
@@ -260,36 +261,16 @@
           </div>
         </div>
   
-        <div class="form-row">
-          <div class="form-group">
-            <select name="Source" required>
-              <option value="">How did you hear about us?</option>
-              <option>Facebook</option>
-              <option>LinkedIn</option>
-              <option>Twitter</option>
-              <option>Website</option>
-              <option>Billboards</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <select name="CustomerType" required>
-              <option value="">Customer Type</option>
-              <option value="Commercial">Industrial</option> 
-              <option value="Commercial">Commercial</option>
-              <option value="Commercial">Agricultural</option>
-              <option value="Residential">Residential</option>
-            </select>
-          </div>
-        </div>
+
   
         <div class="form-row">
           <div class="form-group">
             <select name="ElectricityBill" required>
-              <option value="">Max Summer Electricity Bill?</option>
-              <option>5000</option><option>10000</option><option>15000</option>
-              <option>20000</option><option>25000</option><option>30000</option>
-              <option>35000</option><option>40000</option><option>45000</option>
-              <option>50000</option><option>60000</option><option>70000</option>
+              <option value="">Max Unit Consumption</option>
+              <option>5000</option><option>1000</option><option>1500</option>
+              <option>2000</option><option>2500</option><option>3000</option>
+              <option>3500</option><option>4000</option><option>4500</option>
+              <option>5000</option><option>6000</option><option>7000</option>
             </select>
           </div>
           <div class="form-group">
@@ -302,6 +283,21 @@
           </div>
         </div>
   
+        <div class="form-row">
+          <div class="form-group">
+            <select name="Source" required>
+              <option value="">How did you hear about us?</option>
+              <option>Facebook</option>
+              <option>LinkedIn</option>
+              <option>Twitter</option>
+              <option>Website</option>
+              <option>Billboards</option>
+            </select>
+          </div>
+       
+        </div>
+
+
         <button type="submit">Submit</button>
       </form>
     </div>
