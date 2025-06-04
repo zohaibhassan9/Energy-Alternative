@@ -1,105 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Energy Alternatives - Solar Solutions</title>
-
-<link rel="shortcut icon" href=./assets/images/logo-black.png>
-<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
-<link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Alternatives - Solar PV and Thermal Solutions</title>
+    <link rel="shortcut icon" href="./assets/images/logo-black.png">
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css" media="print" onload='this.media="all"'>
+    <style>
+        /* Additional custom styles */
+        .section-top {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/solar-banner.jpg') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .single_ser_info {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 20px;
+        }
+        
+        .single_ser_info a {
+            display: block;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .single_ser_info a:hover {
+            background: #3498db;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .single_ser_info a i {
+            float: right;
+            margin-top: 3px;
+        }
+        
+        .single_pro_details h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .single_pro_details h3 {
+            color: #0471b9;
+            margin: 30px 0 15px;
+            font-weight: 600;
+        }
+        
+        .single_pro_details h4 {
+            color: #2c3e50;
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+        
+        .single_pro_details p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #495057;
+        }
+        
+        .srex-single-pro-img img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .single_pro_details img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .solar-pv-toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .solar-pv-toc h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .solar-pv-toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .solar-pv-toc li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .solar-pv-toc li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .solar-pv-toc li ul {
+            padding-left: 20px;
+            margin-top: 8px;
+        }
+        
+        .solar-pv-toc a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .solar-pv-toc a:hover {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 991px) {
+            .solar-pv-sticky-left {
+                margin-bottom: 30px;
+            }
+        }
+    </style>
 </head>
 
+<body class="body-wrapper home-one" data-scroll-animation="true">
+    <div class="overlay"></div>
 
+    <section class="section-top">
+        <div class="container">
+            <div class="col-lg-10 offset-lg-1 text-center">
+                <div class="section-top-title">
+                    <h1>Service details</h1>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li>> Services > Solar PV and Thermal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<body class="body-wrapper home-one" data-scroll-animation=true>
-<div class=overlay></div>
+    <section class="srex-single-project srex-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12 col-xs-12 solar-pv-sticky-left">
+                    <div class="single_ser_info">
+                        <h4>Services</h4>
+                        <a href="./solar-pv-service-details.html">Solar PV and Thermal <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./fabrication-service-details.html">Fabrication <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./generator-service-details.html">Generator Services <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./consultancy-service-details.html">Consultancy Services <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./solar-financing-service-details.html">Solar Financing <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./testing-service-details.html">Testing Services <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./netmeteringservicedetails.html">Net Metering <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./facilitymanagement.html">Facility Management <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8 col-sm-12 col-xs-12">
+                    <div class="single_pro_details single_ser_details">
+                        <h2>Solar PV and Thermal</h2>
+                        <p class="lead">We offer cutting-edge solar solutions for homes, businesses, and agriculture—Explore our services below.</p>
+                        
+                        <div class="srex-single-pro-img">
+                            <img src="assets/images/Solar PV and Thermal.jpg" alt="Solar PV and Thermal Systems">
+                        </div>
+                        
+                        <div class="solar-pv-toc">
+                            <h2>Table of Contents</h2>
+                            <ul>
+                                <li><a href="#solar-pv-residential">Residential systems</a></li>
+                                <li><a href="#solar-pv-commercial">Commercial systems</a></li>
+                                <li>
+                                    <a href="#solar-pv-agricultural">Agricultural systems</a>
+                                    <ul>
+                                        <li><a href="#solar-pv-epc">EPC</a></li>
+                                        <li><a href="#solar-pv-ppa">PPA</a></li>
+                                        <li><a href="#solar-pv-leasing">Bank leasing projects</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <h3 id="solar-pv-residential">Residential Systems</h3>
+                        <p><strong>Power your home, cut bills, and reduce your carbon footprint.</strong><br>
+                        Our rooftop solar systems include battery storage and net metering options, letting you store extra energy and even sell it back to the grid.</p>
+                        <img src="assets/images/1.png" alt="Residential Solar System">
+                        
+                        <h3 id="solar-pv-commercial">Commercial Systems</h3>
+                        <p><strong>Smart energy for smart businesses.</strong><br>
+                        We provide scalable solar solutions for offices, factories, and institutions—cutting operational costs and promoting sustainability.
+                        Optional PPA available: No upfront cost, just clean energy at a fixed rate.</p>
+                        <img src="assets/images/3.png" alt="Commercial Solar System">
+                        
+                        <h3 id="solar-pv-agricultural">Agricultural Systems</h3>
+                        <p><strong>Solar pumps that bring water to life.</strong><br>
+                        Ideal for rural and off-grid areas, our solar pumping systems power irrigation and livestock needs—fuel-free, eco-friendly, and cost-effective.</p>
+                        <img src="assets/images/2.png" alt="Agricultural Solar System">
+                        
+                        <h4 id="solar-pv-epc">EPC (Engineering, Procurement & Construction)</h4>
+                        <p>From blueprint to power-on—leave it to us.<br>
+                        We manage your entire solar project: designing, sourcing, installing, and maintaining high-performance systems on time and within budget.</p>
+                        
+                        <h4 id="solar-pv-ppa">PPA (Power Purchase Agreement)</h4>
+                        <p>Go solar with zero investment.<br>
+                        With PPA, we install and maintain the system while you only pay for the energy at a fixed rate—lower than your utility bills.</p>
+                        
+                        <h4 id="solar-pv-leasing">Bank Leasing Projects</h4>
+                        <p>Solar energy without upfront costs.<br>
+                        Our partnerships with banks let you lease a solar system, saving money while we handle ownership, maintenance, and installation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class=section-top>
-<div class=container>
-<div class="col-lg-10 offset-lg-1 text-center">
-<div class=section-top-title>
-<h1>Service details</h1>
-<ul>
-<li><a href=index.html>Home</a></li>
-<li>> Services > Solar PV and Thermal</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class="srex-single-project srex-section">
-<div class=container>
-<div class=row>
-<div class="col-lg-4 col-sm-12 col-xs-12 solar-pv-sticky-left">
-<div class=single_ser_info>
-<h4>Services</h4>
-<a href=./solar-pv-service-details.html>Solar PV and Thermal <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./fabrication-service-details.html>Fabrication <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./generator-service-details.html>Generator Services <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./consultancy-service-details.html>Consultancy Services <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./solar-financing-service-details.html>Solar Financing <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./testing-service-details.html>Testing Services <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./netmeteringservicedetails.html>Net Meteringl <i class="fa-solid fa-arrow-right"></i></a>
-<a href=./facilitymanagement.html> Facility Management <i class="fa-solid fa-arrow-right"></i></a>
-</div>
-</div>
-<div class="col-lg-8 col-sm-12 col-xs-12">
-<div class="single_pro_details single_ser_details">
-
-<h2>Solar PV and Thermal</h2>
-<p>We offer cutting-edge solar solutions for homes, businesses, and agriculture—Explore our services below.</p>
-<div class=srex-single-pro-img>
-<img src="assets/images/Solar PV and Thermal.jpg" alt=" ">
-</div>
-<div class=solar-pv-toc>
-<h2>Table of Contents</h2>
-<ul>
-<li><a href=#solar-pv-residential>Residential systems</a></li>
-<li><a href=#solar-pv-commercial>Commercial systems</a></li>
-<li>
-<a href=#solar-pv-agricultural>Agricultural systems</a>
-<ul>
-<li><a href=#solar-pv-epc>EPC</a></li>
-<li><a href=#solar-pv-ppa>PPA</a></li>
-<li><a href=#solar-pv-leasing>Bank leasing projects</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<h3 id=solar-pv-residential>Residential Systems</h3>
-<p><b>Power your home, cut bills, and reduce your carbon footprint.</b>
-Our rooftop solar systems include battery storage and net metering options, letting you store extra energy and even sell it back to the grid.</p>
-<img src="assets/images/Picture1.png" alt="">
-<h3 id=solar-pv-commercial>Commercial Systems</h3>
-<p><b>Smart energy for smart businesses.</b>
-We provide scalable solar solutions for offices, factories, and institutions—cutting operational costs and promoting sustainability.
-Optional PPA available: No upfront cost, just clean energy at a fixed rate.</p>
-<img src="assets/images/Picture2.png" alt="">
-<h3 id=solar-pv-agricultural> Agricultural Systems</h3>
-<p><b>Solar pumps that bring water to life.</b>
-Ideal for rural and off-grid areas, our solar pumping systems power irrigation and livestock needs—fuel-free, eco-friendly, and cost-effective.</p>
-<img src="assets/images/Picture3.png" alt="">
-<h4> EPC (Engineering, Procurement & Construction)</h4>
-<p>From blueprint to power-on—leave it to us.
-We manage your entire solar project: designing, sourcing, installing, and maintaining high-performance systems on time and within budget.</p>
-<h4>PPA (Power Purchase Agreement)</h4>
-<p>Go solar with zero investment.
-With PPA, we install and maintain the system while you only pay for the energy at a fixed rate—lower than your utility bills.</p>
-
-<h4> Bank Leasing Projects</h4>
-<p>Solar energy without upfront costs.
-Our partnerships with banks let you lease a solar system, saving money while we handle ownership, maintenance, and installation.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<div id=footer-placeholder></div>
-<script>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
-<script src="header.js"></script>
+    <div id="footer-placeholder"></div>
+    
+    <script>
+        fetch("footer.html")
+            .then((e) => e.text())
+            .then((e) => {
+                document.getElementById("footer-placeholder").innerHTML = e;
+            });
+    </script>
+    <script src="header.js"></script>
 </body>
 </html>
