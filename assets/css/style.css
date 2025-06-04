@@ -1043,7 +1043,7 @@ body {
 
 /* Navigation Bar */
 .nav-container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -1055,7 +1055,7 @@ body {
 }
 
 .nav-bar {
-    width: 90%;
+    width: 100%;
     max-width: 1400px;
     margin: 0 auto;
     display: flex;
