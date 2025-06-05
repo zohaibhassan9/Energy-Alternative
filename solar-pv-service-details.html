@@ -1,232 +1,506 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang=eng>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Alternatives - Solar PV and Thermal Solutions</title>
-    <link rel="shortcut icon" href="./assets/images/logo-black.png">
-    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css" media="print" onload='this.media="all"'>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Enengy Alternatives Powered By Nature</title>
+<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
+<link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+
+<link rel=stylesheet href=./assets/css/style.css>
+
+<div class="top-bar" style="background-color: #dcdcdc81;">
+       <div class="logo">
+                <a href="index.html"> <img src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Energy Alternatives Logo"></a>
+            </div>
+            <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <div class="contact-label">Email us</div>
+                    <a href="mailto:info@energyalternatives.com.pk" class="contact-link">
+                        info@energyalternatives.com.pk
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <a href="tel:+923001116366" class="contact-link">
+                        +92 300 111 6366
+                    </a>
+                    <div class="contact-hours">Mon to Fri: 09 AM - 06 PM</div>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <a href="tel:+924236367373" class="contact-link">
+                        (042) 3636 7373
+                    </a>
+                    <div class="contact-hours">Mon to Fri: 09 AM - 06 PM</div>
+                </div>
+            </div>
+
+            <a href="https://wa.me/923001116366" class="whatsapp-btn" target="_blank" rel="noopener">
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+            </a>
+        </div>
+    </div>
+    
+    <div class="nav-container">
+        <div class="nav-bar">
+
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="sustainbility.html">Sustainability</a></li>
+                <li><a href="ourcertificates.html">Our Certificates</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="pro.html">Projects</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false">Shop <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://energyalternativesstore.com/solar-panels-categories/"><i class="fas fa-solar-panel"></i> Solar Panels</a></li>
+                        <li><a href="https://energyalternativesstore.com/inverters/"><i class="fas fa-bolt"></i> Solar Inverters</a></li>
+                        <li><a href="https://energyalternativesstore.com/batteries-categories/"><i class="fas fa-battery-full"></i> Batteries</a></li>
+                        <li><a href="https://energyalternativesstore.com/mounting-structures/"><i class="fas fa-th"></i> Mounting Structures</a></li>
+                        <li><a href="https://energyalternativesstore.com/electrical-asseries/"><i class="fas fa-plug"></i> Electrical Accessories</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <a href="getaquoate.html" class="quote-btn">Get a Quote</a>
+             <div class="installations-mobile">#565MW+ Installations</div>
+            <button class="mobile-menu-btn" aria-label="Open mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Main menu">
+    
+        <div class="mobile-menu-header">
+            
+
+            <button class="close-menu-btn" aria-label="Close mobile menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+       
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="sustainbility.html">Sustainability</a></li>
+            <li><a href="ourcertificates.html">Our Certificates</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pro.html">Projects</a></li>
+            <li class="mobile-dropdown">
+                <div class="mobile-dropdown-toggle">
+                    Shop <span class="arrow">▼</span>
+                </div>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="https://energyalternativesstore.com/solar-panels-categories/"><i class="fas fa-solar-panel"></i> Solar Panels</a></li>
+                    <li><a href="https://energyalternativesstore.com/inverters/"><i class="fas fa-bolt"></i> Solar Inverters</a></li>
+                    <li><a href="https://energyalternativesstore.com/batteries-categories/"><i class="fas fa-battery-full"></i> Batteries</a></li>
+                    <li><a href="https://energyalternativesstore.com/mounting-structures/"><i class="fas fa-th"></i> Mounting Structures</a></li>
+                    <li><a href="https://energyalternativesstore.com/electrical-asseries/"><i class="fas fa-plug"></i> Electrical Accessories</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="getaquoate.html" class="quote-btn-mobile"><i class="fas fa-phone-alt"></i> Get a Quote</a>
+    </div>
     <style>
-        /* Additional custom styles */
-        .section-top {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/solar-banner.jpg') no-repeat center center;
-            background-size: cover;
-            color: white;
-            padding: 100px 0;
+        :root {
+            --primary: #0066cc;
+            --secondary: #004080;
+            --accent: #ff9900;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
         }
         
-        .single_ser_info {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: #cfcfcf;
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/images/solar-pattern.png') center/cover;
+            opacity: 0.1;
+        }
+        
+        .breadcrumb {
+            background: transparent;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .breadcrumb-item a:hover {
+            color: white;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+        }
+        
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        /* Service Navigation */
+        .service-nav {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            padding: 0;
             position: sticky;
             top: 20px;
         }
         
-        .single_ser_info a {
-            display: block;
-            padding: 12px 15px;
-            margin-bottom: 8px;
-            color: #2c3e50;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .single_ser_info a:hover {
-            background: #3498db;
+        .service-nav-header {
+            background: var(--primary);
             color: white;
-            transform: translateX(5px);
-        }
-        
-        .single_ser_info a i {
-            float: right;
-            margin-top: 3px;
-        }
-        
-        .single_pro_details h2 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        .single_pro_details h3 {
-            color: #0471b9;
-            margin: 30px 0 15px;
+            padding: 15px 20px;
+            border-radius: 10px 10px 0 0;
             font-weight: 600;
         }
         
-        .single_pro_details h4 {
-            color: #2c3e50;
-            margin: 25px 0 15px;
-            font-weight: 600;
+        .service-nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         
-        .single_pro_details p {
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #495057;
+        .service-nav-list li {
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         
-        .srex-single-pro-img img {
-            width: 100%;
-            border-radius: 8px;
+        .service-nav-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-nav-list a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .service-nav-list a:hover, .service-nav-list a.active {
+            background: rgba(0,102,204,0.05);
+            color: var(--primary);
+            padding-left: 25px;
+        }
+        
+        .service-nav-list a i {
+            color: var(--gray);
+            transition: all 0.3s;
+        }
+        
+        .service-nav-list a:hover i {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+        
+        /* Content Section */
+        .service-content {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+        
+        .service-hero-img {
+            border-radius: 10px;
+            overflow: hidden;
             margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
         
-        .single_pro_details img {
+        .service-hero-img img {
             width: 100%;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            height: auto;
+            transition: transform 0.5s;
         }
         
-        .solar-pv-toc {
-            background: #f8f9fa;
+        .service-hero-img:hover img {
+            transform: scale(1.03);
+        }
+        
+        .toc-container {
+            background: rgba(0,102,204,0.05);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 8px 8px 0;
             padding: 25px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 4px solid #3498db;
+            margin-bottom: 40px;
         }
         
-        .solar-pv-toc h2 {
-            font-size: 1.5rem;
+        .toc-title {
+            color: var(--primary);
             margin-bottom: 15px;
+            font-weight: 600;
         }
         
-        .solar-pv-toc ul {
-            list-style-type: none;
+        .toc-list {
+            list-style: none;
             padding-left: 0;
         }
         
-        .solar-pv-toc li {
-            margin-bottom: 10px;
+        .toc-list li {
+            margin-bottom: 8px;
             position: relative;
             padding-left: 20px;
         }
         
-        .solar-pv-toc li:before {
-            content: "•";
-            color: #3498db;
-            font-weight: bold;
+        .toc-list li::before {
+            content: "→";
+            color: var(--accent);
             position: absolute;
             left: 0;
         }
         
-        .solar-pv-toc li ul {
+        .toc-list a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .toc-list a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        
+        .toc-sublist {
+            list-style: none;
             padding-left: 20px;
             margin-top: 8px;
         }
         
-        .solar-pv-toc a {
-            color: #2c3e50;
-            text-decoration: none;
-            transition: all 0.3s ease;
+        /* Content Styling */
+        .service-title {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-weight: 700;
         }
         
-        .solar-pv-toc a:hover {
-            color: #3498db;
-            text-decoration: underline;
+        .service-subtitle {
+            color: var(--primary);
+            margin: 40px 0 20px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .service-subtitle::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .service-minititle {
+            color: var(--secondary);
+            margin: 30px 0 15px;
+            font-weight: 600;
+        }
+        
+        .content-img {
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 25px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-box {
+            background: rgba(0,102,204,0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 25px 0;
         }
         
         @media (max-width: 991px) {
-            .solar-pv-sticky-left {
+            .service-nav {
                 margin-bottom: 30px;
+            }
+            
+            .service-content {
+                padding: 25px;
             }
         }
     </style>
 </head>
 
-<body class="body-wrapper home-one" data-scroll-animation="true">
-    <div class="overlay"></div>
-
-    <section class="section-top">
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
         <div class="container">
-            <div class="col-lg-10 offset-lg-1 text-center">
-                <div class="section-top-title">
-                    <h1>Service details</h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>> Services > Solar PV and Thermal</li>
-                    </ul>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center mb-4">Solar PV and Thermal Solutions</h1>
+                    <p class="lead text-center mx-auto" style="max-width: 700px; color: #676767;">
+                        Harness the power of the sun with our premium solar solutions designed for homes, businesses, and agricultural needs.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="srex-single-project srex-section">
+    <!-- Main Content -->
+    <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-sm-12 col-xs-12 solar-pv-sticky-left">
-                    <div class="single_ser_info">
-                        <h4>Services</h4>
-                        <a href="./solar-pv-service-details.html">Solar PV and Thermal <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./fabrication-service-details.html">Fabrication <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./generator-service-details.html">Generator Services <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./consultancy-service-details.html">Consultancy Services <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./solar-financing-service-details.html">Solar Financing <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./testing-service-details.html">Testing Services <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./netmeteringservicedetails.html">Net Metering <i class="fa-solid fa-arrow-right"></i></a>
-                        <a href="./facilitymanagement.html">Facility Management <i class="fa-solid fa-arrow-right"></i></a>
+                <!-- Service Navigation -->
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="service-nav">
+                        <div class="service-nav-header">
+                            <i class="fas fa-solar-panel me-2"></i> Our Services
+                        </div>
+                        <ul class="service-nav-list">
+                            <li><a href="./solar-pv-service-details.html" class="active">Solar PV and Thermal <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./fabrication-service-details.html">Fabrication <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./generator-service-details.html">Generator Services <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./consultancy-service-details.html">Consultancy Services <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./solar-financing-service-details.html">Solar Financing <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./testing-service-details.html">Testing Services <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./netmeteringservicedetails.html">Net Metering <i class="fas fa-arrow-right"></i></a></li>
+                            <li><a href="./facilitymanagement.html">Facility Management <i class="fas fa-arrow-right"></i></a></li>
+                        </ul>
                     </div>
                 </div>
                 
-                <div class="col-lg-8 col-sm-12 col-xs-12">
-                    <div class="single_pro_details single_ser_details">
-                        <h2>Solar PV and Thermal</h2>
-                        <p class="lead">We offer cutting-edge solar solutions for homes, businesses, and agriculture—Explore our services below.</p>
+                <!-- Service Content -->
+                <div class="col-lg-8">
+                    <div class="service-content">
+                        <h2 class="service-title">Premium Solar Solutions</h2>
+                        <p class="lead">
+                            We design and implement cutting-edge solar photovoltaic and thermal systems tailored to your specific energy needs, 
+                            delivering efficiency, reliability, and maximum return on investment.
+                        </p>
                         
-                        <div class="srex-single-pro-img">
-                            <img src="assets/images/Solar PV and Thermal.jpg" alt="Solar PV and Thermal Systems">
+                        <div class="service-hero-img">
+                            <img src="assets/images/Solar PV and Thermal.jpg" alt="Solar PV and Thermal Installation">
                         </div>
                         
-                        <div class="solar-pv-toc">
-                            <h2>Table of Contents</h2>
-                            <ul>
-                                <li><a href="#solar-pv-residential">Residential systems</a></li>
-                                <li><a href="#solar-pv-commercial">Commercial systems</a></li>
+                        <div class="toc-container">
+                            <h3 class="toc-title">Table of Contents</h3>
+                            <ul class="toc-list">
+                                <li><a href="#residential-systems">Residential Solar Systems</a></li>
+                                <li><a href="#commercial-systems">Commercial Solar Solutions</a></li>
                                 <li>
-                                    <a href="#solar-pv-agricultural">Agricultural systems</a>
-                                    <ul>
-                                        <li><a href="#solar-pv-epc">EPC</a></li>
-                                        <li><a href="#solar-pv-ppa">PPA</a></li>
-                                        <li><a href="#solar-pv-leasing">Bank leasing projects</a></li>
+                                    <a href="#agricultural-systems">Agricultural Applications</a>
+                                    <ul class="toc-sublist">
+                                        <li><a href="#epc-services">EPC Services</a></li>
+                                        <li><a href="#ppa-model">PPA Model</a></li>
+                                        <li><a href="#leasing-options">Bank Leasing Options</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         
-                        <h3 id="solar-pv-residential">Residential Systems</h3>
-                        <p><strong>Power your home, cut bills, and reduce your carbon footprint.</strong><br>
-                        Our rooftop solar systems include battery storage and net metering options, letting you store extra energy and even sell it back to the grid.</p>
-                        <img src="assets/images/1.png" alt="Residential Solar System">
+                        <h3 id="residential-systems" class="service-subtitle">Residential Solar Systems</h3>
+                        <div class="highlight-box">
+                            <strong>Transform your home into an energy-efficient powerhouse.</strong> Our residential solar solutions are designed to maximize your energy independence while reducing your carbon footprint and electricity bills.
+                        </div>
+                        <p>
+                            Our expert team designs and installs premium rooftop solar systems that seamlessly integrate with your home's architecture. 
+                            We offer complete solutions including high-efficiency solar panels, battery storage systems, and smart energy management with net metering capabilities.
+                        </p>
+                        <div class="content-img">
+                            <img src="assets/images/1.png" alt="Residential Solar Installation">
+                        </div>
+                        <p>
+                            With our residential systems, you can store excess energy during peak production times and either use it when needed or sell it back to the grid, 
+                            creating an additional revenue stream while ensuring uninterrupted power supply.
+                        </p>
                         
-                        <h3 id="solar-pv-commercial">Commercial Systems</h3>
-                        <p><strong>Smart energy for smart businesses.</strong><br>
-                        We provide scalable solar solutions for offices, factories, and institutions—cutting operational costs and promoting sustainability.
-                        Optional PPA available: No upfront cost, just clean energy at a fixed rate.</p>
-                        <img src="assets/images/3.png" alt="Commercial Solar System">
+                        <h3 id="commercial-systems" class="service-subtitle">Commercial Solar Solutions</h3>
+                        <div class="highlight-box">
+                            <strong>Power your business with clean, cost-effective energy.</strong> Our commercial solar solutions are engineered to deliver maximum efficiency and rapid return on investment for businesses of all sizes.
+                        </div>
+                        <p>
+                            We specialize in scalable solar solutions for offices, manufacturing facilities, retail spaces, and institutions. 
+                            Our systems are designed to significantly reduce your operational costs while demonstrating your commitment to sustainability.
+                        </p>
+                        <div class="content-img">
+                            <img src="assets/images/3.png" alt="Commercial Solar Installation">
+                        </div>
+                        <p>
+                            For businesses looking to avoid upfront capital expenditure, we offer Power Purchase Agreement (PPA) options where you pay only for the energy produced at rates typically lower than utility prices, 
+                            with no installation or maintenance costs.
+                        </p>
                         
-                        <h3 id="solar-pv-agricultural">Agricultural Systems</h3>
-                        <p><strong>Solar pumps that bring water to life.</strong><br>
-                        Ideal for rural and off-grid areas, our solar pumping systems power irrigation and livestock needs—fuel-free, eco-friendly, and cost-effective.</p>
-                        <img src="assets/images/2.png" alt="Agricultural Solar System">
+                        <h3 id="agricultural-systems" class="service-subtitle">Agricultural Solar Applications</h3>
+                        <div class="highlight-box">
+                            <strong>Revolutionize your farming operations with solar power.</strong> Our agricultural solutions provide reliable, off-grid power for irrigation and livestock needs without fuel costs or emissions.
+                        </div>
+                        <p>
+                            Ideal for rural and remote farming operations, our solar pumping systems deliver consistent water supply for irrigation and livestock, 
+                            eliminating dependence on unreliable grid power or expensive diesel generators.
+                        </p>
+                        <div class="content-img">
+                            <img src="assets/images/2.png" alt="Agricultural Solar Installation">
+                        </div>
                         
-                        <h4 id="solar-pv-epc">EPC (Engineering, Procurement & Construction)</h4>
-                        <p>From blueprint to power-on—leave it to us.<br>
-                        We manage your entire solar project: designing, sourcing, installing, and maintaining high-performance systems on time and within budget.</p>
+                        <h4 id="epc-services" class="service-minititle">EPC Services (Engineering, Procurement & Construction)</h4>
+                        <p>
+                            Our turnkey EPC service handles every aspect of your solar project from initial feasibility studies to final commissioning. 
+                            We manage system design, equipment procurement, installation, and ongoing maintenance, ensuring optimal performance and compliance with all regulations.
+                        </p>
                         
-                        <h4 id="solar-pv-ppa">PPA (Power Purchase Agreement)</h4>
-                        <p>Go solar with zero investment.<br>
-                        With PPA, we install and maintain the system while you only pay for the energy at a fixed rate—lower than your utility bills.</p>
+                        <h4 id="ppa-model" class="service-minititle">Power Purchase Agreement (PPA) Model</h4>
+                        <p>
+                            The PPA model allows you to benefit from solar energy with no upfront investment. We install, own, and maintain the system on your property, 
+                            while you purchase the generated electricity at predictable rates typically 10-30% below utility prices.
+                        </p>
                         
-                        <h4 id="solar-pv-leasing">Bank Leasing Projects</h4>
-                        <p>Solar energy without upfront costs.<br>
-                        Our partnerships with banks let you lease a solar system, saving money while we handle ownership, maintenance, and installation.</p>
+                        <h4 id="leasing-options" class="service-minititle">Bank Leasing Options</h4>
+                        <p>
+                            Through our partnerships with leading financial institutions, we offer attractive leasing options that make solar power accessible without large capital outlay. 
+                            Our leasing programs include full installation, maintenance, and performance guarantees.
+                        </p>
                     </div>
                 </div>
             </div>

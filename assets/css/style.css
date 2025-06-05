@@ -248,6 +248,11 @@ animation-fill-mode: both;
 /*------------------------------------
 	04/ Fonts
 ------------------------------------*/
+
+/*------------------------------------
+	03/ FAQs
+------------------------------------*/
+
 /*------------------------------------
 	05/ Common
 ------------------------------------*/
@@ -406,14 +411,7 @@ h6 {
   text-transform: capitalize;
 }
 
-p {
-  font-family: Manrope;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  color: #ffffff;
-}
+
 @media (max-width: 767px) {
   p {
     font-size: 15px;
