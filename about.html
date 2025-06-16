@@ -241,49 +241,128 @@
 <section style="margin-top: -40px;" class=ceo-message-section>
 <div class=ceo-message-container>
 <div class=ceo-image-container>
-<img src=https://res.cloudinary.com/db2xlqrrx/image/upload/v1734283178/2_r3gnhb.jpg alt="CEO Image" class=ceo-image>
+<img src="assets/images/altaf bhai.jpg" alt="CEO Image" class=ceo-image>
 </div>
 <div class=ceo-text-container>
 <h2>A Message from Our CEO</h2>
 <p>“At Energy Alternatives, we believe in creating a better tomorrow with clean energy. Our goal is simple — to make solar power accessible, affordable, and effective for everyone in Pakistan.”
 </p>
-<b>Eng. Muhammad Altaf</b> <br>
-(CEO, Energy Alternatives)
-</p>
-<p class=ceo-signature> </p>
+<div class="ceo-info">
+<p class="ceo-name">Eng. Muhammad Altaf</p>
+<p class="ceo-position">CEO, Energy Alternatives</p>
+</div>
 </div>
 </div>
 </section>
 </div>
 
-<style>.certificate-section {
-  text-align: center;
-  padding: 40px 20px;
-}
 
-.certificates {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.certificates img {
-  width: 100%;
-  height: auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-/* Responsive: stack images on small screens */
-@media (max-width: 768px) {
-  .certificates {
-    grid-template-columns: 1fr;
+<style>
+  .ceo-message-section {
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: -40px;
+    position: relative;
   }
-}
+  
+  .ceo-message-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 20px;
+  }
+  
+  .ceo-image-container {
+    flex: 0 0 300px;
+  }
+  
+  .ceo-image {
+    width: 100%;
+    /* padding: 1px; */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .ceo-image:hover {
+    transform: scale(1.03);
+  }
+  
+  .ceo-text-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .ceo-title {
+    font-size: 2.5rem;
+    margin-bottom: 25px;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .ceo-title:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 70px;
+    height: 3px;
+    background: #4CAF50;
+  }
+  
+  .ceo-quote {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-style: italic;
+    position: relative;
+    padding-left: 20px;
+    border-left: 3px solid #4CAF50;
+  }
+  
+  .ceo-info {
+    margin-top: 30px;
+  }
+  
+  .ceo-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+  
+  .ceo-position {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .ceo-message-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .ceo-title:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .ceo-quote {
+      padding-left: 0;
+      border-left: none;
+      padding-top: 15px;
+      border-top: 3px solid #4CAF50;
+    }
+  }
 </style>
-
 <div class="wow ud-fade-in-left" data-wow-delay="300ms">
 <div class=call-us-shell>
 <div class=call-us-section>
