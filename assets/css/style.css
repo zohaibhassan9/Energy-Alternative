@@ -907,6 +907,12 @@ margin-bottom:20px;
   background-image: url('../images/services/fabrication.jpg');
 }
 
+.water-conversation {
+  background-image: url('../images/services/water\ conversation.png');
+}
+.smart-solution {
+  background-image: url('../images/services/smart\ solutions.png');
+}
 .generator {
   background-image: url('../images/services/generator.jpg');
 }
