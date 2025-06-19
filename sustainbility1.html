@@ -118,7 +118,7 @@
         </ul>
         <a href="getaquoate.html" class="quote-btn-mobile"><i class="fas fa-phone-alt"></i> Get a Quote</a>
     </div>
-
+<!-- styling -->
     <style>
         body {
             background-color: #f4f8f4;
@@ -319,14 +319,19 @@
         </div>
     </div>
 
-    <div id="footer-placeholder"></div>
-    <script>
-        fetch("footer.html")
-            .then((res) => res.text())
-            .then((html) => {
-                document.getElementById("footer-placeholder").innerHTML = html;
-            });
-    </script>
-    <script src="header.js"></script>
+<!-- footer placeholder -->
+<div id="footer-placeholder"></div>
+<script>
+fetch("footer.html").then((res) => res.text()).then((html) =>{document.getElementById("footer-placeholder").innerHTML = html})
+</script>
+<!-- <div id="footer-placeholder"></div>
+<script>
+fetch("footer.html")
+.then((res) => res.text())
+.then((html) => {
+document.getElementById("footer-placeholder").innerHTML = html;
+});
+</script>
+<script src="header.js"></script> -->
 </body>
 </html>
