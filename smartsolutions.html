@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Energy Alternatives - Solar Solutions</title>
-<link rel="shortcut icon" href=./assets/images/logo-black.png>
-<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
-<link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Alternatives - Solar Solutions</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css" media="print" onload='this.media="all"'>
+</head>
+<body class="body-wrapper home-one" data-scroll-animation="true">
 <div class="top-bar" style="background-color: #dcdcdc81;">
-       <div class="logo">
-                <a href="index.html"> <img src="https://res.cloudinary.com/db2xlqrrx/image/upload/v1750228045/logo_animate_TRANSPARENT_800_x_415_px_kixybm.gif" alt="Energy Alternatives Logo"></a>
-            </div>         <div class="contact-info">
+        <div class="logo">
+            <a href="index.html"> <img src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Energy Alternatives Logo"></a>
+        </div>
+        <div class="contact-info">
             <div class="contact-item">
                 <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
@@ -55,18 +55,16 @@
             </a>
         </div>
     </div>
-     
+    
     <div class="nav-container">
         <div class="nav-bar">
-
-            
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="sustainbility.html">Sustainability</a></li>
                 <li><a href="ourcertificates.html">Our Certificates</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="pro.html">Projects</a></li>
+                <li><a href="projects.html">Projects</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" aria-expanded="false">Shop <span class="arrow">▼</span></a>
                     <ul class="dropdown-menu">
@@ -81,7 +79,7 @@
             </ul>
             
             <a href="getaquoate.html" class="quote-btn">Get a Quote</a>
-             <div class="installations-mobile">#565MW+ Installations</div>
+            <div class="installations-mobile">#565MW+ Installations</div>
             <button class="mobile-menu-btn" aria-label="Open mobile menu">
                 <i class="fas fa-bars"></i>
             </button>
@@ -89,15 +87,12 @@
     </div>
 
     <div class="mobile-menu" role="dialog" aria-modal="true" aria-label="Main menu">
-    
         <div class="mobile-menu-header">
-            
-
             <button class="close-menu-btn" aria-label="Close mobile menu">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-       
+        
         <ul class="mobile-nav-links">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -121,103 +116,107 @@
         </ul>
         <a href="getaquoate.html" class="quote-btn-mobile"><i class="fas fa-phone-alt"></i> Get a Quote</a>
     </div>
-  <style>
-    body {
-      background-color: #f4f8f4;
-      color: #333;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        body {
+            background-color: #f4f8f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
+        .ss-header {
+            background-color: #FAAA1B;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
 
+        .ss-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-    .ss-header {
-      background-color: #FAAA1B;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+        .ss-container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            padding-bottom: 3rem; /* Added padding to prevent button collision */
+        }
 
-    .ss-header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+        .ss-container h2 {
+            color: #2D65A7;
+            margin-top: 2rem;
+        }
 
-    .ss-container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+        .ss-list {
+            list-style: none;
+            padding: 0;
+        }
 
-    .ss-container h2 {
-      color: #2D65A7;
-      margin-top: 2rem;
-    }
+        .ss-list li {
+            background-color: #5a8ac294;
+            border: 1px solid #2D65A7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 5px;
+            font-size: 1.1rem;
+        }
 
-    .ss-list {
-      list-style: none;
-      padding: 0;
-    }
+        .ss-list li::before {
+            content: '✔️';
+            margin-right: 0.5rem;
+        }
 
-    .ss-list li {
-      background-color: #5a8ac294;
-      border: 1px solid #2D65A7;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      border-radius: 5px;
-      font-size: 1.1rem;
-    }
+        .ss-highlight-box {
+            background-color: #5d96e64c;
+            padding: 1.5rem;
+            border-left: 5px solid #2D65A7;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
 
-    .ss-list li::before {
-      content: '✔️';
-      margin-right: 0.5rem;
-      padding: 20px;
-    }
+        .ss-cta {
+            text-align: center;
+            margin: 3rem 0 4rem; /* Added bottom margin to prevent collision */
+            padding: 2rem;
+            background-color: #FAAA1B;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
 
-    .ss-highlight-box {
-      background-color: #5d96e64c;
-      padding: 1.5rem;
-      border-left: 5px solid #2D65A7;
-      margin: 2rem 0;
-      border-radius: 8px;
-    }
+        .ss-cta a {
+            text-decoration: none;
+            background-color: #2775b9;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            display: inline-block;
+            margin-top: 1rem;
+        }
 
-    .ss-cta {
-      text-align: center;
-      margin-top: 3rem;
-      padding: 2rem;
-      background-color: #FAAA1B;
-      border-radius: 10px;
-    }
+        .ss-cta a:hover {
+            background-color: #ffffff;
+            color: black;
+        }
 
-    .ss-cta a {
-      text-decoration: none;
-      background-color: #2775b9;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+        @media (max-width: 768px) {
+            .ss-header h1 {
+                font-size: 2rem;
+            }
 
-    .ss-cta a:hover {
-      background-color: #ffffff;
-      color: black;
-    }
+            .ss-container {
+                padding: 1rem;
+            }
+        }
+    </style>
 
-    @media (max-width: 768px) {
-      .ss-header h1 {
-        font-size: 2rem;
-      }
-
-      .ss-container {
-        padding: 4rem;
-      }
-    }
-  </style>
-</head>
 <body>
+
+  <!-- Your existing header/navigation code -->
 
   <header class="ss-header">
     <h3>Smart Solutions for a Sustainable Future</h3>
@@ -227,7 +226,7 @@
     <p>
       At <strong>Energy Alternatives</strong>, we are committed to transforming the way energy is consumed and managed — by offering smart, sustainable, and future-ready solutions. Our Smart Solutions are designed to integrate cutting-edge technology with clean, renewable energy, delivering unmatched efficiency, real-time control, and long-term savings — all through one intelligent and user-friendly system.
     </p>
-<p>From solar-powered smart homes to automated energy management and IoT-enabled monitoring systems, our solutions are built to reduce energy waste, lower utility costs, and empower you to take control of your energy use like never before.
+    <p>From solar-powered smart homes to automated energy management and IoT-enabled monitoring systems, our solutions are built to reduce energy waste, lower utility costs, and empower you to take control of your energy use like never before.
     </p>
 
     <h2>What Makes Our Smart Solutions Unique?</h2>
@@ -250,7 +249,7 @@
 
       <h3>IoT & Automation</h3>
       <p>
-        We integrate Internet of Things (IoT) technology with solar systems to make your energy usage intelligent and responsive. Let automation handle what you don’t have to — and reduce wastage effortlessly.
+        We integrate Internet of Things (IoT) technology with solar systems to make your energy usage intelligent and responsive. Let automation handle what you don't have to — and reduce wastage effortlessly.
       </p>
 
       <h3>Eco-Conscious, Future-Driven Design</h3>
@@ -277,14 +276,23 @@
     </div>
   </div>
 
-    <div id="footer-placeholder"></div>
-  <script>
-    fetch("footer.html")
-      .then((res) => res.text())
-      .then((html) => {
-        document.getElementById("footer-placeholder").innerHTML = html;
-      });
-  </script>
+  <!-- Your existing footer code -->
+
   <script src="header.js"></script>
+    
+    <div id="footer-placeholder"></div>
+    <script defer>
+        fetch("footer.html")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                document.getElementById("footer-placeholder").innerHTML = html;
+            })
+            .catch(error => console.error("Error loading footer:", error));
+    </script>
 </body>
 </html>
