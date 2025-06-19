@@ -182,8 +182,8 @@
         
         .certificates-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
         
         .certificate-card {
@@ -193,7 +193,7 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px 2px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -204,34 +204,51 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
-        .certificate-logo {
-            height: 100px;
-            margin-bottom: 20px;
-            object-fit: contain;
+        /* .certificate-logo {
+            height: 320px;
+            width: auto;
             max-width: 100%;
-        }
+            margin-bottom: 15px;
+            object-fit: contain;
+        } */
         
         .certificate-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             margin-bottom: 15px;
             color: var(--primary-color);
         }
         
         .certificate-card p {
             color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         
         .badge {
             display: inline-block;
             background-color: rgb(231, 183, 22);
             color: white;
-            padding: 5px 10px;
+            padding: 8px 15px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             margin-top: auto;
             font-weight: bold;
+        }
+        
+        @media (max-width: 992px) {
+            .certificates-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .certificate-card {
+                padding: 35px 25px;
+            }
+            
+            /* .certificate-logo {
+                height: 160px;
+            } */
         }
         
         @media (max-width: 768px) {
@@ -239,8 +256,16 @@
                 font-size: 2rem;
             }
             
-            .certificates-grid {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            .certificate-card {
+                padding: 30px 20px;
+            }
+            
+            /* .certificate-logo {
+                height: 140px;
+            } */
+            
+            .certificate-card h3 {
+                font-size: 1.4rem;
             }
         }
         
@@ -249,17 +274,13 @@
                 font-size: 1.8rem;
             }
             
-   .certificates-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 2rem;
-    padding: 1.5rem 0;
-}
+            .certificates-section {
+                padding: 40px 15px;
+            }
+/*             
+            .certificate-logo {
+                height: 120px;
+            } */
         }
     </style>
 
@@ -286,42 +307,42 @@
             
             <!-- EA-QHSE Certificates -->
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-1.png" alt="EA-QHSE Certificate 1" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-1.png" alt="EA-QHSE Certificate 1" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-2.png" alt="EA-QHSE Certificate 2" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-2.png" alt="EA-QHSE Certificate 2" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-3.png" alt="EA-QHSE Certificate 3" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-3.png" alt="EA-QHSE Certificate 3" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-4.png" alt="EA-QHSE Certificate 4" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-4.png" alt="EA-QHSE Certificate 4" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-5.png" alt="EA-QHSE Certificate 5" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-5.png" alt="EA-QHSE Certificate 5" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_EA-QHSE-CERTS-PDF-S CANNED-6.png" alt="EA-QHSE Certificate 6" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_EA-QHSE-CERTS-PDF-SCANNED-6.png" alt="EA-QHSE Certificate 6" class="certificate-logo">
                 <h3>EA-QHSE Certification</h3>
                 <p>Quality, Health, Safety and Environment Standard</p>
                 <span class="badge">International Standard</span>
@@ -329,14 +350,14 @@
             
             <!-- PSA Certificates -->
             <div class="certificate-card">
-                <img src="./assets/images/certificate_PSA.png" alt="PSA Certificate" class="certificate-logo">
+                <img src="assets/images/certificates/certificate_PSA.png">
                 <h3>PSA Certification</h3>
                 <p>Recognized by Pakistan Solar Association</p>
                 <span class="badge">Renewable Energy</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_PSA MEMBERSHIP.png" alt="PSA Membership Certificate" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_PSA MEMBERSHIP.png">
                 <h3>PSA Membership</h3>
                 <p>Official member of Pakistan Solar Association</p>
                 <span class="badge">Industry Recognition</span>
@@ -344,14 +365,14 @@
             
             <!-- PEC Certificates -->
             <div class="certificate-card">
-                <img src="./assets/images/certificate_PEC-Certificate-1.png" alt="PEC Certificate 1" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_PEC-Certificate-2.png" alt="PEC Certificate 1" class="certificate-logo">
                 <h3>PEC Accreditation</h3>
                 <p>Certified by Pakistan Engineering Council</p>
                 <span class="badge">Engineering Standard</span>
             </div>
             
             <div class="certificate-card">
-                <img src="./assets/images/certificate_PEC-Certificate-2.png" alt="PEC Certificate 2" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_PEC-Certificate-2.png" alt="PEC Certificate 2" class="certificate-logo">
                 <h3>PEC Accreditation</h3>
                 <p>Certified by Pakistan Engineering Council</p>
                 <span class="badge">Engineering Standard</span>
@@ -359,7 +380,7 @@
             
             <!-- SRA Certificate -->
             <div class="certificate-card">
-                <img src="./assets/images/certificate_SRA-Certificate-1.png" alt="SRA Certificate" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_SRA-Certificate-1.png" alt="SRA Certificate" class="certificate-logo">
                 <h3>SRA Registration</h3>
                 <p>Registered with Sindh Revenue Authority</p>
                 <span class="badge">Tax Compliance</span>
@@ -367,7 +388,7 @@
             
             <!-- Trade Mark Registry -->
             <div class="certificate-card">
-                <img src="./assets/images/certificate_Trade Mark Registry.png" alt="Trade Mark Registry" class="certificate-logo">
+                <img src="./assets/images/certificates/certificate_Trade Mark Registry.png" alt="Trade Mark Registry" class="certificate-logo">
                 <h3>Trademark Registered</h3>
                 <p>Officially registered trademark</p>
                 <span class="badge">Intellectual Property</span>
