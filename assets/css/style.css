@@ -908,10 +908,10 @@ margin-bottom:20px;
 }
 
 .water-conversation {
-  background-image: url('../images/services/water\ conversation.png');
+  background-image: url('https://res.cloudinary.com/db2xlqrrx/image/upload/v1750309020/water_conversation_ozixst.png');
 }
 .smart-solution {
-  background-image: url('../images/services/smart\ solutions.png');
+  background-image: url('https://res.cloudinary.com/db2xlqrrx/image/upload/v1750309020/smart_solutions_vkyqpw.png');
 }
 .generator {
   background-image: url('../images/services/generator.jpg');
