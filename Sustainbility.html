@@ -608,10 +608,8 @@
     <div id="footer-placeholder"></div>
     
     <script>
-        fetch("footer.html")
-            .then((e) => e.text())
-            .then((e) => {
-                document.getElementById("footer-placeholder").innerHTML = e;
+        fetch("footer.html").then((e) => e.text()).then((e) => {
+        document.getElementById("footer-placeholder").innerHTML = e;
             });
     </script>
     <script src="header.js"></script>
