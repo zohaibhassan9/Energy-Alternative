@@ -122,175 +122,219 @@ Shop <span class="arrow">▼</span>
 <body class="body-wrapper home-one" data-scroll-animation=true>
 <div id="hea-placeholder"></div>
 
+
 <style>
+        /* Popup Container */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0; 
+            left: 0;
+            width: 100vw; 
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
 
-/* Popup Container */
-.popup-container {
-display: none;
-position: fixed;
-top: 0; left: 0;
-width: 100vw; height: 100vh;
-background: rgba(0, 0, 0, 0.7);
-justify-content: center;
-align-items: center;
-z-index: 9999;
-}
+        /* Image Popup Styling */
+        .image-popup {
+            position: relative;
+            max-width: 90%;
+            max-height: 90vh;
+            text-align: center;
+        }
 
-/* Form Styling */
-.popup-form {
-background: #0056B3;
-width: 90%;
-max-width: 600px;
-padding: 30px;
-border-radius: 10px;
-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-overflow-y: auto;
-max-height: 90vh;
-position: relative;
-}
+        .image-popup img {
+            max-width: 100%;
+            max-height: 80vh; /* Leave space for close button */
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
 
-.popup-form h2 {
-margin-top: 0;
-margin-bottom: 20px;
-color: #fcae05;
-text-align: center;
-}
+        .image-close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 40px;
+            height: 40px;
+            background: #fff;
+            border-radius: 50%;
+            border: none;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
 
-.form-row {
-display: flex;
-gap: 20px;
-margin-bottom: 15px;
-flex-wrap: wrap;
-}
+        .image-close-btn:hover {
+            background: #f1f1f1;
+        }
 
-.form-group {
-flex: 1;
-min-width: 45%;
-}
+        /* Form Styling */
+        .popup-form {
+            background: #0056B3;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+            max-height: 90vh;
+            position: relative;
+        }
 
-.form-group input,
-.form-group select {
-width: 100%;
-padding: 10px 12px;
-border-radius: 6px;
-border: 1px solid #ccc;
-font-size: 15px;
-}
+        .popup-form h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #fcae05;
+            text-align: center;
+        }
 
-.popup-form button[type="submit"] {
-max-width: 40%;
-display: flex;
-flex-direction: left;
-background: #aaaaaa;
-color: white;
-padding: 10px 20px;
-border: none;
-border-radius: 6px;
-font-size: 16px;
-cursor: pointer;
-margin-top: 10px;
-}
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
 
-.popup-form button[type="submit"]:hover {
-background: #ffffff;
-color: #000000;
-}
+        .form-group {
+            flex: 1;
+            min-width: 45%;
+        }
 
-.close-btn {
-position: absolute;
-top: 12px;
-right: 15px;
-font-size: 40px;
-font-weight: 900;
-background: none;
-border: none;
-cursor: pointer;
-color: #ffffff;
-}
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
 
-.close-btn:hover {
-color: #333;
-}
-</style>
+        .popup-form button[type="submit"] {
+            max-width: 40%;
+            display: flex;
+            flex-direction: left;
+            background: #aaaaaa;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
 
-<!-- Popup Form -->
-<div class="popup-container" id="popupForm">
-<div class="popup-form">
-<button class="close-btn" onclick="closePopup()">×</button>
-<h2>Contact Us</h2>
-<form action="https://formsubmit.co/info@www.energyalternatives.com.pk" method="POST" enctype="multipart/form-data"> 
-<div class="form-row">
-<div class="form-group">
-<input type="text" name="FirstName" placeholder="Full Name" required>
-</div>
-<div class="form-group">
-<input type="email" name="Email" placeholder="Email" required>
-</div>
-</div>
+        .popup-form button[type="submit"]:hover {
+            background: #ffffff;
+            color: #000000;
+        }
 
-<div class="form-row">
+        .form-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 15px;
+            font-size: 40px;
+            font-weight: 900;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #ffffff;
+        }
 
-<div class="form-group">
-<input placeholder="Contact No" required>
-</div>
-<div class="form-group">
-<input class="number" placeholder="Max Unit Consumption" required>
-</div>
-</div>
-
-<div class="form-row">
-<div class="form-group">
-<input type="text" name="Company" placeholder="Company">
-</div>
-<div class="form-group">
-<select name="City" required>
-<option value="">Select City</option>
-<option>Lahore</option>
-<option>Karachi</option>
-<option>Islamabad</option>
-<option>Faisalabad</option>
-<option>Multan</option>
-<option>Peshawar</option>
-<option>Quetta</option>
-<option>Sialkot</option>
-</select>
-</div>
-</div>
+        .form-close-btn:hover {
+            color: #333;
+        }
+    </style>
 
 
+<!-- Your page content here -->
 
-<div class="form-row">
-<div class="form-group">
-<select name="PropertyType" required>
-<option value="">Property Type</option>
-<option>House</option><option>Apartment</option>
-<option>Factory Roof</option><option>Commercial</option>
-<option>Farm</option><option>Shop/Office</option>
-</select>
-</div>
-<div class="form-group">
-<select name="Source" required>
-<option value="">How did you hear about us?</option>
-<option>Facebook</option>
-<option>LinkedIn</option>
-<option>Twitter</option>
-<option>Website</option>
-<option>Billboards</option>
-</select>
-</div>
+<!-- Image Popup -->
+<div class="popup-container" id="imagePopup">
+    <div class="image-popup">
+        <button class="image-close-btn" onclick="closeImagePopup()">×</button>
+        <img src="assets/images/Kuka.jpg" alt="Promotional Image">
+    </div>
 </div>
 
-<div class="form-row">
-<div class="form-group">
+<!-- Form Popup -->
+<div class="popup-container" id="formPopup">
+    <div class="popup-form">
+        <button class="form-close-btn" onclick="closeFormPopup()">×</button>
+        <h2>Contact Us</h2>
+        <form action="https://formsubmit.co/info@www.energyalternatives.com.pk" method="POST" enctype="multipart/form-data"> 
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="FirstName" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="Email" placeholder="Email" required>
+                </div>
+            </div>
 
-</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input name="ContactNo" placeholder="Contact No" required>
+                </div>
+                <div class="form-group">
+                    <input class="number" name="UnitConsumption" placeholder="Max Unit Consumption" required>
+                </div>
+            </div>
 
-</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" name="Company" placeholder="Company">
+                </div>
+                <div class="form-group">
+                    <select name="City" required>
+                        <option value="">Select City</option>
+                        <option>Lahore</option>
+                        <option>Karachi</option>
+                        <option>Islamabad</option>
+                        <option>Faisalabad</option>
+                        <option>Multan</option>
+                        <option>Peshawar</option>
+                        <option>Quetta</option>
+                        <option>Sialkot</option>
+                    </select>
+                </div>
+            </div>
 
+            <div class="form-row">
+                <div class="form-group">
+                    <select name="PropertyType" required>
+                        <option value="">Property Type</option>
+                        <option>House</option>
+                        <option>Apartment</option>
+                        <option>Factory Roof</option>
+                        <option>Commercial</option>
+                        <option>Farm</option>
+                        <option>Shop/Office</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <select name="Source" required>
+                        <option value="">How did you hear about us?</option>
+                        <option>Facebook</option>
+                        <option>LinkedIn</option>
+                        <option>Twitter</option>
+                        <option>Website</option>
+                        <option>Billboards</option>
+                    </select>
+                </div>
+            </div>
 
-<button type="submit">Submit</button>
-</form>
-</div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </div>
 <section class="srex-hero-two">
 <div class="video-background">
@@ -1252,16 +1296,60 @@ More Blogs <i class="fa-solid fa-plus"></i>
 <script src="./assets/vendors/bootstrap/js/bootstrap.min.js"></script>
 <script>const galleryTrack=document.querySelector(".gallery-track"),galleryItems=document.querySelectorAll(".gallery-item");let index=0;function scrollGallery(){index++,index>=galleryItems.length&&(index=0),galleryTrack.style.transform=`translateX(-${100*index}%)`}setInterval(scrollGallery,3e3)</script>
 
-<script>
-// Show popup on page load
+<!-- <script>
+Show popup on page load
 window.onload = function () {
 document.getElementById("popupForm").style.display = "flex";
 };
 
-// Close popup
+Close popup
 function closePopup() {
 document.getElementById("popupForm").style.display = "none";
 }
+</script> -->
+
+
+<script>
+    // Time delays in milliseconds
+    const IMAGE_POPUP_DELAY = 1000;    // 1 second for image popup
+    const FORM_POPUP_DELAY = 1000;     // 1 second after image closes for form popup
+    
+    // Show image popup after initial delay
+    setTimeout(function() {
+        showImagePopup();
+    }, IMAGE_POPUP_DELAY);
+    
+    function showImagePopup() {
+        document.getElementById('imagePopup').style.display = "flex";
+    }
+    
+    function closeImagePopup() {
+        document.getElementById('imagePopup').style.display = "none";
+        
+        // Show form popup after delay
+        setTimeout(function() {
+            showFormPopup();
+        }, FORM_POPUP_DELAY);
+    }
+    
+    function showFormPopup() {
+        document.getElementById('formPopup').style.display = "flex";
+    }
+    
+    function closeFormPopup() {
+        document.getElementById('formPopup').style.display = "none";
+    }
+    
+    // Close popups when clicking outside content
+    window.addEventListener('click', function(event) {
+        if (event.target.className === 'popup-container') {
+            if (event.target.id === 'imagePopup') {
+                closeImagePopup();
+            } else if (event.target.id === 'formPopup') {
+                closeFormPopup();
+            }
+        }
+    });
 </script>
 
 <script src="header.js"></script>
