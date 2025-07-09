@@ -119,7 +119,6 @@
         <a href="getaquoate.html" class="quote-btn-mobile"><i class="fas fa-phone-alt"></i> Get a Quote</a>
     </div>
 </head>
-<!--  -->
 
 <body class="body-wrapper home-one" data-scroll-animation=true>
     <div id="hea-placeholder"></div>
@@ -509,7 +508,10 @@ select.error {
                 margin-right: 0;
                 margin-bottom: 15px;
             }
-        }</style>
+        }
+        
+    </style>
+    <!-- html container -->
     <div class="container">
         <div class="header">
             <h1 style="color: antiquewhite;">Improving The Performance of Solar Energy Systems</h1>
@@ -530,8 +532,10 @@ select.error {
         <div class="content-section">
             <h2><i class="fas fa-solar-panel"></i>Request A Quote</h2>
             <p>We take great pride in everything we do, and having complete information helps us to provide the highest level of service to our customers.</p>
-            
-            <div id="successMessage" class="success-message">
+            <div id="estimatedPrice" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 20px;">
+    Estimated System Price: <span id="priceValue">PKR 0</span>
+</div>
+ <div id="successMessage" class="success-message">
                 <i class="fas fa-check-circle fa-2x" style="margin-bottom: 15px;"></i>
                 <h3>Thank You!</h3>
                 <p>Your request has been submitted successfully. We will contact you shortly.</p>
@@ -542,284 +546,229 @@ select.error {
                 <h3>Error!</h3>
                 <p>There was a problem submitting your form. Please try again later.</p>
             </div>
-        <form id="solarQuoteForm" action="https://formsubmit.co/info@energyalternatives.com.pk" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="_subject" value="New Solar Quote Request">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="#success">
-                <input type="hidden" name="_captcha" value="false">
-                <div class="form-group">
-                    <label class="required-field">Which system do you prefer?</label>
-                    <div class="system-options">
-                        <div class="system-option selected" data-value="Solar Plant"><i class="fas fa-solar-panel"></i><h3>Solar Plant</h3></div>
-                        <div class="system-option" data-value="Grid Independent"><i class="fas fa-plug"></i><h3>Grid Independent</h3></div>
-                        <div class="system-option" data-value="Solar Power Plant"><i class="fas fa-industry"></i><h3>Solar Power Plant</h3></div>
-                    </div>
-                    <input type="hidden" id="systemType" name="systemType" value="Solar Plant" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="panelType" class="required-field">Panel Brand</label>
-                        <select id="panelType" name="panelType" required>
-                            <option value="">Select panel brand</option>
-                            <option value="Canadian Solar">Canadian Solar</option>
-                            <option value="Jinko Solar">Jinko Solar</option>
-                            <option value="Trina Solar">Trina Solar</option>
-                            <option value="JA Solar">JA Solar</option>
-                            <option value="Longi Solar">Longi Solar</option>
-                            <option value="Other">Other (specify in notes)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="batteryType" class="required-field">Battery Brand</label>
-                        <select id="batteryType" name="batteryType" required>
-                            <option value="">Select battery brand</option>
-                            <option value="EA Power">EA Power</option>
-                            <option value="Narada Batteries">Narada Batteries</option>
-                            <option value="Dyness Batteries">Dyness Batteries</option>
-                            <option value="Pylontech">Pylontech</option>
-                            <option value="Sacred Sun>">Sacred Sun</option>
-                            <option value="Other">Other (specify in notes)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="inverterType" class="required-field">Inverter Brand</label>
-                        <select id="inverterType" name="inverterType" required>
-                            <option value="">Select inverter brand</option>
-                            <option value="GoodWe Inverters">GoodWe Inverters</option>
-                            <option value="Solis Inverters">Solis Inverters</option>
-                            <option value="Huawei">Huawei</option>
-                            <option value="Growatt">Growatt</option>
-                            <option value="Canadian Inverters">Canadian Inverters</option>
-                            <option value="Inverex Inverters">Inverex Inverters</option>
-                            <option value="Other">Other (specify in notes)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="electricUsage" class="required-field">Monthly electric usage (kWh/unit)?</label>
-                        <input type="number" id="electricUsage" name="electricUsage" placeholder="Enter your monthly usage" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="structureType" class="required-field">Solar Structure Type</label>
-                        <select id="structureType" name="structureType" required>
-                            <option value="">Select structure type</option>
-                            <option value="Roof Mount">Roof Mount</option>
-                            <option value="Ground Mount">Ground Mount</option>
-                            <option value="Carport">Carport</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="sanctionedLoad">Sanctioned Load</label>
-                        <input type="text" id="sanctionedLoad" name="sanctionedLoad" placeholder="Enter sanctioned load">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="budget">Budget (USD)</label>
-                        <input type="text" id="budget" name="budget" placeholder="e.g. 4000" value="4000">
-                    </div>
-                    <div class="form-group">
-                        <label for="roofArea" class="required-field">Roof Area (sq ft)</label>
-                        <input type="number" id="roofArea" name="roofArea" placeholder="Enter roof area" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="electricBill" class="required-field">Electricity Bill (Image)</label>
-                        <input type="file" id="electricBill" name="electricBill" accept="image/*" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="roofMedia">Roof Photos/Videos</label>
-                        <input type="file" id="roofMedia" name="roofMedia[]" accept="image/*,video/*" multiple>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName" class="required-field">Your full name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phoneNumber" class="required-field">Your phone number</label>
-                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your contact number" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email" class="required-field">Your email address</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="location" class="required-field">Your location (City/Area)</label>
-                        <input type="text" id="location" name="location" placeholder="Enter your city/area" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="notes">Additional Notes</label>
-                    <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or notes..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-block"><i class="fas fa-paper-plane"></i> Submit Request</button>
-                <div class="form-footer">
-                    <p>We respect your privacy. Your information will not be shared with third parties.</p>
-                </div>
-            </form>
+<form id="solarQuoteForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
+  <!-- Hidden config -->
+  <input type="hidden" name="_subject" value="New Solar Quote Request">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="#successMessage">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- System Preference -->
+  <div class="form-group">
+    <label class="required-field">Which system do you prefer?</label>
+    <div class="system-options">
+      <div class="system-option selected" data-value="Solar Plant"><i class="fas fa-solar-panel"></i><h3>Solar Plant</h3></div>
+      <div class="system-option" data-value="Grid Independent"><i class="fas fa-plug"></i><h3>Grid Independent</h3></div>
+      <div class="system-option" data-value="Solar Power Plant"><i class="fas fa-industry"></i><h3>Solar Power Plant</h3></div>
+    </div>
+    <input type="hidden" id="systemType" name="systemType" value="Solar Plant" required>
+  </div>
+
+  <!-- Panel & Battery -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="panelType" class="required-field">Panel Brand</label>
+      <select id="panelType" name="panelType" required>
+        <option value="">Select panel brand</option>
+        <option value="Canadian Solar">Canadian Solar</option>
+        <option value="Jinko Solar">Jinko Solar</option>
+        <option value="Trina Solar">Trina Solar</option>
+        <option value="JA Solar">JA Solar</option>
+        <option value="Longi Solar">Longi Solar</option>
+        <option value="Other">Other (specify in notes)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="batteryType" class="required-field">Battery Brand</label>
+      <select id="batteryType" name="batteryType" required>
+        <option value="">Select battery brand</option>
+        <option value="EA Power">EA Power</option>
+        <option value="Narada Batteries">Narada Batteries</option>
+        <option value="Dyness Batteries">Dyness Batteries</option>
+        <option value="Pylontech">Pylontech</option>
+        <option value="Sacred Sun">Sacred Sun</option>
+        <option value="Other">Other (specify in notes)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Inverter & Usage -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="inverterType" class="required-field">Inverter Brand</label>
+      <select id="inverterType" name="inverterType" required>
+        <option value="">Select inverter brand</option>
+        <option value="GoodWe Inverters">GoodWe Inverters</option>
+        <option value="Solis Inverters">Solis Inverters</option>
+        <option value="Huawei">Huawei</option>
+        <option value="Growatt">Growatt</option>
+        <option value="Canadian Inverters">Canadian Inverters</option>
+        <option value="Inverex Inverters">Inverex Inverters</option>
+        <option value="Other">Other (specify in notes)</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="electricUsage" class="required-field">Monthly electric usage (kWh/unit)?</label>
+      <input type="number" id="electricUsage" name="electricUsage" placeholder="Enter your monthly usage" required>
+    </div>
+  </div>
+
+  <!-- Structure & Load -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="structureType" class="required-field">Solar Structure Type</label>
+      <select id="structureType" name="structureType" required>
+        <option value="">Select structure type</option>
+        <option value="Roof Mount">Roof Mount</option>
+        <option value="Ground Mount">Ground Mount</option>
+        <option value="Carport">Carport</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sanctionedLoad">Sanctioned Load</label>
+      <input type="text" id="sanctionedLoad" name="sanctionedLoad" placeholder="Enter sanctioned load">
+    </div>
+  </div>
+
+  <!-- Budget & Roof Area -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="budget">Budget (PKR)</label>
+      <input type="text" id="budget" name="budget" placeholder="e.g. 4000" value="40000">
+    </div>
+
+    <div class="form-group">
+      <label for="roofArea" class="required-field">Roof Area (sq ft)</label>
+      <input type="number" id="roofArea" name="roofArea" placeholder="Enter roof area" required>
+    </div>
+  </div>
+
+  <!-- Files Upload -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="electricBill">Electricity Bill (Image)</label>
+      <input type="file" id="electricBill" name="electricBill" accept="image/*" required>
+    </div>
+
+    <div class="form-group">
+      <label for="roofMedia">Roof Photos/Videos</label>
+      <input type="file" id="roofMedia" name="roofMedia[]" accept="image/*,video/*" multiple>
+    </div>
+  </div>
+
+  <!-- Contact Info -->
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fullName" class="required-field">Your full name</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber" class="required-field">Your phone number</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your contact number" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email" class="required-field">Your email address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="location" class="required-field">Your location (City/Area)</label>
+      <input type="text" id="location" name="location" placeholder="Enter your city/area" required>
+    </div>
+  </div>
+
+  <!-- Notes -->
+  <div class="form-group">
+    <label for="notes">Additional Notes</label>
+    <textarea id="notes" name="notes" rows="4" placeholder="Any special requirements or notes..."></textarea>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="btn btn-block"><i class="fas fa-paper-plane"></i> Submit Request</button>
+
+  <div class="form-footer">
+    <p>We respect your privacy. Your information will not be shared with third parties.</p>
+  </div>
+</form>
+
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // System type selection
-            const systemOptions = document.querySelectorAll('.system-option');
-            const systemTypeInput = document.getElementById('systemType');
-            
-            systemOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    systemOptions.forEach(opt => opt.classList.remove('selected'));
-                    this.classList.add('selected');
-                    systemTypeInput.value = this.dataset.value;
-                });
-            });
-            
-            // Form submission handling
-            const form = document.getElementById('solarQuoteForm');
-            const successMessage = document.getElementById('successMessage');
-            const errorMessage = document.getElementById('errorMessage');
-            
-            // Check for success parameter in URL
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.has('success')) {
-                successMessage.style.display = 'block';
-                window.scrollTo(0, 0);
-            }
-            
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Basic form validation
-                let isValid = true;
-                const requiredFields = form.querySelectorAll('[required]');
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        field.style.borderColor = 'var(--error)';
-                        isValid = false;
-                    } else {
-                        field.style.borderColor = '#ddd';
-                    }
-                });
-                
-                if (!isValid) {
-                    errorMessage.textContent = 'Please fill in all required fields.';
-                    errorMessage.style.display = 'block';
-                    window.scrollTo({
-                        top: errorMessage.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                    return;
-                }
-                
-                // Submit form using Fetch API
-                const formData = new FormData(form);
-                
-                fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // Show success message
-                        successMessage.style.display = 'block';
-                        form.reset();
-                        
-                        // Reset system type selection
-                        systemOptions[0].classList.add('selected');
-                        systemOptions[1].classList.remove('selected');
-                        systemOptions[2].classList.remove('selected');
-                        systemTypeInput.value = 'Solar Plant';
-                        
-                        // Scroll to top
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    } else {
-                        throw new Error('Network response was not ok.');
-                    }
-                })
-                .catch(error => {
-                    errorMessage.textContent = 'There was a problem submitting your form. Please try again later.';
-                    errorMessage.style.display = 'block';
-                    window.scrollTo({
-                        top: errorMessage.offsetTop - 20,
-                        behavior: 'smooth'
-                    });
-                    console.error('Error:', error);
-                });
-            });
-            
-            // Reset error message when user starts typing
-            const inputs = form.querySelectorAll('input, textarea, select');
-            inputs.forEach(input => {
-                input.addEventListener('input', function() {
-                    if (this.hasAttribute('required') && this.value.trim()) {
-                        this.style.borderColor = '#ddd';
-                    }
-                    errorMessage.style.display = 'none';
-                });
-            });
+   <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // System type selection
+    const systemOptions = document.querySelectorAll('.system-option');
+    const systemTypeInput = document.getElementById('systemType');
+
+    systemOptions.forEach(option => {
+        option.addEventListener('click', function () {
+            systemOptions.forEach(opt => opt.classList.remove('selected'));
+            this.classList.add('selected');
+            systemTypeInput.value = this.dataset.value;
         });
+    });
 
+    // Step 1: Define prices (in PKR)
+    const priceList = {
+        panels: {
+            "Canadian Solar": 12000,
+            "Jinko Solar": 11000,
+            "Trina Solar": 11500,
+            "JA Solar": 10800,
+            "Longi Solar": 11200,
+            "Other": 10000
+        },
+        inverters: {
+            "GoodWe Inverters": 85000,
+            "Solis Inverters": 75000,
+            "Huawei": 95000,
+            "Growatt": 78000,
+            "Canadian Inverters": 82000,
+            "Inverex Inverters": 88000,
+            "Other": 70000
+        },
+        batteries: {
+            "EA Power": 32000,
+            "Narada Batteries": 35000,
+            "Dyness Batteries": 33000,
+            "Pylontech": 36000,
+            "Sacred Sun": 34000,
+            "Other": 30000
+        }
+    };
 
-// Add this to your form validation section
-const selectFields = form.querySelectorAll('select[required]');
-selectFields.forEach(select => {
-    if (!select.value) {
-        select.style.borderColor = 'var(--error)';
-        isValid = false;
-        
-        // Create error tooltip
-        const errorTooltip = document.createElement('div');
-        errorTooltip.className = 'error-tooltip';
-        errorTooltip.textContent = 'This field is required';
-        errorTooltip.style.color = 'var(--error)';
-        errorTooltip.style.fontSize = '0.8rem';
-        errorTooltip.style.marginTop = '5px';
-        
-        // Insert after the select
-        select.parentNode.insertBefore(errorTooltip, select.nextSibling);
+    function calculatePrice() {
+        const panelBrand = document.getElementById('panelType').value;
+        const inverterBrand = document.getElementById('inverterType').value;
+        const batteryBrand = document.getElementById('batteryType').value;
+
+        const panelPrice = priceList.panels[panelBrand] || 0;
+        const inverterPrice = priceList.inverters[inverterBrand] || 0;
+        const batteryPrice = priceList.batteries[batteryBrand] || 0;
+
+        const total = panelPrice + inverterPrice + batteryPrice;
+
+        document.getElementById('priceValue').textContent = `PKR ${total.toLocaleString()}`;
     }
+
+    // Add event listeners
+    document.getElementById('panelType').addEventListener('change', calculatePrice);
+    document.getElementById('inverterType').addEventListener('change', calculatePrice);
+    document.getElementById('batteryType').addEventListener('change', calculatePrice);
+
+    // Optional: Run once on page load
+    calculatePrice();
 });
-
-
-// Replace your entire fetch block with this:
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Validation (keep your existing code)
-    
-    if (isValid) {
-        // Show loading state
-        const submitBtn = form.querySelector('button[type="submit"]');
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-        
-        // Use FormSubmit.co's native form submission
-        form.submit();
-        
-        // Fallback in case FormSubmit fails
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Submit Request';
-        }, 5000);
-    }
-});
-
 </script>
+
+               
 <script src="header.js"></script>
 <div id=footer-placeholder></div>
 <script defer>fetch("footer.html").then((e=>e.text())).then((e=>{document.getElementById("footer-placeholder").innerHTML=e}))</script>
