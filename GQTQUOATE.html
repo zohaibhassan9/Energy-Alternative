@@ -7,6 +7,10 @@
 <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
 <link rel=stylesheet href=assets/css/style.css media=print onload='this.media="all"'>
 
+    <!-- Add Exo font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <div class="top-bar" style="background-color: #dcdcdc81;">
        <div class="logo">
                 <a href="index.html"> <img src="./assets/images/logo animate (TRANSPARENT) (800 x 415 px).gif" alt="Energy Alternatives Logo"></a>
@@ -132,6 +136,7 @@
             --light: #F5F5F5;
             --success: #4CAF50;
             --error: #F44336;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
@@ -509,226 +514,272 @@ select.error {
         }
         
     </style>
-    <!-- html container -->
-    <div class="container">
-        <div class="header">
-            <h1 style="color: antiquewhite;">Improving The Performance of Solar Energy Systems</h1>
-            <p style="color: rgb(255, 255, 255); margin-bottom: 20px;">Thinking Solar? Let's Talk About It. We support our customers on their way to a future with affordable energy systems across Pakistan.</p>
-        </div>
-        
-        <div class="content-section">
-            <h2><i class="fas fa-info-circle"></i>Learn More → Start Close Values</h2>
-            <div class="highlight-box">
-                
-                <div class="highlight-box-content">
-                    <p>Receive a true earth within a day when you fill out this form. Or call us at <strong>+92 300 111 6366</strong></p>
-                    <a href="tel:+923001116366"><i class="fas fa-phone"></i> Call Now</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="content-section">
-            <h2><i class="fas fa-solar-panel"></i>Request A Quote</h2>
-            <p>We take great pride in everything we do, and having complete information helps us to provide the highest level of service to our customers.</p>
+   <!-- html container -->
+<div class="container">
+    <div class="header">
+        <h1 style="color: antiquewhite;">Improving The Performance of Solar Energy Systems</h1>
+        <p style="color: rgb(255, 255, 255); margin-bottom: 20px;">Thinking Solar? Let's Talk About It. We support our customers on their way to a future with affordable energy systems across Pakistan.</p>
+    </div>
+    
+    <div class="content-section">
+        <h2><i class="fas fa-info-circle"></i>Learn More → Start Close Values</h2>
+        <div class="highlight-box">
             
-</div>
- <div id="successMessage" class="success-message">
-                <i class="fas fa-check-circle fa-2x" style="margin-bottom: 15px;"></i>
-                <h3>Thank You!</h3>
-                <p>Your request has been submitted successfully. We will contact you shortly.</p>
+            <div class="highlight-box-content">
+                <p>Receive a true earth within a day when you fill out this form. Or call us at <strong>+92 300 111 6366</strong></p>
+                <a href="tel:+923001116366"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-section">
+        <h2><i class="fas fa-solar-panel"></i>Request A Quote</h2>
+        <p>We take great pride in everything we do, and having complete information helps us to provide the highest level of service to our customers.</p>
+        
+    </div>
+    <div id="successMessage" class="success-message">
+        <i class="fas fa-check-circle fa-2x" style="margin-bottom: 15px;"></i>
+        <h3>Thank You!</h3>
+        <p>Your request has been submitted successfully. We will contact you shortly.</p>
+    </div>
+    
+    <div id="errorMessage" class="error-message">
+        <i class="fas fa-exclamation-circle fa-2x" style="margin-bottom: 15px;"></i>
+        <h3>Error!</h3>
+        <p>There was a problem submitting your form. Please try again later.</p>
+    </div>
+    <form id="solarQuoteForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
+        <!-- Hidden config -->
+        <input type="hidden" name="_subject" value="New Solar Quote Request">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="#successMessage">
+        <input type="hidden" name="_captcha" value="false">
+
+        <!-- System Preference -->
+        <div class="form-group">
+            <label class="required-field">Which system do you prefer?</label>
+            <div class="system-options">
+                <div class="system-option selected" data-value="Solar Plant"><i class="fas fa-solar-panel"></i><h3>Solar Plant</h3></div>
+                <div class="system-option" data-value="Grid Independent"><i class="fas fa-plug"></i><h3>Grid Independent</h3></div>
+                <div class="system-option" data-value="Solar Power Plant"><i class="fas fa-industry"></i><h3>Solar Power Plant</h3></div>
+            </div>
+            <input type="hidden" id="systemType" name="systemType" value="Solar Plant" required>
+        </div>
+
+        <!-- Panel, Battery & Subitems -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="panelType" class="required-field">Panel Brand</label>
+                <select id="panelType" name="panelType" required>
+                    <option value="">Select panel brand</option>
+                    <option value="Trina Solar">Trina Solar</option>
+                    <option value="JA Solar">JA Solar</option>
+                    <option value="Jinko Solar">Jinko Solar</option>
+                    <option value="Longi Solar">Longi Solar</option>
+                    <option value="Canadian Solar">Canadian Solar</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="panelModel" name="panelModel" required disabled>
+                    <option value="">Select panel model</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="batteryType" class="required-field">Battery Brand</label>
+                <select id="batteryType" name="batteryType" required>
+                    <option value="">Select battery brand</option>
+                    <option value="EA Power">EA Power</option>
+                    <option value="Narada Batteries">Narada Batteries</option>
+                    <option value="Dyness Batteries">Dyness Batteries</option>
+                    <option value="Pylontech">Pylontech</option>
+                    <option value="Sacred Sun">Sacred Sun</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="batteryModel" name="batteryModel" required disabled>
+                    <option value="">Select battery model</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Inverter & Usage -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="inverterType" class="required-field">Inverter Brand</label>
+                <select id="inverterType" name="inverterType" required>
+                    <option value="">Select inverter brand</option>
+                    <option value="GoodWe Inverters">GoodWe Inverters</option>
+                    <option value="Solis Inverters">Solis Inverters</option>
+                    <option value="Huawei">Huawei</option>
+                    <option value="Growatt">Growatt</option>
+                    <option value="Canadian Inverters">Canadian Inverters</option>
+                    <option value="Inverex Inverters">Inverex Inverters</option>
+                    <option value="Fronius">Fronius</option>
+               
+                    <option value="Other">Other</option>
+                </select>
+
+                <select id="inverterModel" name="inverterModel" required disabled>
+                    <option value="">Select inverter model</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mountingType" class="required-field">Mounting Structure</label>
+                <select id="mountingType" name="mountingType" required>
+                    <option value="">Select mounting type</option>
+                    <option value="Roof Mounted">Roof Mounted</option>
+                    <option value="Ground Mounted">Ground Mounted</option>
+                    <option value="Pole Mounted">Pole Mounted</option>
+                    <option value="Carport Mounted">Carport Mounted</option>
+                    <option value="Tracking System">Tracking System</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="electricUsage" class="required-field">Monthly electric usage (kWh/unit)?</label>
+                <input type="number" id="electricUsage" name="electricUsage" placeholder="Enter your monthly usage" required>
             </div>
             
-            <div id="errorMessage" class="error-message">
-                <i class="fas fa-exclamation-circle fa-2x" style="margin-bottom: 15px;"></i>
-                <h3>Error!</h3>
-                <p>There was a problem submitting your form. Please try again later.</p>
+            <div class="form-group">
+                <label for="roofType">Roof Type (if applicable)</label>
+                <select id="roofType" name="roofType">
+                    <option value="">Select roof type</option>
+                    <option value="Concrete Roof">Concrete Roof</option>
+                    <option value="Tin Roof">Tin Roof</option>
+                    <option value="Shingle Roof">Shingle Roof</option>
+                    <option value="Tile Roof">Tile Roof</option>
+                    <option value="Flat Roof">Flat Roof</option>
+                    <option value="Not Applicable">Not Applicable</option>
+                </select>
             </div>
-<form id="solarQuoteForm" action="https://formsubmit.co/zh168159@gmail.com" method="POST" enctype="multipart/form-data">
-  <!-- Hidden config -->
-  <input type="hidden" name="_subject" value="New Solar Quote Request">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_next" value="#successMessage">
-  <input type="hidden" name="_captcha" value="false">
+        </div>
 
-  <!-- System Preference -->
-  <div class="form-group">
-    <label class="required-field">Which system do you prefer?</label>
-    <div class="system-options">
-      <div class="system-option selected" data-value="Solar Plant"><i class="fas fa-solar-panel"></i><h3>Solar Plant</h3></div>
-      <div class="system-option" data-value="Grid Independent"><i class="fas fa-plug"></i><h3>Grid Independent</h3></div>
-      <div class="system-option" data-value="Solar Power Plant"><i class="fas fa-industry"></i><h3>Solar Power Plant</h3></div>
-    </div>
-    <input type="hidden" id="systemType" name="systemType" value="Solar Plant" required>
-  </div>
+        <!-- Display Estimated Price -->
+        <div class="form-group">
+            <label style="font-size: large; font-weight: bold;"><strong>Total Estimated Price:</strong></label>
+            <div id="priceValue" style="font-weight:bold; color:green;">PKR 0</div>
+            <div id="estimatedPrice" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 20px;">
+        </div>
 
- <!-- Panel, Battery & Subitems -->
-<div class="form-row">
-  <div class="form-group">
-    <label for="panelType" class="required-field">Panel Brand</label>
-    <select id="panelType" name="panelType" required>
-      <option value="">Select panel brand</option>
-      <option value="Trina Solar">Trina Solar</option>
-      <option value="JA Solar">JA Solar</option>
-      <option value="Jinko Solar">Jinko Solar</option>
-      <option value="Longi Solar">Longi Solar</option>
-      <option value="Canadian Solar">Canadian Solar</option>
-      <option value="Other">Other</option>
-    </select>
+        <!-- Contact Info -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fullName" class="required-field">Your full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
 
-    <select id="panelModel" name="panelModel" required disabled>
-      <option value="">Select panel model</option>
-    </select>
-  </div>
+            <div class="form-group">
+                <label for="phoneNumber" class="required-field">Your phone number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your contact number" required>
+            </div>
+        </div>
 
-  <div class="form-group">
-    <label for="batteryType" class="required-field">Battery Brand</label>
-    <select id="batteryType" name="batteryType" required>
-      <option value="">Select battery brand</option>
-      <option value="EA Power">EA Power</option>
-      <option value="Narada Batteries">Narada Batteries</option>
-      <option value="Dyness Batteries">Dyness Batteries</option>
-      <option value="Pylontech">Pylontech</option>
-      <option value="Sacred Sun">Sacred Sun</option>
-      <option value="Other">Other</option>
-    </select>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email" class="required-field">Your email address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-    <select id="batteryModel" name="batteryModel" required disabled>
-      <option value="">Select battery model</option>
-    </select>
-  </div>
+            <div class="form-group">
+                <label for="location" class="required-field">Your location (City/Area)</label>
+                <input type="text" id="location" name="location" placeholder="Enter your city/area" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="submit-btn">Get Your Quote</button>
+        </div>
+    </form>
 </div>
-
-<!-- Inverter & Usage -->
-<div class="form-row">
-  <div class="form-group">
-    <label for="inverterType" class="required-field">Inverter Brand</label>
-    <select id="inverterType" name="inverterType" required>
-      <option value="">Select inverter brand</option>
-      <option value="GoodWe Inverters">GoodWe Inverters</option>
-      <option value="Solis Inverters">Solis Inverters</option>
-      <option value="Huawei">Huawei</option>
-      <option value="Growatt">Growatt</option>
-      <option value="Canadian Inverters">Canadian Inverters</option>
-      <option value="Inverex Inverters">Inverex Inverters</option>
-      <option value="Other">Other</option>
-    </select>
-
-    <select id="inverterModel" name="inverterModel" required disabled>
-      <option value="">Select inverter model</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="electricUsage" class="required-field">Monthly electric usage (kWh/unit)?</label>
-    <input type="number" id="electricUsage" name="electricUsage" placeholder="Enter your monthly usage" required>
-  </div>
-</div>
-
-<!-- Display Estimated Price -->
-<div class="form-group">
-  <label style="font-size: large; font-weight: bold;"><strong>Total Estimated Price:</strong></label>
-  <div id="priceValue" style="font-weight:bold; color:green;">PKR 0</div>
-  <div id="estimatedPrice" style="font-weight: bold; font-size: 1.2rem; margin-bottom: 20px;">
-</div>
-
-
-
-  <!-- Contact Info -->
-  <div class="form-row">
-    <div class="form-group">
-      <label for="fullName" class="required-field">Your full name</label>
-      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="phoneNumber" class="required-field">Your phone number</label>
-      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your contact number" required>
-    </div>
-  </div>
-
-  <div class="form-row">
-    <div class="form-group">
-      <label for="email" class="required-field">Your email address</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="location" class="required-field">Your location (City/Area)</label>
-      <input type="text" id="location" name="location" placeholder="Enter your city/area" required>
-    </div>
-  </div>
-
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const products = {
-    "Solar Panel": {
-      "Trina Solar": { "400W": 12000, "500W": 15000 },
-      "JA Solar": { "410W": 11500 },
-      "Jinko Solar": { "530W": 14800 },
-      "Longi Solar": { "445W": 13000 },
-      "Canadian Solar": { "445W": 13500 },
-      "Other": { "400W": 10000 }
-    },
-    "Battery": {
-      "EA Power": { "100Ah": 32000, "200Ah": 53000 },
-      "Narada Batteries": { "100Ah": 33000 },
-      "Dyness Batteries": { "100Ah": 32000 },
-      "Pylontech": { "100Ah": 30000 },
-      "Sacred Sun": { "100Ah": 34000 },
-      "Other": { "100Ah": 28000 }
-    },
-    "Inverter": {
-      "Growatt": { "5kW": 80000 },
-      "GoodWe Inverters": { "5kW": 90000 },
-      "Huawei": { "5kW": 95000 },
-      "Solis Inverters": { "5kW": 75000 },
-      "Canadian Inverters": { "5kW": 82000 },
-      "Inverex Inverters": { "3.2kW": 68000 },
-      "Other": { "5kW": 70000 }
+    const products = {
+        "Solar Panel": {
+            "Trina Solar": { "Vertex S 400W": 12000, "Vertex S+ 500W": 15000, "Vertex 600W": 18000 },
+            "JA Solar": { "JAM60S10 410W": 11500, "JAM72S30 535W": 15500, "JAM72D40 585W": 17000 },
+            "Jinko Solar": { "Tiger Neo 530W": 14800, "Tiger Pro 580W": 16500, "Tiger N-type 620W": 19000 },
+            "Longi Solar": { "Hi-MO 5 445W": 13000, "Hi-MO 6 550W": 16000, "Hi-MO X 600W": 18500 },
+            "Canadian Solar": { "HiKu 445W": 13500, "BiHiKu 550W": 16500, "HiHero 620W": 19500 },
+            "Other": { "400W": 10000, "500W": 13000 }
+        },
+        "Battery": {
+            "EA Power": { "EP-100 100Ah": 32000, "EP-200 200Ah": 53000, "EP-300 300Ah": 75000 },
+            "Narada Batteries": { "NPFC-100 100Ah": 33000, "NPFC-200 200Ah": 55000, "NPFC-300 300Ah": 78000 },
+            "Dyness Batteries": { "D100 100Ah": 32000, "D200 200Ah": 54000, "D300 300Ah": 76000 },
+            "Pylontech": { "US2000 2.4kWh": 30000, "US3000 3.5kWh": 45000, "US5000 4.8kWh": 65000 },
+            "Sacred Sun": { "GFM-100 100Ah": 34000, "GFM-200 200Ah": 56000 },
+            "Other": { "100Ah": 28000, "200Ah": 50000 }
+        },
+        "Inverter": {
+            "GoodWe Inverters": { "GW5048-ES 5kW": 90000, "GW10K-ET 10kW": 180000, "GW20K-ET 20kW": 350000 },
+            "Solis Inverters": { "S5-GR1P5K 5kW": 75000, "S6-GR1P10K 10kW": 150000, "S6-GR1P20K 20kW": 300000 },
+            "Huawei": { "SUN2000-5KTL 5kW": 95000, "SUN2000-10KTL 10kW": 190000, "SUN2000-20KTL 20kW": 380000 },
+            "Growatt": { "MIN 5000TL-X 5kW": 80000, "MIN 10000TL-X 10kW": 160000, "MIN 20000TL-X 20kW": 320000 },
+            "Canadian Inverters": { "CSI-5kW": 82000, "CSI-10kW": 165000, "CSI-20kW": 330000 },
+            "Inverex Inverters": { "Nitrox 3.2kW": 68000, "Nitrox 5kW": 95000, "Nitrox 10kW": 185000 },
+            "Other": { "5kW": 70000, "10kW": 140000 }
+        },
+        "Mounting": {
+            "L1": { "Standard": 50000, "Premium": 80000 },
+            "L2": { "Standard": 70000, "Premium": 100000 },
+            "L3": { "Single Pole": 60000, "Dual Pole": 90000 },
+            "L4": { "Standard": 120000, "Premium": 180000 },
+            "Elevated Mounting Structure": { "Single Axis": 150000, "Dual Axis": 250000 },
+            "Rail Solar Mounting Structure": { "Standard": 120000, "Premium": 180000 },
+        }
+    };
+
+    function populateModels(category, brandId, modelId) {
+        const brand = document.getElementById(brandId).value;
+        const modelSelect = document.getElementById(modelId);
+        modelSelect.innerHTML = `<option value="">Select model</option>`;
+        modelSelect.disabled = true;
+
+        if (products[category][brand]) {
+            Object.keys(products[category][brand]).forEach(model => {
+                const option = document.createElement("option");
+                option.value = model;
+                option.textContent = model;
+                modelSelect.appendChild(option);
+            });
+            modelSelect.disabled = false;
+        }
+
+        calculatePrice();
     }
-  };
 
-  function populateModels(category, brandId, modelId) {
-    const brand = document.getElementById(brandId).value;
-    const modelSelect = document.getElementById(modelId);
-    modelSelect.innerHTML = `<option value="">Select model</option>`;
-    modelSelect.disabled = true;
-
-    if (products[category][brand]) {
-      Object.keys(products[category][brand]).forEach(model => {
-        const option = document.createElement("option");
-        option.value = model;
-        option.textContent = model;
-        modelSelect.appendChild(option);
-      });
-      modelSelect.disabled = false;
+    function getPrice(category, brandId, modelId) {
+        const brand = document.getElementById(brandId).value;
+        const model = document.getElementById(modelId).value;
+        return products[category]?.[brand]?.[model] || 0;
     }
 
-    calculatePrice();
-  }
+    function calculatePrice() {
+        const panelPrice = getPrice("Solar Panel", "panelType", "panelModel");
+        const batteryPrice = getPrice("Battery", "batteryType", "batteryModel");
+        const inverterPrice = getPrice("Inverter", "inverterType", "inverterModel");
+        const mountingType = document.getElementById("mountingType").value;
+        const mountingPrice = products["Mounting"][mountingType]?.Standard || 0;
+        
+        const total = panelPrice + batteryPrice + inverterPrice + mountingPrice;
+        document.getElementById("priceValue").textContent = `PKR ${total.toLocaleString()}`;
+    }
 
-  function getPrice(category, brandId, modelId) {
-    const brand = document.getElementById(brandId).value;
-    const model = document.getElementById(modelId).value;
-    return products[category]?.[brand]?.[model] || 0;
-  }
-
-  function calculatePrice() {
-    const panelPrice = getPrice("Solar Panel", "panelType", "panelModel");
-    const batteryPrice = getPrice("Battery", "batteryType", "batteryModel");
-    const inverterPrice = getPrice("Inverter", "inverterType", "inverterModel");
-    const total = panelPrice + batteryPrice + inverterPrice;
-    document.getElementById("priceValue").textContent = `PKR ${total.toLocaleString()}`;
-  }
-
-  document.getElementById("panelType").addEventListener("change", () => populateModels("Solar Panel", "panelType", "panelModel"));
-  document.getElementById("batteryType").addEventListener("change", () => populateModels("Battery", "batteryType", "batteryModel"));
-  document.getElementById("inverterType").addEventListener("change", () => populateModels("Inverter", "inverterType", "inverterModel"));
-
-  document.getElementById("panelModel").addEventListener("change", calculatePrice);
-  document.getElementById("batteryModel").addEventListener("change", calculatePrice);
-  document.getElementById("inverterModel").addEventListener("change", calculatePrice);
+    // Event listeners
+    document.getElementById("panelType").addEventListener("change", () => populateModels("Solar Panel", "panelType", "panelModel"));
+    document.getElementById("batteryType").addEventListener("change", () => populateModels("Battery", "batteryType", "batteryModel"));
+    document.getElementById("inverterType").addEventListener("change", () => populateModels("Inverter", "inverterType", "inverterModel"));
+    
+    document.getElementById("panelModel").addEventListener("change", calculatePrice);
+    document.getElementById("batteryModel").addEventListener("change", calculatePrice);
+    document.getElementById("inverterModel").addEventListener("change", calculatePrice);
+    document.getElementById("mountingType").addEventListener("change", calculatePrice);
 });
 </script>
                
