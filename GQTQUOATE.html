@@ -775,6 +775,15 @@
                 </div>
                 
                 <div class="form-group">
+                    <label for="gridType" class="required-field">Grid Connection Type</label>
+                    <select id="gridType" name="gridType" required>
+                        <option value="">Select grid connection type</option>
+                        <option value="On-Grid">On-Grid (Grid-Tied)</option>
+                        <option value="Hybrid">Hybrid (Grid-Tied with Battery Backup)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
                     <label for="electricUsage" class="required-field">What is your average monthly electricity consumption?</label>
                     <div class="toggle-label">
                         <span>I know my usage in kWh/units:</span>
@@ -828,9 +837,9 @@
                         </div>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group" id="batteryFields" style="display: none;">
                         <label for="batteryType" class="required-field">Battery Brand</label>
-                        <select id="batteryType" name="batteryType" required>
+                        <select id="batteryType" name="batteryType">
                             <option value="">Select battery brand</option>
                             <option value="EA Power">EA Power</option>
                             <option value="Narada Batteries">Narada Batteries</option>
@@ -846,7 +855,7 @@
                         
                         <div class="form-group">
                             <label for="batteryQuantity">Number of Batteries</label>
-                            <input type="number" id="batteryQuantity" name="batteryQuantity" min="0" value="0">
+                            <input type="number" id="batteryQuantity" name="batteryQuantity" min="1" value="1">
                         </div>
                     </div>
                 </div>
@@ -879,8 +888,8 @@
                             <option value="Pole Mounted">L3 Structure</option>
                             <option value="Carport Mounted">L3 Structure</option>
                             <option value="Tracking System">L4 Structure</option>
-                            <option value="Tracking System">Elevated Structure</option>
-                            <option value="Tracking System">Solar Carport Structure</option>
+                            <option value="Elevated Structure">Elevated Structure</option>
+                            <option value="Solar Carport Structure">Solar Carport Structure</option>
                             <option value="Other">Custom Solution</option>
                         </select>
                     </div>
@@ -892,7 +901,7 @@
                         <span class="price-label">Solar Panels:</span>
                         <span class="price-amount" id="panelPrice">PKR 0</span>
                     </div>
-                    <div class="price-summary">
+                    <div class="price-summary" id="batteryPriceContainer">
                         <span class="price-label">Batteries:</span>
                         <span class="price-amount" id="batteryPrice">PKR 0</span>
                     </div>
@@ -1008,6 +1017,7 @@
                     <div class="highlight-box-content">
                         <h3>System Summary</h3>
                         <div id="reviewSystemType"><strong>System Type:</strong> <span></span></div>
+                        <div id="reviewGridType"><strong>Grid Connection:</strong> <span></span></div>
                         <div id="reviewMonthlyUsage"><strong>Monthly Usage:</strong> <span></span> kWh</div>
                         <div id="reviewComponents"><strong>Selected Components:</strong> <span></span></div>
                         <div id="reviewEstimatedPrice"><strong>Estimated Price:</strong> <span></span></div>
@@ -1198,6 +1208,27 @@
             }
         });
 
+        // Grid type selection handling
+        const gridTypeSelect = document.getElementById('gridType');
+        const batteryFields = document.getElementById('batteryFields');
+        const batteryPriceContainer = document.getElementById('batteryPriceContainer');
+        
+        gridTypeSelect.addEventListener('change', function() {
+            const isHybrid = this.value === 'Hybrid';
+            batteryFields.style.display = isHybrid ? 'block' : 'none';
+            batteryPriceContainer.style.display = isHybrid ? 'flex' : 'none';
+            document.getElementById('batteryType').required = isHybrid;
+            document.getElementById('batteryModel').required = isHybrid;
+            document.getElementById('batteryQuantity').required = isHybrid;
+            if (!isHybrid) {
+                document.getElementById('batteryType').value = '';
+                document.getElementById('batteryModel').value = '';
+                document.getElementById('batteryQuantity').value = '0';
+                document.getElementById('batteryPrice').textContent = 'PKR 0';
+            }
+            calculatePrice();
+        });
+
         // Populate model dropdowns based on brand selection
         function populateModels(category, brandId, modelId) {
             const brand = document.getElementById(brandId).value;
@@ -1234,7 +1265,8 @@
         function calculatePrice() {
             // Component prices
             const panelPrice = getPrice("Solar Panel", "panelType", "panelModel", "panelQuantity");
-            const batteryPrice = getPrice("Battery", "batteryType", "batteryModel", "batteryQuantity");
+            const isHybrid = document.getElementById('gridType').value === 'Hybrid';
+            const batteryPrice = isHybrid ? getPrice("Battery", "batteryType", "batteryModel", "batteryQuantity") : 0;
             const inverterPrice = getPrice("Inverter", "inverterType", "inverterModel");
             const mountingType = document.getElementById("mountingType").value;
             const mountingPrice = products["Mounting"][mountingType]?.Standard?.price || 0;
@@ -1294,6 +1326,13 @@
                 document.querySelector(`.form-step[data-step="${nextStepNum}"]`).classList.add('active');
                 document.querySelector(`.progress-step[data-step="${nextStepNum}"]`).classList.add('active');
                 
+                // If moving to components step, update battery fields visibility
+                if (nextStepNum === 2) {
+                    const isHybrid = document.getElementById('gridType').value === 'Hybrid';
+                    batteryFields.style.display = isHybrid ? 'block' : 'none';
+                    batteryPriceContainer.style.display = isHybrid ? 'flex' : 'none';
+                }
+                
                 // If moving to review step, populate review fields
                 if (nextStepNum === 4) {
                     populateReviewFields();
@@ -1324,20 +1363,33 @@
             if (step === 1) {
                 const electricUsage = document.getElementById('electricUsage');
                 const electricBill = document.getElementById('electricBill');
+                const gridType = document.getElementById('gridType');
                 
                 if (!usageToggle.checked && !electricUsage.value) {
                     electricUsage.classList.add('error');
                     isValid = false;
+                } else {
+                    electricUsage.classList.remove('error');
                 }
                 
                 if (usageToggle.checked && !electricBill.value) {
                     electricBill.classList.add('error');
                     isValid = false;
+                } else {
+                    electricBill.classList.remove('error');
+                }
+                
+                if (!gridType.value) {
+                    gridType.classList.add('error');
+                    isValid = false;
+                } else {
+                    gridType.classList.remove('error');
                 }
             }
             
             if (step === 2) {
                 const requiredFields = ['panelType', 'panelModel', 'inverterType', 'inverterModel', 'mountingType'];
+                const isHybrid = document.getElementById('gridType').value === 'Hybrid';
                 const batteryQuantity = parseInt(document.getElementById('batteryQuantity').value) || 0;
                 
                 requiredFields.forEach(fieldId => {
@@ -1350,11 +1402,11 @@
                     }
                 });
 
-                // Validate battery fields only if battery quantity > 0
+                // Validate battery fields only if Hybrid and battery quantity > 0
                 const batteryType = document.getElementById('batteryType');
                 const batteryModel = document.getElementById('batteryModel');
                 
-                if (batteryQuantity > 0) {
+                if (isHybrid && batteryQuantity > 0) {
                     if (!batteryType.value) {
                         batteryType.classList.add('error');
                         isValid = false;
@@ -1380,6 +1432,8 @@
         function populateReviewFields() {
             document.getElementById('reviewSystemType').querySelector('span').textContent = 
                 document.getElementById('systemType').value;
+            document.getElementById('reviewGridType').querySelector('span').textContent = 
+                document.getElementById('gridType').value;
                 
             document.getElementById('reviewMonthlyUsage').querySelector('span').textContent = 
                 document.getElementById('electricUsage').value || 'Bill uploaded';
@@ -1394,10 +1448,11 @@
             const inverterBrand = document.getElementById('inverterType').value;
             const inverterModel = document.getElementById('inverterModel').value;
             const mountingType = document.getElementById('mountingType').value;
+            const isHybrid = document.getElementById('gridType').value === 'Hybrid';
             
             let componentsText = '';
             if (panelBrand && panelModel) componentsText += `${panelQty}x ${panelBrand} ${panelModel}`;
-            if (batteryBrand && batteryModel && batteryQty > 0) componentsText += `, ${batteryQty}x ${batteryBrand} ${batteryModel}`;
+            if (isHybrid && batteryBrand && batteryModel && batteryQty > 0) componentsText += `, ${batteryQty}x ${batteryBrand} ${batteryModel}`;
             if (inverterBrand && inverterModel) componentsText += `, ${inverterBrand} ${inverterModel}`;
             componentsText += `, ${mountingType} mounting`;
             
