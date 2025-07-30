@@ -1076,6 +1076,7 @@
                     "Hi-MO 6 550W": { price: 16000, efficiency: "21.4%", warranty: "25 years" },
                     "Hi-MO X 600W": { price: 18500, efficiency: "21.8%", warranty: "25 years" }
                 },
+
                 "Canadian Solar": { 
                     "HiKu 445W": { price: 13500, efficiency: "20.5%", warranty: "25 years" },
                     "BiHiKu 550W": { price: 16500, efficiency: "21.2%", warranty: "25 years" },
@@ -1179,6 +1180,7 @@
             }
         };
 
+        
         // System type selection
         const systemOptions = document.querySelectorAll('.system-option');
         systemOptions.forEach(option => {
@@ -1207,7 +1209,6 @@
                 document.getElementById('electricBill').removeAttribute('required');
             }
         });
-
         // Grid type selection handling
         const gridTypeSelect = document.getElementById('gridType');
         const batteryFields = document.getElementById('batteryFields');
@@ -1246,7 +1247,7 @@
                 modelSelect.disabled = false;
             }
 
-            calculatePrice();
+      calculatePrice();
         }
 
         // Get price for a selected product
