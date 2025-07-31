@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!doctype html>
-<html lang=eng>
+<html lang="en">
 <head>
-<meta charset=UTF-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Enengy Alternatives Powered By Nature</title>
-<link rel=stylesheet href=assets/vendors/bootstrap/css/bootstrap.min.css>
-<link rel=stylesheet href=./assets/vendors/slick-slider/slick.css>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Energy Alternatives Powered By Nature</title>
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/vendors/slick-slider/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         :root {
             --primary: #fcc913;
@@ -17,16 +17,24 @@
             --dark: #212529;
             --gray: #728da5;
         }
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            
+        }
         
         body {
             font-family: 'Segoe UI', Roboto, sans-serif;
             color: var(--dark);
             line-height: 1.7;
+            background-color: #f8f9fa;
         }
         
         /* Hero Section */
         .hero-section {
-background: url('assets/images/sustainbility page  banner.jpg') center/cover; color: white;
+            background: url('assets/images/sustainbility page  banner.jpg') center/cover; 
+            color: white;
             padding: 100px 0;
             position: relative;
             overflow: hidden;
@@ -39,7 +47,6 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             left: 0;
             width: 100%;
             height: 100%;
-            
             opacity: 0.1;
         }
         
@@ -75,6 +82,7 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             padding: 0;
             position: sticky;
             top: 20px;
+            height: fit-content;
         }
         
         .service-nav-header {
@@ -245,25 +253,15 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             margin: 25px 0;
         }
         
-        @media (max-width: 991px) {
-            .service-nav {
-                margin-bottom: 30px;
-            }
-            
-            .service-content {
-                padding: 25px;
-            }
-        }
-
         /* New Styles for Main Content */
         .section {
-            padding: 50px 20px;
+            padding: 50px 0;
             max-width: 1200px;
             margin: 0 auto;
             border-radius: 20px;
             box-sizing: border-box;
         }
-
+        
         .section-desc {
             text-align: center;
             max-width: 800px;
@@ -271,7 +269,7 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             font-size: 1.1rem;
             color: #555;
         }
-
+        
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -317,7 +315,29 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             margin-bottom: 8px;
             line-height: 1.5;
         }
-
+        
+        .card a {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .card a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
         .cta {
             background-color: #2D65A7;
             color: white;
@@ -328,22 +348,67 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
             max-width: 1200px;
             box-sizing: border-box;
         }
-
-        @media (max-width: 600px) {
+        
+        .btn-primary {
+            background-color: #FAAA1B;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e69900;
+            color: white;
+        }
+        
+        /* Duplicate content fix */
+        .duplicate-content {
+            display: none;
+        }
+        
+        @media (max-width: 991px) {
+            .service-nav {
+                margin-bottom: 30px;
+                position: static;
+            }
+            
+            .service-content {
+                padding: 25px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .card {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-<!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center mb-4">Powering a Sustainable Tomorrow</h1>
-                    <p class="lead text-center mx-auto" style="max-width: 700px; color: #676767;">
+                    <p class="lead text-center mx-auto" style="max-width: 700px; color: #d6d6d6;">
                         At EnergyAlternatives, we help you reduce your carbon footprint — one solar panel at a time.
                     </p>
                 </div>
@@ -355,7 +420,7 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
     <section class="py-5">
         <div class="container">
             <div class="row">
-                <!-- Service Navigation -->
+                <!-- Service Navigation - Left Side -->
                 <div class="col-lg-4 mb-4 mb-lg-0">
                     <div class="service-nav">
                         <div class="service-nav-header">
@@ -374,114 +439,124 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
                     </div>
                 </div>
                 
-                <!-- Service Content -->
+                <!-- Service Content - Right Side -->
                 <div class="col-lg-8">
                     <div class="service-content">
                         <h2 class="service-title">Our Sustainability Services</h2>
                         <p class="section-desc">At EnergyAlternatives, we go beyond just solar. Our sustainability solutions are designed to help homes, businesses, and communities reduce environmental impact and move toward a greener, cleaner future.</p>
                         
                         <div class="services-grid" id="services">
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Solar Energy Solutions.png" alt="Solar Energy Solutions">
                                 <h3>Solar Energy Solutions</h3>
                                 <ul>
                                     <li>On-grid, off-grid, and hybrid installations</li>
                                     <li>Solar street lights & water pumps</li>
                                     <li>End-to-end support — from consultation to maintenance</li>
                                 </ul>
-                                <a href="sustainbility1.html">Solar Energy Solutions</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Water Conservation Systems.png" alt="Water Conservation Systems">
                                 <h3>Water Conservation Systems</h3>
                                 <ul>
                                     <li>Rainwater harvesting installations</li>
                                     <li>Greywater recycling systems</li>
                                     <li>Water-saving plumbing upgrades</li>
                                 </ul>
-                                <a href="sustainbility1.html">Water Conservation Systems</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Energy Efficiency Upgrades.png" alt="Energy Efficiency Upgrades">
                                 <h3>Energy Efficiency Upgrades</h3>
                                 <ul>
                                     <li>LED retrofitting and smart appliances</li>
                                     <li>Energy audits and reports</li>
                                     <li>Thermal insulation for better control</li>
                                 </ul>
-                                <a href="sustainbility1.html">Energy Efficiency Upgrades</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/EV Charging Infrastructure.png" alt="EV Charging Infrastructure">
                                 <h3>EV Charging Infrastructure</h3>
                                 <ul>
                                     <li>EV station setup (residential & commercial)</li>
                                     <li>EV adoption consultancy</li>
                                 </ul>
-                                <a href="sustainbility1.html">EV Charging Infrastructure</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Green Landscaping Solutions.png" alt="Green Landscaping Solutions">
                                 <h3>Green Landscaping Solutions</h3>
                                 <ul>
                                     <li>Low-water-use plant installations</li>
                                     <li>Drip irrigation systems</li>
                                     <li>Solar-powered outdoor lighting</li>
                                 </ul>
-                                <a href="sustainbility1.html">Green Landscaping Solutions</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Waste Management & Recycling.png" alt="Waste Management & Recycling">
                                 <h3>Waste Management & Recycling</h3>
                                 <ul>
                                     <li>Safe solar panel recycling</li>
                                     <li>Eco battery disposal</li>
                                     <li>Waste segregation systems</li>
                                 </ul>
-                                <a href="sustainbility1.html">Waste Management & Recycling</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Smart Monitoring.png" alt="Smart Monitoring">
                                 <h3>Smart Monitoring</h3>
                                 <ul>
                                     <li>Smart irrigation & flow sensors</li>
                                     <li>Energy monitoring dashboards</li>
                                 </ul>
-                                <a href="sustainbility1.html">Smart Monitoring</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Green Finance & Subsidy.png" alt="Green Finance & Subsidy">
                                 <h3>Green Finance & Subsidy</h3>
                                 <ul>
                                     <li>Help with government subsidies</li>
                                     <li>EMI & leasing for solar solutions</li>
                                 </ul>
-                                <a href="sustainbility1.html">Green Finance & Subsidy</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Sustainable Building Consulting.png" alt="Sustainable Building Consulting">
                                 <h3>Sustainable Building Consulting</h3>
                                 <ul>
                                     <li>LEED or EDGE certification support</li>
                                     <li>Green material sourcing</li>
                                     <li>Site assessments & reports</li>
                                 </ul>
-                                <a href="sustainbility1.html">Sustainable Building Consulting</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                             
-                            <div class="card" onclick="window.location.href='sustainbility.html'">
+                            <div class="card">
+                                <img src="./assets/images/sustainbility/Training & Awareness.png" alt="Training & Awareness">
                                 <h3>Training & Awareness</h3>
                                 <ul>
                                     <li>Workshops for corporates, schools</li>
                                     <li>Webinars & digital eco resources</li>
                                 </ul>
-                                <a href="sustainbility1.html">Training & Awareness</a>
+                                <a href="sustainbility1.html">Learn More</a>
                             </div>
                         </div>
 
                         <div class="cta">
                             <h2>Let's Build a Greener Tomorrow</h2>
                             <p>Partner with EnergyAlternatives and take a confident step toward a sustainable future.</p>
-                            <a href="contact.html" class="btn" style="background-color: #FAAA1B; color: white; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-size: 1.2rem; transition: background-color 0.3s ease;">📩 Request a Free Sustainability Consultation</a>
+                            <a href="contact.html" class="btn-primary">📩 Request a Free Sustainability Consultation</a>
                         </div>
                     </div>
                 </div>
@@ -489,7 +564,12 @@ background: url('assets/images/sustainbility page  banner.jpg') center/cover; co
         </div>
     </section>
 
+    <!-- Remove duplicate content section -->
+    <div class="container duplicate-content">
+        <!-- This content is duplicated from above and should be removed -->
+    </div>
 
-
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
